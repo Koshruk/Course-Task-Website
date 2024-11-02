@@ -6,27 +6,47 @@
     <title>Rezilla</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
       rel="stylesheet"
-    />
+      />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="./css/modern-normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./sass/main.css">
   </head>
 
   <body class="main-page">
     <header class="header">
-      <section class="header__adress-section">
-        <address class="header__adress">
-          <p class="header__location">Rezilla, 18 Grattan St, Brooklyn</p>
-          <a class="header__phone" href="tel:+12062142298">+1 206-214-2298</a>
-          <a class="header__email" href="support@rezilla.com">support@rezilla.com</a>
+      <section class="header__address-section">
+        <div class="container container--header">
+        <address class="header__address">
+          <p class="header__location">
+            <svg class="header__svg header__svg--pin">
+              <use href="./images/svg/icons.svg#pin-icon"></use>
+            </svg>
+            Rezilla, 18 Grattan St, Brooklyn
+          </p>
+          <div class="header__contacts">
+          <a class="header__phone" href="tel:+12062142298">
+            <svg class="header__svg">
+              <use href="./images/svg/icons.svg#phone-icon"></use>
+            </svg>
+            +1 206-214-2298
+          </a>
+          <a class="header__email" href="support@rezilla.com">
+            <svg class="header__svg header__svg--mail">
+              <use href="./images/svg/icons.svg#mail-icon"></use>
+            </svg>
+            support@rezilla.com
+          </a>
+          </div>
         </address>
       </section>
       <section class="header__buttons-section">
+        <div class="container container--header">
         <nav class="header__navigation">
             <ul class="header__links-list">
                 <li class="header__links-item">
@@ -52,6 +72,7 @@
           <button class="button header__button" type="button">Add Listing</button>
         </div>
       </section>
+      </div>
     </header>
 
     <main class="main-page_content"></main>
