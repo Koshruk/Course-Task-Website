@@ -1,0 +1,31 @@
+.button{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.0;
+    letter-spacing: 0.0em;
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    &__svg{
+        max-width: 20px;
+        max-height: 20px;
+    }
+
+    &--blue{
+        padding: 15px 26px;
+        background-color: $main-color;
+        color: $white-color;
+        border-bottom-left-radius: 30% 100%;
+        border-bottom-right-radius: 30% 100%;
+        border-top-left-radius: 30% 100%;
+        border-top-right-radius: 30% 100%;
+        border-style: none;
+    }
+
+    &--transparent{
+        border-style: none;
+        background-color: inherit;
+    }
+}

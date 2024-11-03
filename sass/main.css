@@ -9,11 +9,11 @@ a {
 }
 
 body {
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 14px;
   font-style: normal;
   line-height: 1.17;
-  letter-spacing: 0.03em;
 }
 
 address {
@@ -31,9 +31,61 @@ ul {
   margin-left: auto;
   margin-right: auto;
 }
+.container--flex {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0em;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.logo__svg-container {
+  padding: 13px;
+  background-color: #3a0ca3;
+  border-radius: 50%;
+  max-height: 50px;
+}
+.logo__svg {
+  max-width: 24px;
+  max-height: 24px;
+  color: #ffffff;
+}
+
+.button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0em;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.button__svg {
+  max-width: 20px;
+  max-height: 20px;
+}
+.button--blue {
+  padding: 15px 26px;
+  background-color: #3a0ca3;
+  color: #ffffff;
+  border-bottom-left-radius: 30% 100%;
+  border-bottom-right-radius: 30% 100%;
+  border-top-left-radius: 30% 100%;
+  border-top-right-radius: 30% 100%;
+  border-style: none;
+}
+.button--transparent {
+  border-style: none;
+  background-color: inherit;
+}
 
 .header__address-section {
-  font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 13.3px;
   line-height: 1.65;
@@ -50,16 +102,46 @@ ul {
   gap: 30px;
   margin-left: auto;
 }
-.header__svg {
+.header__address-svg {
   position: relative;
   top: 2px;
   max-width: 16px;
   max-height: 16px;
   margin-right: 10px;
 }
-.header__svg--pin {
+.header__address-svg--pin {
   margin-right: 8px;
 }
-.header__svg--mail {
+.header__address-svg--mail {
   top: 4px;
+}
+.header__buttons-section {
+  padding: 15px 0;
+}
+.header__nav-list {
+  display: flex;
+}
+.header__nav-item {
+  display: flex;
+}
+.header__nav-link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  padding: 13px 16px;
+  border-bottom-left-radius: 50% 100%;
+  border-bottom-right-radius: 50% 100%;
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+}
+.header__nav-link:hover {
+  background-color: rgba(67, 97, 238, 0.3);
+}
+.header__logo {
+  margin-left: 129px;
+}
+.header__button-div {
+  margin-left: auto;
+  display: flex;
+  gap: 20px;
 }/*# sourceMappingURL=main.css.map */

@@ -24,20 +24,20 @@
         <div class="container container--header">
         <address class="header__address">
           <p class="header__location">
-            <svg class="header__svg header__svg--pin">
+            <svg class="header__address-svg header__address-svg--pin">
               <use href="./images/svg/icons.svg#pin-icon"></use>
             </svg>
             Rezilla, 18 Grattan St, Brooklyn
           </p>
           <div class="header__contacts">
           <a class="header__phone" href="tel:+12062142298">
-            <svg class="header__svg">
+            <svg class="header__address-svg">
               <use href="./images/svg/icons.svg#phone-icon"></use>
             </svg>
             +1 206-214-2298
           </a>
           <a class="header__email" href="support@rezilla.com">
-            <svg class="header__svg header__svg--mail">
+            <svg class="header__address-svg header__address-svg--mail">
               <use href="./images/svg/icons.svg#mail-icon"></use>
             </svg>
             support@rezilla.com
@@ -46,30 +46,47 @@
         </address>
       </section>
       <section class="header__buttons-section">
-        <div class="container container--header">
+        <div class="container container--flex container--header">
         <nav class="header__navigation">
-            <ul class="header__links-list">
-                <li class="header__links-item">
+            <ul class="header__nav-list">
+                <li class="header__nav-item">
                     <a class="header__nav-link" href="">Home</a>
                 </li>
-                <li class="header__links-item">
+                <li class="header__nav-item">
                     <a class="header__nav-link" href="">About</a>
                 </li>
-                <li class="header__links-item">
+                <li class="header__nav-item">
                     <a class="header__nav-link" href="">Listings</a>
                 </li>
-                <li class="header__links-item">
+                <li class="header__nav-item">
                     <a class="header__nav-link" href="">Services</a>
                 </li>
-                <li class="header__links-item">
+                <li class="header__nav-item">
                     <a class="header__nav-link" href="">Blocks</a>
                 </li>
             </ul>
         </nav>
-        <a class="logo header__logo" href="">Rezilla</a>
+        <a class="logo header__logo" href="">
+          <div class="logo__svg-container">
+          <svg class="logo__svg">
+            <use href="./images/svg/icons.svg#rezilla-icon"></use>
+          </svg>
+          </div>
+          Rezilla
+        </a>
         <div class="header__button-div">
-          <button class="button header__button" type="button">Login/Register</button>
-          <button class="button header__button" type="button">Add Listing</button>
+          <button class="button header__button button--transparent" type="button">
+            <svg class="button__svg">
+              <use href="./images/svg/icons.svg#user-circle-icon"></use>
+            </svg>
+            Login/Register
+          </button>
+          <button class="button header__button button--blue" type="button">
+            <svg class="button__svg">
+              <use href="./images/svg/icons.svg#rezilla-icon"></use>
+            </svg>
+            Add Listing
+          </button>
         </div>
       </section>
       </div>
