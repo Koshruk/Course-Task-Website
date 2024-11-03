@@ -92,8 +92,65 @@
       </div>
     </header>
 
-    <main class="main-page_content"></main>
+    <main class="main-page_content">
+      <section class="hero">
+        <div class="container container--main">
+          <h3 class="secondary-title hero__secondary-title">Real Estate</h3>
+          <div class="hero__title-section">
+            <h1 class="title hero__title">Find a perfect home you love..!</h1>
+            <p class="hero__text">Etiam eget elementum elit. Aenean dignissim dapibus vestibulum. Integer a dolor eu sapien sodales vulputate ac in purus.</p>
+            <div class="slider hero__slider">
+              <div class="slider__round-window">
+              <div class="slider__images-container">
+                <img id="slide-1" class="slider__image hero__image"
+                  src="./images/jpg/luxury-classic-modern-bedroom-suite-hotel.jpg"
+                  alt="спальна кімната виконанана в класичному лакшері стилі"
+                />
+                <img id="slide-2" class="slider__image hero__image"
+                  src="./images/jpg/kenny-eliason-kdwahpWYfQo-unsplash.jpg"
+                  alt="кухня з білими меблями виконона в coastal стилі"
+                />
+                <img id="slide-3" class="slider__image hero__image"
+                  src="./images/jpg/jilbert-ebrahimi-0WVik0B5UWY-unsplash.jpg"
+                  alt="вітальня в простому стилі"
+                />
+                <img id="slide-4" class="slider__image hero__image"
+                  src="./images/jpg/pexels-pixabay-271624.jpg"
+                  alt="спальна кімната з диваном та невеликим столиком"
+                />
+              </div>
+              </div>
+              <div class="slider__nav">
+                <button class="slider__button slider__button--back" onclick="backSlide()">
+                  <svg class="slider__button-svg">
+                    <use href="./images/svg/icons.svg#left-slider-icon"></use>
+                  </svg>
+                </button>
+                <button class="slider__button slider__button--next" onclick="nextSlide()">
+                  <svg class="slider__button-svg">
+                    <use href="./images/svg/icons.svg#right-slider-icon"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="slider__bar-section">
+                <ul class="slider__bar-list">
+                  <li class="slider__bar">
+                  </li>
+                  <li class="slider__bar">
+                  </li>
+                  <li class="slider__bar">
+                  </li>
+                  <li class="slider__bar">
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer class="main-pagefooter"></footer>
+    <script src="./js/slider.js"></script>
   </body>
 </html>

@@ -1,11 +1,19 @@
 .container{
-    max-width: 1300px;
-    padding: 0px 30px;
     margin-left: auto;
     margin-right: auto;
 
     &--flex{
         display: flex;
         align-items: center;
+    }
+
+    &--header{
+        max-width: 1300px;
+        padding: 0px 30px;
+    }
+
+    &--main{
+        max-width: 1200px;
+        padding: 0 40px;
     }
 }

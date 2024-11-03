@@ -1,0 +1,29 @@
+.hero{
+    background: linear-gradient($transparent-color2, $color1);
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+
+    padding-top: 89px;
+    padding-bottom: 112px;
+
+    &__secondary-title{
+        margin-bottom: 30px;
+    }
+
+    &__title{
+        margin-bottom: 40px;
+    }
+
+    &__text{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.63;
+        letter-spacing: 0em;
+
+        color: $text-color3;
+    }
+
+    &__slider{
+        margin-top: 40px;
+    }
+}
