@@ -1,8 +1,11 @@
+/*import Swiper from 'swiper';
+import 'swiper/css';
+const swiper = new Swiper;
+*/
 const slidesContainer = document.querySelector(".slider__images-container");
 const slides = document.querySelectorAll(".slider__image");
 const bars =document.querySelectorAll(".slider__bar");
 let slideIndex = 0;
-
 function showSlide(index) {
   if (index >= slides.length) slideIndex = 0;
   else if (index < 0) slideIndex = slides.length - 1;

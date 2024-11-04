@@ -1,13 +1,24 @@
 .hero{
-    background: linear-gradient($transparent-color2, $color1);
+    
+    background-image: linear-gradient($transparent-color2, $color1);
     border-bottom-left-radius: 100%;
     border-bottom-right-radius: 100%;
+    background-size: 1440px;
 
     padding-top: 89px;
     padding-bottom: 112px;
 
     &__secondary-title{
         margin-bottom: 30px;
+    }
+
+    &__flex-div{
+        display: flex;
+        gap: 160px;
+    }
+
+    &__title-section{
+        max-width: 540px;
     }
 
     &__title{
@@ -27,3 +38,17 @@
         margin-top: 40px;
     }
 }
+
+.section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200vw; /* Ensures it covers beyond the viewport */
+    height: 100vw; /* This controls the circular effect */
+    background-image: linear-gradient($transparent-color2, $color1);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    pointer-events: none; /* Keeps the section content accessible */
+  }

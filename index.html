@@ -96,6 +96,7 @@
       <section class="hero">
         <div class="container container--main">
           <h3 class="secondary-title hero__secondary-title">Real Estate</h3>
+          <div class="flex-div hero__flex-div">
           <div class="hero__title-section">
             <h1 class="title hero__title">Find a perfect home you love..!</h1>
             <p class="hero__text">Etiam eget elementum elit. Aenean dignissim dapibus vestibulum. Integer a dolor eu sapien sodales vulputate ac in purus.</p>
@@ -134,7 +135,7 @@
               </div>
               <div class="slider__bar-section">
                 <ul class="slider__bar-list">
-                  <li class="slider__bar">
+                  <li class="slider__bar slider__bar--active">
                   </li>
                   <li class="slider__bar">
                   </li>
@@ -146,7 +147,50 @@
               </div>
             </div>
           </div>
+          <div class="form-section hero__form-section">
+            <div class="form-section__nav">
+              <button class="button button--transparent form-section__button">
+                For Sale
+              </button>
+              <button class="button button--transparent form-section__button">
+                For Rent
+              </button>
+              </ul>
+            </div>
+            <form class="form-section__form">
+              <ul class="form-section__input-list">
+                <li class="form-section__input-item">
+                  <label class="form-section__label">Location</label>
+                  <input class="form-section__input" placeholder="New York, San Francisco, etc" type="text" name="location"/>
+                </li>
+                <li class="form-section__input-item">
+                  <label class="form-section__label">Type</label>
+                  <input class="form-section__input" placeholder="Select Property Type" type="text" name="location"/>
+                  
+                </li>
+                <li class="form-section__input-item">
+                  <label class="form-section__label">Rooms</label>
+                  <input class="form-section__input" placeholder="Select Rooms" type="text" name="location"/>
+                </li>
+              </ul>
+              <button class="button button--blue form-section__button--search form-section__button">
+                <svg class="button__svg">
+                  <use href="./images/svg/icons.svg#search-normal-icon"></use>
+                </svg>
+                Search
+              </button>
+            </form>
+            </div>
+          </div>
         </div>
+      </section>
+
+      <section class="announcement-section">
+        <ul class="announcement-section__list">
+          <li class="announcement-section__item">
+            <div class="announcement-section__announcement"></div>
+          </li>
+        </ul>
       </section>
     </main>
 

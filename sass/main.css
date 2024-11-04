@@ -14,6 +14,7 @@ body {
   font-size: 14px;
   font-style: normal;
   line-height: 1.17;
+  letter-spacing: 0em;
 }
 
 address {
@@ -75,6 +76,8 @@ img {
   display: flex;
   gap: 10px;
   align-items: center;
+  justify-content: center;
+  color: inherit;
 }
 .button__svg {
   max-width: 20px;
@@ -179,6 +182,7 @@ img {
 .slider__round-window {
   border-radius: 20px;
   overflow: hidden;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
 .slider__images-container {
   display: flex;
@@ -216,7 +220,7 @@ img {
   align-items: center;
   width: 7px;
   height: 13px;
-  color: #aaaaaa;
+  color: #d4d4d4;
 }
 .slider__bar-list {
   display: flex;
@@ -238,14 +242,22 @@ img {
 }
 
 .hero {
-  background: linear-gradient(rgba(76, 201, 240, 0), #4361ee);
+  background-image: linear-gradient(rgba(76, 201, 240, 0), #4361ee);
   border-bottom-left-radius: 100%;
   border-bottom-right-radius: 100%;
+  background-size: 1440px;
   padding-top: 89px;
   padding-bottom: 112px;
 }
 .hero__secondary-title {
   margin-bottom: 30px;
+}
+.hero__flex-div {
+  display: flex;
+  gap: 160px;
+}
+.hero__title-section {
+  max-width: 540px;
 }
 .hero__title {
   margin-bottom: 40px;
@@ -259,4 +271,63 @@ img {
 }
 .hero__slider {
   margin-top: 40px;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200vw; /* Ensures it covers beyond the viewport */
+  height: 100vw; /* This controls the circular effect */
+  background-image: linear-gradient(rgba(76, 201, 240, 0), #4361ee);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  pointer-events: none; /* Keeps the section content accessible */
+}
+
+.form-section {
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  border-radius: 30px;
+}
+.form-section__nav {
+  display: flex;
+  gap: 125px;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #d4d4d4;
+  color: #808080;
+}
+.form-section__form {
+  padding: 50px 40px 60px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.form-section__label {
+  display: none;
+}
+.form-section__input-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+.form-section__input {
+  font-size: 16px;
+  line-height: 1.63;
+  padding: 15px 0 15px 20px;
+  border-radius: 20px;
+  border-style: none;
+  color: #d4d4d4;
+  background-color: rgba(212, 212, 212, 0.2);
+}
+.form-section__button--search {
+  border-radius: 50px;
+  width: 100%;
+  margin: auto auto 0;
+  gap: 10px;
 }/*# sourceMappingURL=main.css.map */
