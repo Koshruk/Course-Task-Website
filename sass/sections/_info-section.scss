@@ -1,0 +1,19 @@
+.info-section{
+    padding-top: 188px;
+    padding-bottom: 40px;
+    
+    &__flex-div{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__image{
+        max-width: 577px;
+    }
+
+    &__container{
+        padding: 30px;
+        border-radius: 30px;
+        box-shadow: 0 7px 20px rgba(black, 0.2);
+    }
+}
