@@ -16,7 +16,7 @@
     />
     <link rel="stylesheet" type="text/css" href="./css/modern-normalize.css" />
     <link rel="stylesheet" type="text/css" href="./sass/main.css">
-    <link>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   </head>
 
   <body class="main-page">
@@ -106,39 +106,49 @@
             <p class="regular-text hero__regular-text">
               Etiam eget elementum elit. Aenean dignissim dapibus vestibulum. Integer a dolor eu sapien sodales vulputate ac in purus.
             </p>
-            <div class="swiper slider hero__slider">
-              <div class="slider__round-window">
-              <div class="swiper-wrapper slider__images-container">
-                <img id="slide-1" class="swiper-slide slider__image hero__image"
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                <img id="slide-1"
                   src="./images/jpg/luxury-classic-modern-bedroom-suite-hotel.jpg"
                   alt="спальна кімната виконанана в класичному лакшері стилі"
                 />
-                <img id="slide-2" class="swiper-slide slider__image hero__image"
+                </div>
+                <div class="swiper-slide">
+                <img id="slide-2"
                   src="./images/jpg/kenny-eliason-kdwahpWYfQo-unsplash.jpg"
                   alt="кухня з білими меблями виконона в coastal стилі"
                 />
-                <img id="slide-3" class="swiper-slide slider__image hero__image"
+                </div>
+                <div class="swiper-slide">
+                <img id="slide-3"
                   src="./images/jpg/jilbert-ebrahimi-0WVik0B5UWY-unsplash.jpg"
                   alt="вітальня в простому стилі"
                 />
-                <img id="slide-4" class="swiper-slide slider__image hero__image"
+                </div>
+              <div class="swiper-slide">
+                <img id="slide-4"
                   src="./images/jpg/pexels-pixabay-271624.jpg"
                   alt="спальна кімната з диваном та невеликим столиком"
                 />
               </div>
               </div>
-              <div class="slider__nav">
-                <button class="swiper-button-prev slider__button slider__button--back" onclick="backSlide()">
+              </div>
+                <div class="swiper-button-prev">
+                  <!--
                   <svg class="slider__button-svg">
                     <use href="./images/svg/icons.svg#left-slider-icon"></use>
                   </svg>
-                </button>
-                <button class="swiper-button-next slider__button slider__button--next" onclick="nextSlide()">
+                -->
+                </div>
+                <div class="swiper-button-next">
+                  <!--
                   <svg class="slider__button-svg">
                     <use href="./images/svg/icons.svg#right-slider-icon"></use>
                   </svg>
-                </button>
-              </div>
+                -->
+                </div>
+                <!--
               <div class="slider__bar-section">
                 <ul class="slider__bar-list">
                   <li class="slider__bar slider__bar--active">
@@ -151,7 +161,7 @@
                   </li>
                 </ul>
               </div>
-            </div>
+            -->
           </div>
           <div class="form-section hero__form-section">
             <div class="form-section__nav">
@@ -425,6 +435,17 @@
     </main>
 
     <footer class="main-pagefooter"></footer>
-    <script src="./js/slider.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.swiper',{
+    modules: [Navigation],
+    loop: false,
+    direction: 'horizontal',
+    navigation:{
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'  
+    },
+});
+    </script>
   </body>
 </html>
