@@ -1,0 +1,41 @@
+.button{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.0;
+    letter-spacing: 0.0em;
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+    color: inherit;
+
+    &__svg{
+        max-width: 20px;
+        max-height: 20px;
+    }
+
+    &--blue{
+        padding: 15px 26px;
+        background-color: $main-color;
+        color: $white-color;
+        border-radius: 30px;
+        border-style: none;
+    }
+
+    &--transparent{
+        border-style: none;
+        background-color: inherit;
+    }
+
+    &--bordered{
+        border-style: solid;
+        border-radius: 30px;
+        border-width: 1px;
+        border-color: $main-color;
+        background-color: inherit;
+        color: $main-color;
+        padding: 15px 30px;
+    }
+}

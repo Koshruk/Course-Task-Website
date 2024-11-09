@@ -1,0 +1,81 @@
+.header{
+    &__address-section{
+        font-weight: 400;
+        font-size: 13.3px;
+        line-height: 1.65;
+        letter-spacing: 0em;
+
+        padding: 15px 0;
+
+        background-color: $main-color;
+        color: $white-color;
+    }
+
+    &__address{
+        display: flex;
+    }
+
+    &__contacts{
+        display: flex;
+        gap: 30px;
+        margin-left: auto;
+    }
+
+    &__address-svg{
+        position: relative;
+        top: 2px;
+
+        max-width: 16px;
+        max-height: 16px;
+
+        margin-right: 10px;
+
+        &--pin{
+            margin-right: 8px;
+        }
+
+        &--mail{
+            top: 4px;
+        }
+    }
+
+    &__buttons-section{
+        padding: 15px 0;
+    }
+
+    &__nav-list{
+        display: flex;
+        
+    }
+
+    &__nav-item{
+        display: flex;
+    }
+
+
+    &__nav-link{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.0;
+
+        padding: 13px 16px;
+        border-bottom-left-radius: 50% 100%;
+        border-bottom-right-radius: 50% 100%;
+        border-top-left-radius: 50% 100%;
+        border-top-right-radius: 50% 100%;
+        &:hover{
+            background-color: $transparent-color1;
+        }
+    }
+
+    &__logo{
+        margin-left: 129px;
+    }
+
+    &__button-div{
+        margin-left: auto;
+
+        display: flex;
+        gap:20px
+    }
+}

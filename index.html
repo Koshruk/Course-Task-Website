@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="rieltor website" />
+    <title>Rezilla</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
+      rel="stylesheet"
+      />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./css/modern-normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./sass/main.css">
+    <link>
+  </head>
+
+  <body class="main-page">
+    <header class="header">
+      <section class="header__address-section">
+        <div class="container container--header">
+        <address class="header__address">
+          <p class="header__location">
+            <svg class="header__address-svg header__address-svg--pin">
+              <use href="./images/svg/icons.svg#pin-icon"></use>
+            </svg>
+            Rezilla, 18 Grattan St, Brooklyn
+          </p>
+          <div class="header__contacts">
+          <a class="header__phone" href="tel:+12062142298">
+            <svg class="header__address-svg">
+              <use href="./images/svg/icons.svg#phone-icon"></use>
+            </svg>
+            +1 206-214-2298
+          </a>
+          <a class="header__email" href="support@rezilla.com">
+            <svg class="header__address-svg header__address-svg--mail">
+              <use href="./images/svg/icons.svg#mail-icon"></use>
+            </svg>
+            support@rezilla.com
+          </a>
+          </div>
+        </address>
+      </section>
+      <section class="header__buttons-section">
+        <div class="container container--flex container--header">
+        <nav class="header__navigation">
+            <ul class="header__nav-list">
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="">Home</a>
+                </li>
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="">About</a>
+                </li>
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="">Listings</a>
+                </li>
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="">Services</a>
+                </li>
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="">Blocks</a>
+                </li>
+            </ul>
+        </nav>
+        <a class="logo header__logo" href="">
+          <div class="logo__svg-container">
+          <svg class="logo__svg">
+            <use href="./images/svg/icons.svg#rezilla-icon"></use>
+          </svg>
+          </div>
+          Rezilla
+        </a>
+        <div class="header__button-div">
+          <button class="button header__button button--transparent" type="button">
+            <svg class="button__svg">
+              <use href="./images/svg/icons.svg#user-circle-icon"></use>
+            </svg>
+            Login/Register
+          </button>
+          <button class="button header__button button--blue" type="button">
+            <svg class="button__svg">
+              <use href="./images/svg/icons.svg#rezilla-icon"></use>
+            </svg>
+            Add Listing
+          </button>
+        </div>
+      </section>
+      </div>
+    </header>
+
+    <main class="main-page_content">
+      <section class="hero">
+        <div class="hero__background">
+        </div>
+        <div class="container container--main">
+          <h3 class="secondary-title hero__secondary-title">Real Estate</h3>
+          <div class="flex-div hero__flex-div">
+          <div class="hero__title-section">
+            <div class="decor-circle hero__decor-circle"></div>
+            <h1 class="title hero__title">Find a perfect home you love..!</h1>
+            <p class="regular-text hero__regular-text">
+              Etiam eget elementum elit. Aenean dignissim dapibus vestibulum. Integer a dolor eu sapien sodales vulputate ac in purus.
+            </p>
+            <div class="swiper slider hero__slider">
+              <div class="slider__round-window">
+              <div class="swiper-wrapper slider__images-container">
+                <img id="slide-1" class="swiper-slide slider__image hero__image"
+                  src="./images/jpg/luxury-classic-modern-bedroom-suite-hotel.jpg"
+                  alt="спальна кімната виконанана в класичному лакшері стилі"
+                />
+                <img id="slide-2" class="swiper-slide slider__image hero__image"
+                  src="./images/jpg/kenny-eliason-kdwahpWYfQo-unsplash.jpg"
+                  alt="кухня з білими меблями виконона в coastal стилі"
+                />
+                <img id="slide-3" class="swiper-slide slider__image hero__image"
+                  src="./images/jpg/jilbert-ebrahimi-0WVik0B5UWY-unsplash.jpg"
+                  alt="вітальня в простому стилі"
+                />
+                <img id="slide-4" class="swiper-slide slider__image hero__image"
+                  src="./images/jpg/pexels-pixabay-271624.jpg"
+                  alt="спальна кімната з диваном та невеликим столиком"
+                />
+              </div>
+              </div>
+              <div class="slider__nav">
+                <button class="swiper-button-prev slider__button slider__button--back" onclick="backSlide()">
+                  <svg class="slider__button-svg">
+                    <use href="./images/svg/icons.svg#left-slider-icon"></use>
+                  </svg>
+                </button>
+                <button class="swiper-button-next slider__button slider__button--next" onclick="nextSlide()">
+                  <svg class="slider__button-svg">
+                    <use href="./images/svg/icons.svg#right-slider-icon"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="slider__bar-section">
+                <ul class="slider__bar-list">
+                  <li class="slider__bar slider__bar--active">
+                  </li>
+                  <li class="slider__bar">
+                  </li>
+                  <li class="slider__bar">
+                  </li>
+                  <li class="slider__bar">
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="form-section hero__form-section">
+            <div class="form-section__nav">
+              <button class="button button--transparent form-section__button">
+                For Sale
+              </button>
+              <button class="button button--transparent form-section__button">
+                For Rent
+              </button>
+              </ul>
+            </div>
+            <form class="form-section__form">
+              <ul class="form-section__input-list">
+                <li class="form-section__input-item">
+                  <label class="form-section__label">Location</label>
+                  <input class="form-section__input" placeholder="New York, San Francisco, etc" type="text" name="location"/>
+                </li>
+                <li class="form-section__input-item">
+                  <label class="form-section__label">Type</label>
+                  <input class="form-section__input" placeholder="Select Property Type" type="text" name="location"/>
+                  
+                </li>
+                <li class="form-section__input-item">
+                  <label class="form-section__label">Rooms</label>
+                  <input class="form-section__input" placeholder="Select Rooms" type="text" name="location"/>
+                </li>
+              </ul>
+              <button class="button button--blue form-section__button--search form-section__button">
+                <svg class="button__svg">
+                  <use href="./images/svg/icons.svg#search-normal-icon"></use>
+                </svg>
+                Search
+              </button>
+            </form>
+            </div>
+          </div>
+        </div>
+        <section class="announcement-section hero__announcement-section">
+          <div class="container container--main">
+          <ul class="announcement-section__list">
+            <li class="announcement-section__item">
+              <div class="announcement-section__announcement">
+                <ul class="announcement-section__image-list">
+                  <li class="announcement-section__image-item">
+                    <div class="announcement-section__circular-image-div announcement-section__circular-image-div--account">
+                      <img class="announcement-section__image"
+                      src="./images/jpg/account1.jpg"
+                      alt="profile picture"
+                      />
+                    </div>
+                  </li>
+                  <li class="announcement-section__image-item">
+                    <div class="announcement-section__circular-image-div announcement-section__circular-image-div--account">
+                    <img class="announcement-section__image"
+                    src="./images/jpg/account2.jpg"
+                    alt="profile picture"
+                    />
+                    </div>
+                  </li>
+                  <li class="announcement-section__image-item">
+                    <div class="announcement-section__circular-image-div announcement-section__circular-image-div--account">
+                    <img class="announcement-section__image"
+                    src="../images/jpg/account3.jpg"
+                    alt="profile picture"
+                    />
+                    </div>
+                  </li>
+                  <li class="announcement-section__image-item">
+                    <div class="announcement-section__circular-image-div announcement-section__circular-image-div--account">
+                    <img class="announcement-section__image"
+                    src="/images/jpg/account4.jpg"
+                    alt="profile picture"
+                    />
+                    </div>
+                  </li>
+                  <li class="announcement-section__image-item">
+                    <div class="announcement-section__circular-image-div announcement-section__circular-image-div--account">
+                    <img class="announcement-section__image"
+                    src="./images/jpg/account5.jpg"
+                    alt="profile picture"
+                    />
+                    </div>
+                  </li>
+                </ul>
+                <p class="announcement-section__text">72k+ Happy <br> Customers</p>
+              </div>
+            </li>
+            <li class="announcement-section__item">
+              <div class="announcement-section__announcement announcement-section__announcement--picture-is-bigger">
+                <div class="announcement-section__circular-image-div announcement-section__circular-image-div--house">
+                <img class="announcement-section__image"
+                    src="./images/jpg/house.jpg"
+                    alt="american suburban house"
+                  />
+                </div>
+                <p class="announcement-section__text">200+ New <br> Listings Everyday!</p>
+              </div>
+            </li>
+          </ul>
+          </div>
+        </section>
+      </section>
+
+      <section class="clients-section">
+        <div class="container clients-section__container container--header">
+          <h2 class="clients-section__title">Trusted by 100+ Companies acroos the globe!</h2>
+          <ul class="clients-section__clients-logo-list">
+            <li class="clients-section__clients-logo-item">
+              <img class="clients-section__image"
+                src="./images/png/google.png"
+                alt="logo of 'Google'"
+              />
+            </li>
+            <li class="clients-section__clients-logo-item">
+              <img class="clients-section__image"
+                src="./images/png/amazon.png"
+                alt="logo of 'Amazon'"
+              />
+            </li>
+            <li class="clients-section__clients-logo-item">
+              <img class="clients-section__image"
+                src="./images/png/logitech.png"
+                alt="logo of 'Logitech'"
+              />
+            </li>
+            <li class="clients-section__clients-logo-item">
+              <img class="clients-section__image"
+                src="./images/png/spotify.png"
+                alt="logo of 'Spotify'"
+              />
+            </li>
+            <li class="clients-section__clients-logo-item">
+              <img class="clients-section__image"
+                src="./images/png/samsung.png"
+                alt="logo of 'Samsung'"
+              />
+            </li>
+            <li class="clients-section__clients-logo-item">
+              <img class="clients-section__image"
+                src="./images/png/netflix.png"
+                alt="logo of 'Netflix'"
+              />
+            </li>
+          </ul>
+          <div class="decor-circle clients-section__decor-circle"></div>
+        </div>
+      </section>
+
+      <section class="info-section">
+        <div class="container container--main">
+          <h3 class="secondary-title info-section__secondary-title">Who we are</h3>
+          <div class="flex-div info-section__flex-div">
+            <div class="info-section__info-div">
+              <h2 class="info-section__title">
+                Assisting individuals in locating the appropriate real estate.
+              </h2>
+              <p class="regular-text info-section__regular-text info-section__regular-text--main-text">
+                Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. Nulla convallis ipsum molestie nibh malesuada, ac malesuada leo volutpat.
+              </p>
+              <div class="info-section__container">
+                <svg class="info-section__container-svg">
+                  <use href="./images/svg/icons.svg#smart-home-icon"></use>
+                </svg>
+                <div class="info-section__text-group">
+                <h4 class="info-section__container-title">Donec porttitor euismod</h4>
+                <p class="regular-text info-section__regular-text">
+                  Nullam a lacinia ipsum, nec dignissim purus. Nulla
+                </p>
+                </div>
+              </div>
+              <div class="info-section__container">
+                <svg class="info-section__container-svg">
+                  <use href="./images/svg/icons.svg#user-octagon-icon"></use>
+                </svg>
+                <div class="info-section__text-group">
+                <h4 class="info-section__container-title">
+                  Donec porttitor euismod
+                </h4>
+                <p class="regular-text info-section__regular-text">
+                  Nullam a lacinia ipsum, nec dignissim purus. Nulla
+                </p>
+                </div>
+              </div>
+            </div>
+            <div class="info-section__picture-div">
+              <div class="info-section__picture-form info-section__picture-form--first">
+                <img class="info-section__image"
+                  src="./images/jpg/luxury-house1.jpg"
+                  alt="Two-stored panthouse with pool"
+                />
+              </div>
+              <div class="info-section__picture-column">
+                <div class="info-section__picture-form info-section__picture-form--second">
+                  <img class="info-section__image"
+                    src="./images/jpg/bedroom.jpg"
+                    alt="Two-stored panthouse with pool"
+                  />
+                </div>
+                <div class="info-section__picture-form info-section__picture-form--third">
+                  <img class="info-section__image"
+                    src="./images/jpg/living-room.jpg"
+                    alt="Two-stored panthouse with pool"
+                  />
+                </div>
+                <div class="decor-circle info-section__decor-circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="offers-section">
+        <div class="container offers-section__container container--main">
+          <h3 class="secondary-title offers-section__secondary-title">Checkout our new</h3>
+          <div class="flex-div offers-section__flex-div">
+            <div class="offers-section__info-div">
+              <h2 class="offers-section__title">Latest listed properties</h2>
+              <p class="regular-text offers-section__regular-text">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.</p>
+            </div>
+            <ul class="offers-section__button-list">
+              <li class="offers-section__button-item">
+                <button class="button button--bordered offers-section__button">All</button>
+              </li>
+              <li class="offers-section__button-item">
+                <button class="button button--bordered offers-section__button">Sell</button>
+              </li>
+              <li class="offers-section__button-item">
+                <button class="button button--bordered offers-section__button">Rent</button>
+              </li>
+            </ul>
+          </div>
+          <div class="slider-offer hero__slider-offer">
+            <div class="slider-offer__container">
+              <figure class="figure-offer slider__figure-offer">
+                <div class="figure-offer__image-container">
+                  <img class="figure-offer__image"
+                    src="./images/jpg/offer1.jpg"
+                    alt="Two-stored panthouse with pool"
+                  />
+                  <div class="figure-offer__quality-container figure-offer__quality-container--popular"> <!--change name-->
+                    <svg class="figure-offer__quality-svg">
+                      <use href="./images/svg/icons.svg#fire-icon"></use>
+                    </svg>
+                    <p class="figure-offer__quality-text">Popular</p>
+                  </div>
+                </div>
+                <figcaption class="figure-offer__figcaption">
+                  <p class="figure-offer__cost">$5,970</p>
+                  <h4 class="figure-offer__title">Tranquil Haven in the Woods</h4>
+                  <p class="regular-text figure-offer__regular-text">103 Wright CourtBurien, WA 98168</p>
+                  <div class="figure-offer__rooms">
+                    <p class="figure-offer__rooms-text">
+                      <svg class="figure-offer__svg figure-offer__svg--wide">
+                        <use href="./images/svg/icons.svg#bed-icon"></use>
+                      </svg>
+                      4 Bedrooms
+                    </p>
+                    <p class="figure-offer__rooms-text">
+                      <svg class="figure-offer__svg figure-offer__svg--thin">
+                        <use href="./images/svg/icons.svg#bathroom-icon"></use>
+                      </svg>
+                      3 Baths
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+        </section>
+    </main>
+
+    <footer class="main-pagefooter"></footer>
+    <script src="./js/slider.js"></script>
+  </body>
+</html>

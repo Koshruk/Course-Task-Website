@@ -1,0 +1,22 @@
+.logo{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.0;
+    letter-spacing: 0.0em;
+
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    &__svg-container{
+        padding: 13px;
+        background-color: $main-color;
+        border-radius: 50%;
+        max-height: 50px;
+    }
+
+    &__svg{
+        max-width: 24px;
+        max-height: 24px;
+        color: $white-color;
+    }
+}
