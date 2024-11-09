@@ -1,3 +1,22 @@
 .offers-section{
     padding-top: 100px;
+
+    &__flex-div{
+        display: flex;
+    }
+
+    &__button-list{
+        margin-left: auto;
+
+        display: flex;
+        gap: 20px;
+    }
+
+    &__title{
+        margin-bottom: 30px;
+    }
+
+    &__regular-text{
+        margin-bottom: 40px;
+    }
 }

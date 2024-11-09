@@ -1,0 +1,91 @@
+.figure-offer{
+    &__image-container{
+        max-width: 340px;
+        max-height: 340px;
+        overflow: hidden;
+        border-radius: 30px;
+
+        margin-bottom: 30px;
+
+        position: relative;
+    }
+
+    &__image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+    }
+
+    &__quality-container{
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+
+        padding: 10px 24px;
+
+        background-color: $white-color;
+        color: $popular-color;
+        border-radius: 20px;
+
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+    }
+
+    &__quality-svg{
+        max-height: 20px;
+        max-width: 20px;
+    }
+
+    &__quality-text{
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    &__cost{
+        font-weight: 600;
+        font-size: 26.7px;
+
+        margin-bottom: 15px;
+    }
+
+    &__title{
+        font-weight: 500;
+        font-size: 19.5px;
+
+        margin-bottom: 10px;
+    }
+
+    &__regular-text{
+        margin-bottom: 10px;
+    }
+
+    &__rooms{
+        display: flex;
+        gap: 20px;
+    }
+
+
+    &__rooms-text{
+        font-size: 16px;
+        line-height: 1.63;
+
+        display: flex;
+        gap: 10px;
+    }
+
+    &__svg{
+        max-height: 24px;
+
+        &--wide{
+            max-width: 30px;
+        }
+
+        &--thin{
+            max-width: 24px;
+        }
+    }
+
+}

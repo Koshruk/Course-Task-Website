@@ -1,7 +1,16 @@
-/*import Swiper from 'swiper';
+import Swiper from 'swiper';
 import 'swiper/css';
-const swiper = new Swiper;
-*/
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+const swiper = new Swiper('.swiper',{
+    loop: true,
+    navigation:{
+      nextEl: '.swiper-button-next',
+      pverEl: '.swiper-button-prev'  
+    },
+});
+/*
 const slidesContainer = document.querySelector(".slider__images-container");
 const slides = document.querySelectorAll(".slider__image");
 const bars =document.querySelectorAll(".slider__bar");

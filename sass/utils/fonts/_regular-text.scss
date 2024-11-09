@@ -5,4 +5,8 @@
     letter-spacing: 0em;
 
     color: $text-color3;
+
+    &--black{
+        color: $main-text-color;
+    }
 }

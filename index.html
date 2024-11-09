@@ -16,6 +16,7 @@
     />
     <link rel="stylesheet" type="text/css" href="./css/modern-normalize.css" />
     <link rel="stylesheet" type="text/css" href="./sass/main.css">
+    <link>
   </head>
 
   <body class="main-page">
@@ -102,35 +103,37 @@
           <div class="hero__title-section">
             <div class="decor-circle hero__decor-circle"></div>
             <h1 class="title hero__title">Find a perfect home you love..!</h1>
-            <p class="regular-text hero__regular-text">Etiam eget elementum elit. Aenean dignissim dapibus vestibulum. Integer a dolor eu sapien sodales vulputate ac in purus.</p>
-            <div class="slider hero__slider">
+            <p class="regular-text hero__regular-text">
+              Etiam eget elementum elit. Aenean dignissim dapibus vestibulum. Integer a dolor eu sapien sodales vulputate ac in purus.
+            </p>
+            <div class="swiper slider hero__slider">
               <div class="slider__round-window">
-              <div class="slider__images-container">
-                <img id="slide-1" class="slider__image hero__image"
+              <div class="swiper-wrapper slider__images-container">
+                <img id="slide-1" class="swiper-slide slider__image hero__image"
                   src="./images/jpg/luxury-classic-modern-bedroom-suite-hotel.jpg"
                   alt="спальна кімната виконанана в класичному лакшері стилі"
                 />
-                <img id="slide-2" class="slider__image hero__image"
+                <img id="slide-2" class="swiper-slide slider__image hero__image"
                   src="./images/jpg/kenny-eliason-kdwahpWYfQo-unsplash.jpg"
                   alt="кухня з білими меблями виконона в coastal стилі"
                 />
-                <img id="slide-3" class="slider__image hero__image"
+                <img id="slide-3" class="swiper-slide slider__image hero__image"
                   src="./images/jpg/jilbert-ebrahimi-0WVik0B5UWY-unsplash.jpg"
                   alt="вітальня в простому стилі"
                 />
-                <img id="slide-4" class="slider__image hero__image"
+                <img id="slide-4" class="swiper-slide slider__image hero__image"
                   src="./images/jpg/pexels-pixabay-271624.jpg"
                   alt="спальна кімната з диваном та невеликим столиком"
                 />
               </div>
               </div>
               <div class="slider__nav">
-                <button class="slider__button slider__button--back" onclick="backSlide()">
+                <button class="swiper-button-prev slider__button slider__button--back" onclick="backSlide()">
                   <svg class="slider__button-svg">
                     <use href="./images/svg/icons.svg#left-slider-icon"></use>
                   </svg>
                 </button>
-                <button class="slider__button slider__button--next" onclick="nextSlide()">
+                <button class="swiper-button-next slider__button slider__button--next" onclick="nextSlide()">
                   <svg class="slider__button-svg">
                     <use href="./images/svg/icons.svg#right-slider-icon"></use>
                   </svg>
@@ -349,7 +352,7 @@
                 </div>
                 <div class="info-section__picture-form info-section__picture-form--third">
                   <img class="info-section__image"
-                    src="./images/jpg/luxury-house1.jpg"
+                    src="./images/jpg/living-room.jpg"
                     alt="Two-stored panthouse with pool"
                   />
                 </div>
@@ -361,7 +364,64 @@
       </section>
 
       <section class="offers-section">
-      </section>
+        <div class="container offers-section__container container--main">
+          <h3 class="secondary-title offers-section__secondary-title">Checkout our new</h3>
+          <div class="flex-div offers-section__flex-div">
+            <div class="offers-section__info-div">
+              <h2 class="offers-section__title">Latest listed properties</h2>
+              <p class="regular-text offers-section__regular-text">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.</p>
+            </div>
+            <ul class="offers-section__button-list">
+              <li class="offers-section__button-item">
+                <button class="button button--bordered offers-section__button">All</button>
+              </li>
+              <li class="offers-section__button-item">
+                <button class="button button--bordered offers-section__button">Sell</button>
+              </li>
+              <li class="offers-section__button-item">
+                <button class="button button--bordered offers-section__button">Rent</button>
+              </li>
+            </ul>
+          </div>
+          <div class="slider-offer hero__slider-offer">
+            <div class="slider-offer__container">
+              <figure class="figure-offer slider__figure-offer">
+                <div class="figure-offer__image-container">
+                  <img class="figure-offer__image"
+                    src="./images/jpg/offer1.jpg"
+                    alt="Two-stored panthouse with pool"
+                  />
+                  <div class="figure-offer__quality-container figure-offer__quality-container--popular"> <!--change name-->
+                    <svg class="figure-offer__quality-svg">
+                      <use href="./images/svg/icons.svg#fire-icon"></use>
+                    </svg>
+                    <p class="figure-offer__quality-text">Popular</p>
+                  </div>
+                </div>
+                <figcaption class="figure-offer__figcaption">
+                  <p class="figure-offer__cost">$5,970</p>
+                  <h4 class="figure-offer__title">Tranquil Haven in the Woods</h4>
+                  <p class="regular-text figure-offer__regular-text">103 Wright CourtBurien, WA 98168</p>
+                  <div class="figure-offer__rooms">
+                    <p class="figure-offer__rooms-text">
+                      <svg class="figure-offer__svg figure-offer__svg--wide">
+                        <use href="./images/svg/icons.svg#bed-icon"></use>
+                      </svg>
+                      4 Bedrooms
+                    </p>
+                    <p class="figure-offer__rooms-text">
+                      <svg class="figure-offer__svg figure-offer__svg--thin">
+                        <use href="./images/svg/icons.svg#bathroom-icon"></use>
+                      </svg>
+                      3 Baths
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+        </section>
     </main>
 
     <footer class="main-pagefooter"></footer>

@@ -20,15 +20,22 @@
         padding: 15px 26px;
         background-color: $main-color;
         color: $white-color;
-        border-bottom-left-radius: 30% 100%;
-        border-bottom-right-radius: 30% 100%;
-        border-top-left-radius: 30% 100%;
-        border-top-right-radius: 30% 100%;
+        border-radius: 30px;
         border-style: none;
     }
 
     &--transparent{
         border-style: none;
         background-color: inherit;
+    }
+
+    &--bordered{
+        border-style: solid;
+        border-radius: 30px;
+        border-width: 1px;
+        border-color: $main-color;
+        background-color: inherit;
+        color: $main-color;
+        padding: 15px 30px;
     }
 }
