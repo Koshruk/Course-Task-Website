@@ -1,18 +1,11 @@
-.slider{
+.slider-hero{
     position: relative;
-
     width: 540px;
-
-    &__round-window{
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 10px 10px 20px rgba(black, 0.2);
-    }
+    overflow: hidden;
 
     &__images-container{
         display: flex;
         transition: transform 0.5s ease;
-        width: calc(540px * 4);
     }
 
     &__image{
@@ -21,14 +14,41 @@
         object-fit: cover;
     }
 
+    &__button{
+        position: absolute;
+        overflow: visible;
+        height: 40px !important;
+        width: 40px !important;
+        border-radius: 50%;
+        background-color: $white-color;
+
+        &::after, &::before{
+            display: none;
+        }
+
+        &--prev{
+            left: -18px !important;
+        }
+
+        &--next{
+            right: -18px !important;
+        }
+    }
+
     &__nav{
         position: absolute;
         display: flex;
         justify-content: space-between;
         width: 100%;
-        top: 146px;
+        bottom: 50%;
     }
 
+    &__pagination{
+        position: absolute;
+        bottom: -20px !important;
+    }
+
+/*
     &__button{
         position: absolute;
         border-style: none;
@@ -44,26 +64,30 @@
             right: -18px;
         }
     }
+*/
 
     &__button-svg{
         display: flex;
         align-items: center;
-        width: 7px;
-        height: 13px;
+        max-width: 7px;
+        max-height: 13px;
         color: $text-color4;
     }
 
+/*
     &__bar-list{
         display: flex;
         gap: 34px;
         justify-content: space-between;
     }
-
+*/
+/*
     &__bar-section{
         margin-top: 9px;
         padding: 0 11px;
     }
-
+*/
+/*
     &__bar{
         height: 4px;
         width: 100%;
@@ -75,4 +99,5 @@
             background-color: $color1;
         }
     }
+        */
 }

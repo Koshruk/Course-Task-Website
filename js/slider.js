@@ -1,13 +1,12 @@
-import Swiper from 'swiper';
-import 'swiper/css';
-import { Navigation, Pagination } from 'swiper/modules';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-const swiper = new Swiper('.swiper',{
+const swiper = new Swiper('.swiperHero',{
+    direction: 'horizontal',
     loop: true,
     navigation:{
       nextEl: '.swiper-button-next',
-      pverEl: '.swiper-button-prev'  
+      prevEl: '.swiper-button-prev'  
+    },
+    pagination:{
+        el: '.swiper-pagination',
     },
 });
 /*
