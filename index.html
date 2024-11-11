@@ -113,48 +113,55 @@
                 Etiam eget elementum elit. Aenean dignissim dapibus vestibulum.
                 Integer a dolor eu sapien sodales vulputate ac in purus.
               </p>
-              <div class="slider-hero hero__slider-hero swiperHero">
-                <div class="slider-hero__images-container swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img
-                      class="slider-hero__image"
-                      src="./images/jpg/luxury-classic-modern-bedroom-suite-hotel.jpg"
-                      alt="спальна кімната виконанана в класичному лакшері стилі"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      class="slider-hero__image"
-                      src="./images/jpg/kenny-eliason-kdwahpWYfQo-unsplash.jpg"
-                      alt="кухня з білими меблями виконона в coastal стилі"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      class="slider-hero__image"
-                      src="./images/jpg/jilbert-ebrahimi-0WVik0B5UWY-unsplash.jpg"
-                      alt="вітальня в простому стилі"
-                    />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      class="slider-hero__image"
-                      src="./images/jpg/pexels-pixabay-271624.jpg"
-                      alt="спальна кімната з диваном та невеликим столиком"
-                    />
+              <div class="slider-hero hero__slider-hero">
+                <div class="slider-hero__swiper swiperHero">
+                  <div class="slider-hero__images-container swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img
+                        class="slider-hero__image"
+                        src="./images/jpg/luxury-classic-modern-bedroom-suite-hotel.jpg"
+                        alt="спальна кімната виконанана в класичному лакшері стилі"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        class="slider-hero__image"
+                        src="./images/jpg/kenny-eliason-kdwahpWYfQo-unsplash.jpg"
+                        alt="кухня з білими меблями виконона в coastal стилі"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        class="slider-hero__image"
+                        src="./images/jpg/jilbert-ebrahimi-0WVik0B5UWY-unsplash.jpg"
+                        alt="вітальня в простому стилі"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        class="slider-hero__image"
+                        src="./images/jpg/pexels-pixabay-271624.jpg"
+                        alt="спальна кімната з диваном та невеликим столиком"
+                      />
+                    </div>
                   </div>
                 </div>
                 <div class="slider-hero__nav">
                   <div class="slider-hero__button slider-hero__button--prev swiper-button-prev">
-                    <svg class="slider-hero__button-svg">
+                    <svg class="slider-hero__button-svg slider-hero__button-svg--left">
                       <use href="./images/svg/icons.svg#left-slider-icon"></use>
                     </svg>
                   </div>
-                  <div class="slider-hero__button slider-hero__button--next swiper-button-next"></div>
+                  <div class="slider-hero__button slider-hero__button--next swiper-button-next">
+                    <svg class="slider-hero__button-svg slider-hero__button-svg--right">
+                      <use href="./images/svg/icons.svg#left-slider-icon"></use>
+                    </svg>
+                  </div>
                 </div>
-                <div class="slider-hero__pagination swiper-pagination"></div>
+                <div class="slider-hero__pagination swiper-pagination-hero"></div>
               </div>
             </div>
+
             <div class="form-section hero__form-section">
               <div class="form-section__nav">
                 <button class="button button--transparent form-section__button">
@@ -359,7 +366,7 @@
           </h3>
           <div class="flex-div info-section__flex-div">
             <div class="info-section__info-div">
-              <h2 class="info-section__title">
+              <h2 class="info-section__section-title section-title">
                 Assisting individuals in locating the appropriate real estate.
               </h2>
               <p
@@ -439,7 +446,7 @@
           </h3>
           <div class="flex-div offers-section__flex-div">
             <div class="offers-section__info-div">
-              <h2 class="offers-section__title">Latest listed properties</h2>
+              <h2 class="offers-section__section-title section-title">Latest listed properties</h2>
               <p class="regular-text offers-section__regular-text">
                 Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec
                 dignissim purus.
@@ -463,23 +470,172 @@
               </li>
             </ul>
           </div>
-          <div class="slider-offer hero__slider-offer">
-            <div class="slider-offer__container">
-              <figure class="figure-offer slider__figure-offer">
+          <div class="swiperOffers slider-offers hero__slider-offers">
+            <div class="swiper-wrapper slider-offers__container">
+              <figure class="swiper-slide figure-offer slider-offers__figure-offer">
                 <div class="figure-offer__image-container">
                   <img
                     class="figure-offer__image"
                     src="./images/jpg/offer1.jpg"
                     alt="Two-stored panthouse with pool"
                   />
-                  <div
-                    class="figure-offer__quality-container figure-offer__quality-container--popular"
-                  >
-                    <!--change name-->
-                    <svg class="figure-offer__quality-svg">
+                  <div class="figure-offer__badge figure-offer__badge--popular">
+                    <svg class="figure-offer__badge-svg">
                       <use href="./images/svg/icons.svg#fire-icon"></use>
                     </svg>
-                    <p class="figure-offer__quality-text">Popular</p>
+                    <p class="figure-offer__badge-text">Popular</p>
+                  </div>
+                </div>
+                <figcaption class="figure-offer__figcaption">
+                  <p class="figure-offer__cost">$5,970</p>
+                  <h4 class="figure-offer__title">
+                    Tranquil Haven in the Woods
+                  </h4>
+                  <p class="regular-text figure-offer__regular-text">
+                    103 Wright CourtBurien, WA 98168
+                  </p>
+                  <div class="figure-offer__rooms">
+                    <p class="figure-offer__rooms-text">
+                      <svg class="figure-offer__svg figure-offer__svg--wide">
+                        <use href="./images/svg/icons.svg#bed-icon"></use>
+                      </svg>
+                      4 Bedrooms
+                    </p>
+                    <p class="figure-offer__rooms-text">
+                      <svg class="figure-offer__svg figure-offer__svg--thin">
+                        <use href="./images/svg/icons.svg#bathroom-icon"></use>
+                      </svg>
+                      3 Baths
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+              <figure class="swiper-slide figure-offer slider__figure-offer">
+                <div class="figure-offer__image-container">
+                  <img
+                    class="figure-offer__image"
+                    src="./images/jpg/offer2.jpg"
+                    alt="Two-stored panthouse with pool"
+                  />
+                  <div class="figure-offer__badge figure-offer__badge--popular">
+                    <svg class="figure-offer__badge-svg">
+                      <use href="./images/svg/icons.svg#fire-icon"></use>
+                    </svg>
+                    <p class="figure-offer__badge-text">Popular</p>
+                  </div>
+                </div>
+                <figcaption class="figure-offer__figcaption">
+                  <p class="figure-offer__cost">$5,970</p>
+                  <h4 class="figure-offer__title">
+                    Tranquil Haven in the Woods
+                  </h4>
+                  <p class="regular-text figure-offer__regular-text">
+                    103 Wright CourtBurien, WA 98168
+                  </p>
+                  <div class="figure-offer__rooms">
+                    <p class="figure-offer__rooms-text">
+                      <svg class="figure-offer__svg figure-offer__svg--wide">
+                        <use href="./images/svg/icons.svg#bed-icon"></use>
+                      </svg>
+                      4 Bedrooms
+                    </p>
+                    <p class="figure-offer__rooms-text">
+                      <svg class="figure-offer__svg figure-offer__svg--thin">
+                        <use href="./images/svg/icons.svg#bathroom-icon"></use>
+                      </svg>
+                      3 Baths
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+              <figure class="swiper-slide figure-offer slider__figure-offer">
+                <div class="figure-offer__image-container">
+                  <img
+                    class="figure-offer__image"
+                    src="./images/jpg/offer3.jpg"
+                    alt="Two-stored panthouse with pool"
+                  />
+                  <div class="figure-offer__badge figure-offer__badge--popular">
+                    <svg class="figure-offer__badge-svg">
+                      <use href="./images/svg/icons.svg#fire-icon"></use>
+                    </svg>
+                    <p class="figure-offer__badge-text">Popular</p>
+                  </div>
+                </div>
+                <figcaption class="figure-offer__figcaption">
+                  <p class="figure-offer__cost">$5,970</p>
+                  <h4 class="figure-offer__title">
+                    Tranquil Haven in the Woods
+                  </h4>
+                  <p class="regular-text figure-offer__regular-text">
+                    103 Wright CourtBurien, WA 98168
+                  </p>
+                  <div class="figure-offer__rooms">
+                    <p class="figure-offer__rooms-text">
+                      <svg class="figure-offer__svg figure-offer__svg--wide">
+                        <use href="./images/svg/icons.svg#bed-icon"></use>
+                      </svg>
+                      4 Bedrooms
+                    </p>
+                    <p class="figure-offer__rooms-text">
+                      <svg class="figure-offer__svg figure-offer__svg--thin">
+                        <use href="./images/svg/icons.svg#bathroom-icon"></use>
+                      </svg>
+                      3 Baths
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+              <figure class="swiper-slide figure-offer slider__figure-offer">
+                <div class="figure-offer__image-container">
+                  <img
+                    class="figure-offer__image"
+                    src="./images/jpg/offer4.jpg"
+                    alt="Two-stored panthouse with pool"
+                  />
+                  <div class="figure-offer__badge figure-offer__badge--popular">
+                    <svg class="figure-offer__badge-svg">
+                      <use href="./images/svg/icons.svg#fire-icon"></use>
+                    </svg>
+                    <p class="figure-offer__badge-text">Popular</p>
+                  </div>
+                </div>
+                <figcaption class="figure-offer__figcaption">
+                  <p class="figure-offer__cost">$5,970</p>
+                  <h4 class="figure-offer__title">
+                    Tranquil Haven in the Woods
+                  </h4>
+                  <p class="regular-text figure-offer__regular-text">
+                    103 Wright CourtBurien, WA 98168
+                  </p>
+                  <div class="figure-offer__rooms">
+                    <p class="figure-offer__rooms-text">
+                      <svg class="figure-offer__svg figure-offer__svg--wide">
+                        <use href="./images/svg/icons.svg#bed-icon"></use>
+                      </svg>
+                      4 Bedrooms
+                    </p>
+                    <p class="figure-offer__rooms-text">
+                      <svg class="figure-offer__svg figure-offer__svg--thin">
+                        <use href="./images/svg/icons.svg#bathroom-icon"></use>
+                      </svg>
+                      3 Baths
+                    </p>
+                  </div>
+                </figcaption>
+              </figure>
+              <figure class="swiper-slide figure-offer slider__figure-offer">
+                <div class="figure-offer__image-container">
+                  <img
+                    class="figure-offer__image"
+                    src="./images/jpg/offer5.jpg"
+                    alt="Two-stored panthouse with pool"
+                  />
+                  <div class="figure-offer__badge figure-offer__badge--popular">
+                    <svg class="figure-offer__badge-svg">
+                      <use href="./images/svg/icons.svg#fire-icon"></use>
+                    </svg>
+                    <p class="figure-offer__badge-text">Popular</p>
                   </div>
                 </div>
                 <figcaption class="figure-offer__figcaption">
@@ -510,6 +666,252 @@
           </div>
         </div>
       </section>
+
+      <section class="services-section">
+        <div class="container services-section__container container--main">
+          <h3 class="services-section__secondary-title">Our services</h3>
+          <h2 class="services-section__section-title section-title">Donec porttitor euismod dignissim</h2>
+          <ul class="services-section__services-list">
+            <li class="services-section__services-item">
+              <div class="services-section__svg-container">
+                <svg class="services-section__svg">
+                  <use href="./images/svg/icons.svg#search-icon"></use>
+                </svg>
+              </div>
+              <h4 class="services-section__service-title">Buy a New Home</h4>
+              <p class="regular-text services-section__regular-text">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.</p>
+            </li>
+            <li class="services-section__services-item">
+              <div class="services-section__svg-container">
+                <svg class="services-section__svg">
+                  <use href="./images/svg/icons.svg#home-icon"></use>
+                </svg>
+              </div>
+              <h4 class="services-section__service-title">Sell a House</h4>
+              <p class="regular-text services-section__regular-text">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.</p>
+            </li>
+            </li>
+            <li class="services-section__services-item">
+              <div class="services-section__svg-container">
+                <svg class="services-section__svg">
+                  <use href="./images/svg/icons.svg#bed-icon"></use>
+                </svg>
+              </div>
+              <h4 class="services-section__service-title">Rent a House</h4>
+              <p class="regular-text services-section__regular-text">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.</p>
+            </li>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="areas-section">
+        <div class="container areas-section__container container--main">
+          <h3 class="secondary-title areas-section__secondary-title">Areas across the town</h3>
+          <h2 class="section-title areas-section__section-title">Neighborhood properties</h2>
+          <ul class="areas-section__pictures-list">
+            <li class="areas-section__pictures-item areas-section__pictures-item--thin">
+              <img
+                class="areas-section__image"
+                src="./images/jpg/nyc.jpg"
+                alt="High-tech style panthouse"
+              />
+              <div class="areas-section__overlay">
+                <p class="areas-section__properties-number">216</p>
+                <p class="areas-section__location">New York City, NY</p>
+              </div>
+            </li>
+            <li class="areas-section__pictures-item areas-section__pictures-item--thin">
+              <img
+                class="areas-section__image"
+                src="./images/jpg/houston.jpg"
+                alt="High-tech style panthouse"
+              />
+              <div class="areas-section__overlay">
+                <p class="areas-section__properties-number">212</p>
+                <p class="areas-section__location">San Diego, CA</p>
+              </div>
+            </li>
+            <li class="areas-section__pictures-item areas-section__pictures-item">
+              <img
+                class="areas-section__image"
+                src="./images/jpg/san-diego.jpg"
+                alt="High-tech style panthouse"
+              />
+              <div class="areas-section__overlay">
+                <p class="areas-section__properties-number">183</p>
+                <p class="areas-section__location">Philadelphia, PA</p>
+              </div>
+            </li>
+          </ul>
+          <ul class="areas-section__pictures-list">
+            <li class="areas-section__pictures-item areas-section__pictures-item--medium">
+              <img
+                class="areas-section__image"
+                src="./images/jpg/philadelphia.jpg"
+                alt="High-tech style panthouse"
+              />
+              <div class="areas-section__overlay">
+                <p class="areas-section__properties-number">112</p>
+                <p class="areas-section__location">San-Francisco, CA</p>
+              </div>
+            </li>
+            <li class="areas-section__pictures-item areas-section__pictures-item">
+              <img
+                class="areas-section__image"
+                src="./images/jpg/san-francisco.jpg"
+                alt="High-tech style panthouse"
+              />
+              <div class="areas-section__overlay">
+                <p class="areas-section__properties-number">141</p>
+                <p class="areas-section__location">Houston, TX</p>
+              </div>
+            </li>
+          </ul>
+          <div class="decor-circle areas-section__decor-circle"></div>
+        </div>
+      </section>
+      <section class="team-section">
+        <div class="container container--main team-section__container">
+          <h3 class="secondary-title team-section__secondary-title">Introduce yourself to</h3>
+          <h2 class="section-title team-section__section-title">Our Team of Experts</h2>
+          <ul class="team-section__members-list">
+            <li class="team-section__member-item">
+              <figure class="figure-member team-section__figure-member">
+                <div class="figure-member__image-container">
+                <img
+                  class="figure-member__image"
+                  src="./images/jpg/brandon-m.jpg"
+                  alt="Brendon M. Perez"
+                />
+                </div>
+                <figcaption class="figure-member__figcaption">
+                  <h4 class="figure-member__title">Brendon M. Perez</h4>
+                  <p class="figure-member__text">CEO & Founder</p>
+                </figcaption>
+              </figure>
+              <figure class="figure-member team-section__figure-member">
+                <div class="figure-member__image-container">
+                  <img
+                    class="figure-member__image"
+                    src="./images/jpg/jody-j-appleby.jpg"
+                    alt="Jody J. Appleby"
+                  />
+                  </div>
+                <figcaption class="figure-member__figcaption">
+                  <h4 class="figure-member__title">Jody J. Appleby</h4>
+                  <p class="figure-member__text">Real Estate Developer</p>
+                </figcaption>
+              </figure>
+              <figure class="figure-member team-section__figure-member">
+                <div class="figure-member__image-container">
+                  <img
+                    class="figure-member__image"
+                    src="./images/jpg/justin-s-meza.jpg"
+                    alt="Justin J. Meza"
+                  />
+                  </div>
+                <figcaption class="figure-member__figcaption">
+                  <h4 class="figure-member__title">Justin J. Meza</h4>
+                  <p class="figure-member__text">Listing Agent</p>
+                </figcaption>
+              </figure>
+              <figure class="figure-member team-section__figure-member">
+                <div class="figure-member__image-container">
+                  <img
+                    class="figure-member__image"
+                    src="./images/jpg/susan-t-smith.jpg"
+                    alt="Susan T. Smith"
+                  />
+                  </div>
+                <figcaption class="figure-member__figcaption">
+                  <h4 class="figure-member__title">Susan T. Smith</h4>
+                  <p class="figure-member__text">Buyer's Agent</p>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="blogs-section">
+        <div class="container container--main blogs-section__container">
+          <h3 class="secondary-title blogs-section__secondary-title">What's trending</h3>
+          <h2 class="section-title blogs-section__section-title">Latest Blogs & Posts</h2>
+          <div class="slider-blogs blogs-section__slider-blogs">
+            <div class="swiperBlogs slider-blogs__swiper">
+              <div class="swiper-wrapper slider-blogs__wrapper">
+                <figure class="swiper-slide figure-blogs slider-blogs__figure-blogs">
+                  <div class="figure-blogs__image-container">
+                    <img
+                      class="figure-blogs__image"
+                      src="./images/jpg/avoid-mistakes.jpg"
+                      alt="people take notes on a meeting"
+                    />
+                    <div class="figure-blogs__badge">
+                      <p class="figure-blogs__badge-date">28</p>
+                      <p class="regular-text figure-blogs__badge-day">Tue</p>
+                    </div>
+                  </div>
+                  <figcaption class="figure-blogs__figcaption">
+                    <h4 class="figure-blogs__title">Top 10 Home Buying Mistakes to Avoid</h4>
+                    <p class="regular-text figure-blogs__regular-text">Etiam eget elementum elit. Aenean dignissim dapibus vestibulum</p>
+                    <a class="figure-blogs__link" href="">
+                      <svg class="figure-blogs__link-svg">
+                        <use href="./images/svg/icons.svg#arrow-icon"></use>
+                      </svg>
+                    </a>
+                  </figcaption>
+                </figure>
+                <figure class="swiper-slide figure-blogs slider-blogs__figure-blogs">
+                  <div class="figure-blogs__image-container">
+                    <img
+                      class="figure-blogs__image"
+                      src="./images/jpg/quick-sale.jpg"
+                      alt="people take notes on a meeting"
+                    />
+                    <div class="figure-blogs__badge">
+                      <p class="figure-blogs__badge-date">10</p>
+                      <p class="regular-text figure-blogs__badge-day">Mon</p>
+                    </div>
+                  </div>
+                  <figcaption class="figure-blogs__figcaption">
+                    <h4 class="figure-blogs__title">How to Stage Your Home for a Quick Sale</h4>
+                    <p class="regular-text figure-blogs__regular-text">Nullam odio lacus, dictum quis pretium congue, vehicula venenatis nunc.</p>
+                    <a class="figure-blogs__link" href="">
+                      <svg class="figure-blogs__link-svg">
+                        <use href="./images/svg/icons.svg#arrow-icon"></use>
+                      </svg>
+                    </a>
+                </figure>
+                <figure class="swiper-slide figure-blogs slider-blogs__figure-blogs">
+                  <div class="figure-blogs__image-container">
+                    <img
+                      class="figure-blogs__image"
+                      src="./images/jpg/5-tips.jpg"
+                      alt="people take notes on a meeting"
+                    />
+                    <div class="figure-blogs__badge">
+                      <p class="figure-blogs__badge-date">26</p>
+                      <p class="regular-text figure-blogs__badge-day">Wed</p>
+                    </div>
+                  </div>
+                  <figcaption class="figure-blogs__figcaption">
+                    <h4 class="figure-blogs__title">5 Tips for First-Time Home Sellers</h4>
+                    <p class="regular-text figure-blogs__regular-text">In hac habitasse platea dictumst. Phasellus vel velit vel augue maximus.</p>
+                    <a class="figure-blogs__link" href="">
+                      <svg class="figure-blogs__link-svg">
+                        <use href="./images/svg/icons.svg#arrow-icon"></use>
+                      </svg>
+                    </a>
+                  </figcaption>
+                </figure>  
+              </div>
+            </div>
+          </div>
+        </div> 
+      </section>
+      
     </main>
 
     <footer class="main-pagefooter"></footer>

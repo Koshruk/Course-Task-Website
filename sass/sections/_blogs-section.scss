@@ -1,0 +1,17 @@
+.blogs-section{
+    padding-top: 110px;
+    padding-bottom: 100px;
+    background-color: $main-color;
+
+    &__secondary-title{
+        color: $white-color;
+        text-align: center;
+    }
+
+    &__section-title{
+        color: $white-color;
+        text-align: center;
+
+        margin-bottom: 80px;
+    }
+}

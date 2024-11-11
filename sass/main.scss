@@ -1,6 +1,7 @@
 @import 'utils/variables';
 @import 'utils/fonts/title';
 @import 'utils/fonts/regular-text';
+@import 'utils/fonts/section-title';
 
 @import 'base/defaults';
 @import 'base/container';
@@ -8,9 +9,12 @@
 @import 'components/button';
 @import 'components/secondary-title';
 @import 'components/header';
-@import 'components/slider';
+@import 'components/slider-hero';
+@import 'components/slider-blogs';
 @import 'components/decor-circle';
 @import 'components/figure-offer';
+@import 'components/figure-member';
+@import 'components/figure-blogs';
 
 
 @import 'sections/hero';
@@ -19,3 +23,7 @@
 @import 'sections/clients-section';
 @import 'sections/info-section';
 @import 'sections/offers-section';
+@import 'sections/services-section';
+@import 'sections/areas-section';
+@import 'sections/team-section';
+@import 'sections/blogs-section';

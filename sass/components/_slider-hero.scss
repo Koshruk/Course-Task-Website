@@ -1,7 +1,13 @@
 .slider-hero{
     position: relative;
-    width: 540px;
-    overflow: hidden;
+    user-select: none;
+
+    &__swiper{
+        width: 540px;
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 15px 20px 40px rgba(black, 0.2);
+    }
 
     &__images-container{
         display: flex;
@@ -46,6 +52,24 @@
     &__pagination{
         position: absolute;
         bottom: -20px !important;
+        width: 100%;
+        padding: 0 11px;
+
+        display: flex;
+        gap: 34px;
+        justify-content: center;
+    }
+
+    &__pagination-bullet{
+        display: inline-block;
+        height: 4px;
+        width: 100%;
+        background-color: $white-color;
+        border-radius: 2px;
+
+        &--active{
+            background-color: $color1;
+        }
     }
 
 /*
@@ -72,6 +96,10 @@
         max-width: 7px;
         max-height: 13px;
         color: $text-color4;
+
+        &--right{
+            transform: scaleX(-1);
+        }
     }
 
 /*

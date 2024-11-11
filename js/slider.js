@@ -1,4 +1,4 @@
-const swiper = new Swiper('.swiperHero',{
+const swiperHero = new Swiper('.swiperHero',{
     direction: 'horizontal',
     loop: true,
     navigation:{
@@ -6,8 +6,21 @@ const swiper = new Swiper('.swiperHero',{
       prevEl: '.swiper-button-prev'  
     },
     pagination:{
-        el: '.swiper-pagination',
+        el: '.swiper-pagination-hero',
+        bulletClass: 'slider-hero__pagination-bullet',
+        bulletActiveClass: 'slider-hero__pagination-bullet--active',
     },
+});
+
+const swiperOffers = new Swiper('.swiperOffers',{
+    slidesPerView: 3,
+    freeMode: true,
+    spaceBetween: 30,
+});
+
+const swiperBlogs = new Swiper('.swiperBlogs',{
+    slidesPerView: 3,
+    spaceBetween: 50,
 });
 /*
 const slidesContainer = document.querySelector(".slider__images-container");

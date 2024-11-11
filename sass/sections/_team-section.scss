@@ -1,0 +1,20 @@
+.team-section{
+    padding-bottom: 180px;
+    
+    &__secondary-title{
+        text-align: center;
+    }
+    &__section-title{
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    &__members-list{
+        padding: 0 15px;
+    }
+
+    &__member-item{
+        display: flex;
+        justify-content: space-between;
+    }
+}
