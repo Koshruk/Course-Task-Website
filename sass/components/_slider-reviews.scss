@@ -1,0 +1,35 @@
+.slider-reviews{
+    position: relative;
+
+    &__swiper{
+        height: 340px;
+        overflow: hidden;
+        box-shadow: 5px 10px 20px rgba(black, 0.2);
+        border-radius: 30px;
+    }
+
+    &__pagination{
+        position: absolute;
+        bottom: 0 !important;
+        right: -30px !important;
+
+        padding: 0 0px;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 34px;
+        justify-content: center;
+    }
+
+    &__pagination-bullet{
+        display: inline-block;
+        height: 100%;
+        width: 4px;
+        background-color: $text-color4;
+        border-radius: 2px;
+
+        &--active{
+            background-color: $text-color3;
+        }
+    }
+}

@@ -2,4 +2,8 @@
     position: absolute;
     background: linear-gradient($color1, rgba($color1, 0.0));
     border-radius: 50%;
+
+    &--white{
+        background: linear-gradient($white-color, rgba($white-color, 0.0));
+    }
 }

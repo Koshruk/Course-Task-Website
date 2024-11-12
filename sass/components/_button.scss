@@ -10,6 +10,7 @@
     justify-content: center;
 
     color: inherit;
+    border-style: none;
 
     &__svg{
         max-width: 20px;
@@ -21,11 +22,9 @@
         background-color: $main-color;
         color: $white-color;
         border-radius: 30px;
-        border-style: none;
     }
 
     &--transparent{
-        border-style: none;
         background-color: inherit;
     }
 
@@ -36,6 +35,13 @@
         border-color: $main-color;
         background-color: inherit;
         color: $main-color;
+        padding: 15px 30px;
+    }
+
+    &--white{
+        background-color: $white-color;
+        color: $main-color;
+        border-radius: 30px;
         padding: 15px 30px;
     }
 }

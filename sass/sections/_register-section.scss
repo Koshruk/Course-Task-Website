@@ -1,0 +1,62 @@
+.register-section{
+
+    padding: 0 0 180px;
+
+    &__container{
+        background-color: $main-color;
+        max-width: 1200px;
+        padding: 70px 25px;
+        border-radius: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+
+    &__image{
+        width: 358px;
+
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    &__text-div{
+        margin-left: 50px;
+        margin-right: 85px;
+        width: 360px;
+        margin-left: auto;
+    }
+
+    &__title{
+        color: $white-color;
+        margin-bottom: 15px;
+    }
+
+    &__regular-text{
+        color: $white-color;
+    }
+
+    &__button{
+        margin-right: 180px;
+    }
+
+    &__decor-circle{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        opacity: 50%;
+        &--first{
+            transform: rotate(-45deg);
+
+            left: 266px;
+            bottom: 50px;
+        }
+
+        &--second{
+            transform: rotate(45deg);
+
+            right: 50px;
+            top: -40px;
+        }
+    }
+}

@@ -1,6 +1,7 @@
 const swiperHero = new Swiper('.swiperHero',{
     direction: 'horizontal',
     loop: true,
+    allowTouchMove: false,
     navigation:{
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'  
@@ -21,6 +22,22 @@ const swiperOffers = new Swiper('.swiperOffers',{
 const swiperBlogs = new Swiper('.swiperBlogs',{
     slidesPerView: 3,
     spaceBetween: 50,
+});
+
+const swiperReviews = new Swiper('.swiperReviews',{
+    slidesPerView: 1,
+    paceBetween: 50,
+    direction: 'vertical',
+    allowTouchMove: false,
+    navigation:{
+        nextEl: '.swiper-button-next-reviews',
+        prevEl: '.swiper-button-prev-reviews'  
+      },
+    pagination:{
+        el: '.swiper-pagination-reviews',
+        bulletClass: 'slider-reviews__pagination-bullet',
+        bulletActiveClass: 'slider-reviews__pagination-bullet--active',
+    },
 });
 /*
 const slidesContainer = document.querySelector(".slider__images-container");

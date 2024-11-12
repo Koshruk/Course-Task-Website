@@ -110,6 +110,7 @@ img {
   align-items: center;
   justify-content: center;
   color: inherit;
+  border-style: none;
 }
 .button__svg {
   max-width: 20px;
@@ -120,10 +121,8 @@ img {
   background-color: #3a0ca3;
   color: #ffffff;
   border-radius: 30px;
-  border-style: none;
 }
 .button--transparent {
-  border-style: none;
   background-color: inherit;
 }
 .button--bordered {
@@ -133,6 +132,12 @@ img {
   border-color: #3a0ca3;
   background-color: inherit;
   color: #3a0ca3;
+  padding: 15px 30px;
+}
+.button--white {
+  background-color: #ffffff;
+  color: #3a0ca3;
+  border-radius: 30px;
   padding: 15px 30px;
 }
 
@@ -331,7 +336,6 @@ img {
 }
 .slider-blogs__swiper {
   overflow: hidden;
-  padding-right: 40px;
 }
 .slider-blogs__pagination {
   position: absolute;
@@ -353,10 +357,44 @@ img {
   background-color: #4361ee;
 }
 
+.slider-reviews {
+  position: relative;
+}
+.slider-reviews__swiper {
+  height: 340px;
+  overflow: hidden;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+}
+.slider-reviews__pagination {
+  position: absolute;
+  bottom: 0 !important;
+  right: -30px !important;
+  padding: 0 0px;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  justify-content: center;
+}
+.slider-reviews__pagination-bullet {
+  display: inline-block;
+  height: 100%;
+  width: 4px;
+  background-color: #aaaaaa;
+  border-radius: 2px;
+}
+.slider-reviews__pagination-bullet--active {
+  background-color: #808080;
+}
+
 .decor-circle {
   position: absolute;
   background: linear-gradient(#4361ee, rgba(67, 97, 238, 0));
   border-radius: 50%;
+}
+.decor-circle--white {
+  background: linear-gradient(#ffffff, rgba(255, 255, 255, 0));
 }
 
 .figure-offer__image-container {
@@ -516,6 +554,55 @@ img {
   max-width: 30px;
   max-height: 50px;
   color: #3a0ca3;
+}
+
+.review {
+  font-size: 19.4px;
+  font-weight: 500;
+  padding: 0 60px;
+}
+.review__content-div {
+  border-bottom: 1px solid #d4d4d4;
+  padding: 30px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 250px;
+}
+.review__content {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.review__quotes-svg {
+  max-width: 60px;
+  max-height: 40px;
+  color: rgba(255, 199, 0, 0.4);
+}
+.review__author-div {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+}
+.review__author-image-container {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+}
+.review__author-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.review__author-name {
+  font-weight: 600;
+}
+.review__stars-image {
+  max-width: 86px;
+  margin-left: auto;
 }
 
 .hero {
@@ -960,4 +1047,94 @@ img {
   color: #ffffff;
   text-align: center;
   margin-bottom: 80px;
+}
+
+.reviews-section {
+  padding: 217px 0;
+}
+.reviews-section__title-div {
+  max-width: 415px;
+}
+.reviews-section__regular-text {
+  margin-top: 20px;
+  color: #2b2b2b;
+  margin-bottom: 60px;
+}
+.reviews-section__slider-reviews {
+  width: 500px;
+  margin-left: auto;
+}
+.reviews-section__slider-nav {
+  display: flex;
+}
+.reviews-section__slider-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #4361ee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reviews-section__slider-button--next {
+  margin-left: 50px;
+}
+.reviews-section__button-svg {
+  max-height: 30px;
+  max-width: 30px;
+  color: #4361ee;
+}
+.reviews-section__button-svg--left {
+  transform: scaleX(-1);
+}
+
+.register-section {
+  padding: 0 0 180px;
+}
+.register-section__container {
+  background-color: #3a0ca3;
+  max-width: 1200px;
+  padding: 70px 25px;
+  border-radius: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.register-section__image {
+  width: 358px;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+.register-section__text-div {
+  margin-left: 50px;
+  margin-right: 85px;
+  width: 360px;
+  margin-left: auto;
+}
+.register-section__title {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+.register-section__regular-text {
+  color: #ffffff;
+}
+.register-section__button {
+  margin-right: 180px;
+}
+.register-section__decor-circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  opacity: 50%;
+}
+.register-section__decor-circle--first {
+  transform: rotate(-45deg);
+  left: 266px;
+  bottom: 50px;
+}
+.register-section__decor-circle--second {
+  transform: rotate(45deg);
+  right: 50px;
+  top: -40px;
 }/*# sourceMappingURL=main.css.map */

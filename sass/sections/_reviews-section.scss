@@ -1,0 +1,47 @@
+.reviews-section{
+    padding: 217px 0;
+
+    &__title-div{
+        max-width: 415px;
+    }
+
+    &__regular-text{
+        margin-top: 20px;
+        color: $text-color2;
+        margin-bottom: 60px;
+    }
+
+    &__slider-reviews{
+        width: 500px;
+        margin-left: auto;
+    }
+
+    &__slider-nav{
+        display: flex;
+    }
+
+    &__slider-button{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid $color1;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &--next{
+            margin-left: 50px;
+        }
+    }
+
+    &__button-svg{
+        max-height: 30px;
+        max-width: 30px;
+        color: $color1;
+
+        &--left{
+            transform: scaleX(-1);
+        }
+    }
+}
