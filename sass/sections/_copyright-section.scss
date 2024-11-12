@@ -1,0 +1,13 @@
+.copyright-section{
+    padding: 20px 0;
+    background-color: $text-color1;
+    color: $text-color4;
+    font-size: 16px;
+    line-height: 1.65;
+    
+    &__links-list{
+        margin-left: auto;
+        display: flex;
+        gap: 40px;
+    }
+}

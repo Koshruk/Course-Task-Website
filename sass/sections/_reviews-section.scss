@@ -1,6 +1,10 @@
 .reviews-section{
     padding: 217px 0;
 
+    &__container{
+        position: relative;
+    }
+
     &__title-div{
         max-width: 415px;
     }
@@ -18,6 +22,7 @@
 
     &__slider-nav{
         display: flex;
+        user-select: none;
     }
 
     &__slider-button{
@@ -43,5 +48,16 @@
         &--left{
             transform: scaleX(-1);
         }
+    }
+
+    &__decor-circle{
+        position: absolute;
+
+        width: 60px;
+        height: 60px;
+        transform: rotate(-30deg);
+        opacity: 50%;
+        top: -20px;
+        right: 500px;
     }
 }

@@ -55,19 +55,19 @@
           <nav class="header__navigation">
             <ul class="header__nav-list">
               <li class="header__nav-item">
-                <a class="header__nav-link" href="">Home</a>
+                <a class="header__nav-link" href="#home">Home</a>
               </li>
               <li class="header__nav-item">
-                <a class="header__nav-link" href="">About</a>
+                <a class="header__nav-link" href="#info">About</a>
               </li>
               <li class="header__nav-item">
-                <a class="header__nav-link" href="">Listings</a>
+                <a class="header__nav-link" href="#offers">Listings</a>
               </li>
               <li class="header__nav-item">
-                <a class="header__nav-link" href="">Services</a>
+                <a class="header__nav-link" href="#services">Services</a>
               </li>
               <li class="header__nav-item">
-                <a class="header__nav-link" href="">Blocks</a>
+                <a class="header__nav-link" href="#blogs">Blogs</a>
               </li>
             </ul>
           </nav>
@@ -101,7 +101,7 @@
     </header>
 
     <main class="main-page_content">
-      <section class="hero">
+      <section class="hero" id="home">
         <div class="hero__background"></div>
         <div class="container container--main">
           <h3 class="secondary-title hero__secondary-title">Real Estate</h3>
@@ -147,18 +147,28 @@
                   </div>
                 </div>
                 <div class="slider-hero__nav">
-                  <div class="slider-hero__button slider-hero__button--prev swiper-button-prev">
-                    <svg class="slider-hero__button-svg slider-hero__button-svg--left">
+                  <div
+                    class="slider-hero__button slider-hero__button--prev swiper-button-prev"
+                  >
+                    <svg
+                      class="slider-hero__button-svg slider-hero__button-svg--left"
+                    >
                       <use href="./images/svg/icons.svg#left-slider-icon"></use>
                     </svg>
                   </div>
-                  <div class="slider-hero__button slider-hero__button--next swiper-button-next">
-                    <svg class="slider-hero__button-svg slider-hero__button-svg--right">
+                  <div
+                    class="slider-hero__button slider-hero__button--next swiper-button-next"
+                  >
+                    <svg
+                      class="slider-hero__button-svg slider-hero__button-svg--right"
+                    >
                       <use href="./images/svg/icons.svg#left-slider-icon"></use>
                     </svg>
                   </div>
                 </div>
-                <div class="slider-hero__pagination swiper-pagination-hero"></div>
+                <div
+                  class="slider-hero__pagination swiper-pagination-hero"
+                ></div>
               </div>
             </div>
 
@@ -359,7 +369,7 @@
         </div>
       </section>
 
-      <section class="info-section">
+      <section class="info-section" id="info">
         <div class="container container--main">
           <h3 class="secondary-title info-section__secondary-title">
             Who we are
@@ -434,19 +444,26 @@
                 </div>
                 <div class="decor-circle info-section__decor-circle"></div>
               </div>
+              <img
+                class="info-section__circular-text"
+                src="./images/png/circular-text.png"
+                alt="circulat text that says 'real estate since 2022'"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      <section class="offers-section">
+      <section class="offers-section" id="offers">
         <div class="container offers-section__container container--main">
           <h3 class="secondary-title offers-section__secondary-title">
             Checkout our new
           </h3>
           <div class="flex-div offers-section__flex-div">
             <div class="offers-section__info-div">
-              <h2 class="offers-section__section-title section-title">Latest listed properties</h2>
+              <h2 class="offers-section__section-title section-title">
+                Latest listed properties
+              </h2>
               <p class="regular-text offers-section__regular-text">
                 Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec
                 dignissim purus.
@@ -471,8 +488,10 @@
             </ul>
           </div>
           <div class="swiperOffers slider-offers hero__slider-offers">
-            <div class="swiper-wrapper slider-offers__container">
-              <figure class="swiper-slide figure-offer slider-offers__figure-offer">
+            <div class="swiper-wrapper slider-offers__wrapper">
+              <figure
+                class="swiper-slide figure-offer slider-offers__figure-offer"
+              >
                 <div class="figure-offer__image-container">
                   <img
                     class="figure-offer__image"
@@ -667,10 +686,12 @@
         </div>
       </section>
 
-      <section class="services-section">
+      <section class="services-section" id="services">
         <div class="container services-section__container container--main">
           <h3 class="services-section__secondary-title">Our services</h3>
-          <h2 class="services-section__section-title section-title">Donec porttitor euismod dignissim</h2>
+          <h2 class="services-section__section-title section-title">
+            Donec porttitor euismod dignissim
+          </h2>
           <ul class="services-section__services-list">
             <li class="services-section__services-item">
               <div class="services-section__svg-container">
@@ -679,7 +700,10 @@
                 </svg>
               </div>
               <h4 class="services-section__service-title">Buy a New Home</h4>
-              <p class="regular-text services-section__regular-text">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.</p>
+              <p class="regular-text services-section__regular-text">
+                Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec
+                dignissim purus.
+              </p>
             </li>
             <li class="services-section__services-item">
               <div class="services-section__svg-container">
@@ -688,8 +712,10 @@
                 </svg>
               </div>
               <h4 class="services-section__service-title">Sell a House</h4>
-              <p class="regular-text services-section__regular-text">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.</p>
-            </li>
+              <p class="regular-text services-section__regular-text">
+                Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec
+                dignissim purus.
+              </p>
             </li>
             <li class="services-section__services-item">
               <div class="services-section__svg-container">
@@ -698,8 +724,10 @@
                 </svg>
               </div>
               <h4 class="services-section__service-title">Rent a House</h4>
-              <p class="regular-text services-section__regular-text">Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.</p>
-            </li>
+              <p class="regular-text services-section__regular-text">
+                Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec
+                dignissim purus.
+              </p>
             </li>
           </ul>
         </div>
@@ -707,10 +735,16 @@
 
       <section class="areas-section">
         <div class="container areas-section__container container--main">
-          <h3 class="secondary-title areas-section__secondary-title">Areas across the town</h3>
-          <h2 class="section-title areas-section__section-title">Neighborhood properties</h2>
+          <h3 class="secondary-title areas-section__secondary-title">
+            Areas across the town
+          </h3>
+          <h2 class="section-title areas-section__section-title">
+            Neighborhood properties
+          </h2>
           <ul class="areas-section__pictures-list">
-            <li class="areas-section__pictures-item areas-section__pictures-item--thin">
+            <li
+              class="areas-section__pictures-item areas-section__pictures-item--thin"
+            >
               <img
                 class="areas-section__image"
                 src="./images/jpg/nyc.jpg"
@@ -721,7 +755,9 @@
                 <p class="areas-section__location">New York City, NY</p>
               </div>
             </li>
-            <li class="areas-section__pictures-item areas-section__pictures-item--thin">
+            <li
+              class="areas-section__pictures-item areas-section__pictures-item--thin"
+            >
               <img
                 class="areas-section__image"
                 src="./images/jpg/houston.jpg"
@@ -732,7 +768,9 @@
                 <p class="areas-section__location">San Diego, CA</p>
               </div>
             </li>
-            <li class="areas-section__pictures-item areas-section__pictures-item">
+            <li
+              class="areas-section__pictures-item areas-section__pictures-item"
+            >
               <img
                 class="areas-section__image"
                 src="./images/jpg/san-diego.jpg"
@@ -745,7 +783,9 @@
             </li>
           </ul>
           <ul class="areas-section__pictures-list">
-            <li class="areas-section__pictures-item areas-section__pictures-item--medium">
+            <li
+              class="areas-section__pictures-item areas-section__pictures-item--medium"
+            >
               <img
                 class="areas-section__image"
                 src="./images/jpg/philadelphia.jpg"
@@ -756,7 +796,9 @@
                 <p class="areas-section__location">San-Francisco, CA</p>
               </div>
             </li>
-            <li class="areas-section__pictures-item areas-section__pictures-item">
+            <li
+              class="areas-section__pictures-item areas-section__pictures-item"
+            >
               <img
                 class="areas-section__image"
                 src="./images/jpg/san-francisco.jpg"
@@ -771,19 +813,24 @@
           <div class="decor-circle areas-section__decor-circle"></div>
         </div>
       </section>
+
       <section class="team-section">
         <div class="container container--main team-section__container">
-          <h3 class="secondary-title team-section__secondary-title">Introduce yourself to</h3>
-          <h2 class="section-title team-section__section-title">Our Team of Experts</h2>
+          <h3 class="secondary-title team-section__secondary-title">
+            Introduce yourself to
+          </h3>
+          <h2 class="section-title team-section__section-title">
+            Our Team of Experts
+          </h2>
           <ul class="team-section__members-list">
             <li class="team-section__member-item">
               <figure class="figure-member team-section__figure-member">
                 <div class="figure-member__image-container">
-                <img
-                  class="figure-member__image"
-                  src="./images/jpg/brandon-m.jpg"
-                  alt="Brendon M. Perez"
-                />
+                  <img
+                    class="figure-member__image"
+                    src="./images/jpg/brandon-m.jpg"
+                    alt="Brendon M. Perez"
+                  />
                 </div>
                 <figcaption class="figure-member__figcaption">
                   <h4 class="figure-member__title">Brendon M. Perez</h4>
@@ -797,7 +844,7 @@
                     src="./images/jpg/jody-j-appleby.jpg"
                     alt="Jody J. Appleby"
                   />
-                  </div>
+                </div>
                 <figcaption class="figure-member__figcaption">
                   <h4 class="figure-member__title">Jody J. Appleby</h4>
                   <p class="figure-member__text">Real Estate Developer</p>
@@ -810,7 +857,7 @@
                     src="./images/jpg/justin-s-meza.jpg"
                     alt="Justin J. Meza"
                   />
-                  </div>
+                </div>
                 <figcaption class="figure-member__figcaption">
                   <h4 class="figure-member__title">Justin J. Meza</h4>
                   <p class="figure-member__text">Listing Agent</p>
@@ -823,7 +870,7 @@
                     src="./images/jpg/susan-t-smith.jpg"
                     alt="Susan T. Smith"
                   />
-                  </div>
+                </div>
                 <figcaption class="figure-member__figcaption">
                   <h4 class="figure-member__title">Susan T. Smith</h4>
                   <p class="figure-member__text">Buyer's Agent</p>
@@ -831,17 +878,24 @@
               </figure>
             </li>
           </ul>
+          <div class="decor-circle team-section__decor-circle"></div>
         </div>
       </section>
 
-      <section class="blogs-section">
+      <section class="blogs-section" id="blogs">
         <div class="container container--main blogs-section__container">
-          <h3 class="secondary-title blogs-section__secondary-title">What's trending</h3>
-          <h2 class="section-title blogs-section__section-title">Latest Blogs & Posts</h2>
+          <h3 class="secondary-title blogs-section__secondary-title">
+            What's trending
+          </h3>
+          <h2 class="section-title blogs-section__section-title">
+            Latest Blogs & Posts
+          </h2>
           <div class="slider-blogs blogs-section__slider-blogs">
             <div class="swiperBlogs slider-blogs__swiper">
               <div class="swiper-wrapper slider-blogs__wrapper">
-                <figure class="swiper-slide figure-blogs slider-blogs__figure-blogs">
+                <figure
+                  class="swiper-slide figure-blogs slider-blogs__figure-blogs"
+                >
                   <div class="figure-blogs__image-container">
                     <img
                       class="figure-blogs__image"
@@ -854,8 +908,13 @@
                     </div>
                   </div>
                   <figcaption class="figure-blogs__figcaption">
-                    <h4 class="figure-blogs__title">Top 10 Home Buying Mistakes to Avoid</h4>
-                    <p class="regular-text figure-blogs__regular-text">Etiam eget elementum elit. Aenean dignissim dapibus vestibulum</p>
+                    <h4 class="figure-blogs__title">
+                      Top 10 Home Buying Mistakes to Avoid
+                    </h4>
+                    <p class="regular-text figure-blogs__regular-text">
+                      Etiam eget elementum elit. Aenean dignissim dapibus
+                      vestibulum
+                    </p>
                     <a class="figure-blogs__link" href="">
                       <svg class="figure-blogs__link-svg">
                         <use href="./images/svg/icons.svg#arrow-icon"></use>
@@ -863,7 +922,9 @@
                     </a>
                   </figcaption>
                 </figure>
-                <figure class="swiper-slide figure-blogs slider-blogs__figure-blogs">
+                <figure
+                  class="swiper-slide figure-blogs slider-blogs__figure-blogs"
+                >
                   <div class="figure-blogs__image-container">
                     <img
                       class="figure-blogs__image"
@@ -876,15 +937,23 @@
                     </div>
                   </div>
                   <figcaption class="figure-blogs__figcaption">
-                    <h4 class="figure-blogs__title">How to Stage Your Home for a Quick Sale</h4>
-                    <p class="regular-text figure-blogs__regular-text">Nullam odio lacus, dictum quis pretium congue, vehicula venenatis nunc.</p>
+                    <h4 class="figure-blogs__title">
+                      How to Stage Your Home for a Quick Sale
+                    </h4>
+                    <p class="regular-text figure-blogs__regular-text">
+                      Nullam odio lacus, dictum quis pretium congue, vehicula
+                      venenatis nunc.
+                    </p>
                     <a class="figure-blogs__link" href="">
                       <svg class="figure-blogs__link-svg">
                         <use href="./images/svg/icons.svg#arrow-icon"></use>
                       </svg>
                     </a>
+                  </figcaption>
                 </figure>
-                <figure class="swiper-slide figure-blogs slider-blogs__figure-blogs">
+                <figure
+                  class="swiper-slide figure-blogs slider-blogs__figure-blogs"
+                >
                   <div class="figure-blogs__image-container">
                     <img
                       class="figure-blogs__image"
@@ -897,21 +966,26 @@
                     </div>
                   </div>
                   <figcaption class="figure-blogs__figcaption">
-                    <h4 class="figure-blogs__title">5 Tips for First-Time Home Sellers</h4>
-                    <p class="regular-text figure-blogs__regular-text">In hac habitasse platea dictumst. Phasellus vel velit vel augue maximus.</p>
+                    <h4 class="figure-blogs__title">
+                      5 Tips for First-Time Home Sellers
+                    </h4>
+                    <p class="regular-text figure-blogs__regular-text">
+                      In hac habitasse platea dictumst. Phasellus vel velit vel
+                      augue maximus.
+                    </p>
                     <a class="figure-blogs__link" href="">
                       <svg class="figure-blogs__link-svg">
                         <use href="./images/svg/icons.svg#arrow-icon"></use>
                       </svg>
                     </a>
                   </figcaption>
-                </figure>  
+                </figure>
               </div>
             </div>
           </div>
-        </div> 
+        </div>
       </section>
-      
+
       <section class="reviews-section">
         <div class="container container--flex container--main">
           <div class="reviews-section__title-div">
@@ -922,16 +996,25 @@
               Look What Our Customers Say!
             </h2>
             <p class="regular-text reviews-section__regular-text">
-              Fusce venenatis tellus a felis scelerisque, non pulvinar est pellentesque.
+              Fusce venenatis tellus a felis scelerisque, non pulvinar est
+              pellentesque.
             </p>
             <div class="reviews-section__slider-nav">
-              <div class="reviews-section__slider-button reviews-section__slider-button--prev swiper-button-prev-reviews">
-                <svg class="reviews-section__button-svg reviews-section__button-svg--left">
+              <div
+                class="reviews-section__slider-button reviews-section__slider-button--prev swiper-button-prev-reviews"
+              >
+                <svg
+                  class="reviews-section__button-svg reviews-section__button-svg--left"
+                >
                   <use href="./images/svg/icons.svg#arrow-icon"></use>
                 </svg>
               </div>
-              <div class="reviews-section__slider-button reviews-section__slider-button--next swiper-button-next-reviews">
-                <svg class="reviews-section__button-svg reviews-section__button-svg--right">
+              <div
+                class="reviews-section__slider-button reviews-section__slider-button--next swiper-button-next-reviews"
+              >
+                <svg
+                  class="reviews-section__button-svg reviews-section__button-svg--right"
+                >
                   <use href="./images/svg/icons.svg#arrow-icon"></use>
                 </svg>
               </div>
@@ -946,7 +1029,9 @@
                       <use href="./images/svg/icons.svg#quotes-icon"></use>
                     </svg>
                     <p class="review__content">
-                      I highly recommend Jodi J. Appleby. She was attentive to our needs and worked tirelessly to find us the perfect home. We couldn't be happier with our new place!
+                      I highly recommend Jodi J. Appleby. She was attentive to
+                      our needs and worked tirelessly to find us the perfect
+                      home. We couldn't be happier with our new place!
                     </p>
                   </div>
                   <div class="review__author-div">
@@ -957,9 +1042,7 @@
                         alt="Barbara D. Smith"
                       />
                     </div>
-                    <p class="review__author-name">
-                      Barbara D. Smith
-                    </p>
+                    <p class="review__author-name">Barbara D. Smith</p>
                     <img
                       class="review__stars-image"
                       src="./images/png/stars5.png"
@@ -974,7 +1057,10 @@
                       <use href="./images/svg/icons.svg#quotes-icon"></use>
                     </svg>
                     <p class="review__content">
-                      Selling my home was easier than I ever imagined thanks to Rezilla. They provided expert advice on staging and marketing, and I got multiple offers above asking price within days. Really liked the professionalism of staff!
+                      Selling my home was easier than I ever imagined thanks to
+                      Rezilla. They provided expert advice on staging and
+                      marketing, and I got multiple offers above asking price
+                      within days. Really liked the professionalism of staff!
                     </p>
                   </div>
                   <div class="review__author-div">
@@ -985,9 +1071,7 @@
                         alt="Charlotte M. Robinson"
                       />
                     </div>
-                    <p class="review__author-name">
-                      Charlotte M. Robinson
-                    </p>
+                    <p class="review__author-name">Charlotte M. Robinson</p>
                     <img
                       class="review__stars-image"
                       src="./images/png/stars4.png"
@@ -1002,7 +1086,10 @@
                       <use href="./images/svg/icons.svg#quotes-icon"></use>
                     </svg>
                     <p class="review__content">
-                      I couldn’t have asked for a better experience! From start to finish, my realtor was incredibly knowledgeable and supportive. They helped me find the perfect place within my budget and handled everything seamlessly.
+                      I couldn’t have asked for a better experience! From start
+                      to finish, my realtor was incredibly knowledgeable and
+                      supportive. They helped me find the perfect place within
+                      my budget and handled everything seamlessly.
                     </p>
                   </div>
                   <div class="review__author-div">
@@ -1013,9 +1100,7 @@
                         alt="Noah S. Davis"
                       />
                     </div>
-                    <p class="review__author-name">
-                      Noah S. Davis
-                    </p>
+                    <p class="review__author-name">Noah S. Davis</p>
                     <img
                       class="review__stars-image"
                       src="./images/png/stars5.png"
@@ -1025,12 +1110,16 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-pagination-reviews slider-reviews__pagination"></div>
+            <div
+              class="swiper-pagination-reviews slider-reviews__pagination"
+            ></div>
+          </div>
+          <div class="decor-circle reviews-section__decor-circle">
           </div>
         </div>
       </section>
 
-      <section class="register-section">
+      <section class="register-section" id="register">
         <div class="container container--flex register-section__container">
           <img
             class="register-section__image"
@@ -1042,19 +1131,145 @@
               Become an Agent
             </h2>
             <p class="regular-text register-section__regular-text">
-              Fusce venenatis tellus a felis scelerisque. venenatis tellus a felis scelerisque. 
+              Fusce venenatis tellus a felis scelerisque. venenatis tellus a
+              felis scelerisque.
             </p>
           </div>
-          <button type="button" class="button register-section__button button--white">
+          <button
+            type="button"
+            class="button register-section__button button--white"
+          >
             Register now
           </button>
-          <div class="decor-circle decor-circle--white register-section__decor-circle register-section__decor-circle--first"></div>
-          <div class="decor-circle decor-circle--white register-section__decor-circle register-section__decor-circle--second"></div>
+          <div
+            class="decor-circle decor-circle--white register-section__decor-circle register-section__decor-circle--first"
+          ></div>
+          <div
+            class="decor-circle decor-circle--white register-section__decor-circle register-section__decor-circle--second"
+          ></div>
         </div>
       </section>
     </main>
 
-    <footer class="main-pagefooter"></footer>
+    <footer class="footer">
+      <section class="footer-main-section">
+        <div class="container container--flex container--main footer-main-section__container">
+          <div class="footer-main-section__main-div">
+            <a class="logo footer-main-section__logo" href="">
+              <div class="logo__svg-container">
+                <svg class="logo__svg">
+                  <use href="./images/svg/icons.svg#rezilla-icon"></use>
+                </svg>
+              </div>
+              Rezilla
+            </a>
+            <address class="footer-main-section__address">
+              <p class="footer-main-section__location">
+                Rezilla, 18 Grattan St, Brooklyn
+              </p>
+              <a class="footer-main-section__phone" href="tel:+12062142298">
+                <svg class="footer-main-section__address-svg">
+                  <use href="./images/svg/icons.svg#phone-icon"></use>
+                </svg>
+                +1 206-214-2298
+              </a>
+              <a class="footer-main-section__email" href="support@rezilla.com">
+                <svg class="footer-main-section__address-svg footer-main-section__address-svg--mail">
+                  <use href="./images/svg/icons.svg#mail-icon"></use>
+                </svg>
+                support@rezilla.com
+              </a>
+            </address>
+          </div>
+          <div class="footer-main-section__links-div">
+            <h3 class="footer-main-section__title-div">
+              Quick Links
+            </h3>
+            <nav class="footer-main-section__navigation">
+              <ul class="footer-main-section__links-list">
+                <li class="footer-main-section__links-item">
+                  <a class="footer-main-section__link" href="#home">Home</a>
+                </li>
+                <li class="footer-main-section__links-item">
+                  <a class="footer-main-section__link" href="#info">About</a>
+                </li>
+                <li class="footer-main-section__links-item">
+                  <a class="footer-main-section__link" href="#offers">Listings</a>
+                </li>
+                <li class="footer-main-section__links-item">
+                  <a class="footer-main-section__link" href="#services">Services</a>
+                </li>
+                <li class="footer-main-section__links-item">
+                  <a class="footer-main-section__link" href="#blogs">Blogs</a>
+                </li>
+                <li class="footer-main-section__links-item">
+                  <a class="footer-main-section__link" href="#register">Become an Agent</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer-main-section__discovery-div">
+            <h3 class="footer-main-section__title-div">
+              Discovery
+            </h3>
+            <ul class="footer-main-section__links-list">
+              <li class="footer-main-section__links-item">
+                <a class="footer-main-section__link" href="">Canada</a>
+              </li>
+              <li class="footer-main-section__links-item">
+                <a class="footer-main-section__link" href="">United States</a>
+              </li>
+              <li class="footer-main-section__links-item">
+                <a class="footer-main-section__link" href="">Germany</a>
+              </li>
+              <li class="footer-main-section__links-item">
+                <a class="footer-main-section__link" href="">Nigeria</a>
+              </li>
+              <li class="footer-main-section__links-item">
+                <a class="footer-main-section__link" href="">India</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-main-section__email-div">
+            <h3 class="footer-main-section__title-div">Subscribe to our Newsletter!</h3>
+            <form class="footer-main-section__form">
+              <label class="footer-main-section__label">E-mail</label>
+              <input class="footer-main-section__input" type="email" name="email" id="footer-email" placeholder="Email Address"/>
+              <button type="submit" class="button button--blue footer-main-section__button">
+                <svg class="button__arrow-svg">
+                  <use href="./images/svg/icons.svg#arrow-icon"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      
+      <section class="copyright-section">
+        <div class="container container--flex container--main">
+          <p class="copyright-section__copyright">
+            ©Rezilla - All rights reserved
+          </p>
+          <ul class="copyright-section__links-list">
+            <li class="copyright-section__links-item">
+              <a class="copyright-section__link" href="">
+                Terms and Conditions
+              </a>
+            </li>
+            <li class="copyright-section__links-item">
+              <a class="copyright-section__link" href="">
+                Privacy Policy
+              </a>
+            </li>
+            <li class="copyright-section__links-item">
+              <a class="copyright-section__link" href="">
+                Disclaimer
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/slider.js"></script>
   </body>

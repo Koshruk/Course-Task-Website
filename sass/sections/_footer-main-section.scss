@@ -1,0 +1,45 @@
+.footer-main-section{
+    padding: 82px 0;
+    background-color: rgba($color1, 0.1);
+
+    &__container{
+        align-items: baseline;
+        justify-content: space-between;
+    }
+
+    &__logo{
+        margin-bottom: 30px;
+    }
+
+    &__address{
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &__location{
+        margin-bottom: 45px;
+    }
+
+    &__address-svg{
+        max-width: 20px;
+        max-height: 20px;
+    }
+
+    &__phone , &__email{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+
+    &__title-div{
+        font-size: 19.4px;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+
+    &__link{
+        font-size: 16px;
+        line-height: 1.63;
+    }
+}
