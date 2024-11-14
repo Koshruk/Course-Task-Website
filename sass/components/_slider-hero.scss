@@ -23,8 +23,6 @@
     &__button{
         position: absolute;
         overflow: visible;
-        height: 40px !important;
-        width: 40px !important;
         border-radius: 50%;
         background-color: $white-color;
 
@@ -32,12 +30,16 @@
             display: none;
         }
 
-        &--prev{
-            left: -18px !important;
-        }
+        &.swiper-button-prev {
+            height: 40px;
+            width: 40px;
 
-        &--next{
-            right: -18px !important;
+            left: -18px;
+        }
+        &.swiper-button-next {
+            height: 40px;
+            width: 40px;
+            right: -18px;
         }
     }
 
@@ -51,13 +53,19 @@
 
     &__pagination{
         position: absolute;
-        bottom: -20px !important;
         width: 100%;
         padding: 0 11px;
 
         display: flex;
         gap: 34px;
         justify-content: center;
+
+        &.swiper-pagination-hero{
+            &.swiper-pagination-bullets
+            {
+                bottom: -20px;
+            }
+        }
     }
 
     &__pagination-bullet{

@@ -10,8 +10,6 @@
 
     &__pagination{
         position: absolute;
-        bottom: 0 !important;
-        right: -30px !important;
 
         padding: 0 0px;
         height: 50%;
@@ -19,6 +17,13 @@
         flex-direction: column;
         gap: 34px;
         justify-content: center;
+        &.swiper-pagination-reviews{
+            &.swiper-pagination-bullets
+            {
+                right: -30px;
+                bottom: 0;
+            }
+        }
     }
 
     &__pagination-bullet{

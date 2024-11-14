@@ -50,6 +50,7 @@ body {
   line-height: 1;
   letter-spacing: 0em;
   overflow-x: hidden;
+  color: #2b2b2b;
 }
 
 address {
@@ -88,6 +89,7 @@ img {
   font-size: 20px;
   line-height: 1;
   letter-spacing: 0em;
+  color: #0b090a;
   display: flex;
   gap: 8px;
   align-items: center;
@@ -284,19 +286,21 @@ img {
 .slider-hero__button {
   position: absolute;
   overflow: visible;
-  height: 40px !important;
-  width: 40px !important;
   border-radius: 50%;
   background-color: #ffffff;
 }
 .slider-hero__button::after, .slider-hero__button::before {
   display: none;
 }
-.slider-hero__button--prev {
-  left: -18px !important;
+.slider-hero__button.swiper-button-prev {
+  height: 40px;
+  width: 40px;
+  left: -18px;
 }
-.slider-hero__button--next {
-  right: -18px !important;
+.slider-hero__button.swiper-button-next {
+  height: 40px;
+  width: 40px;
+  right: -18px;
 }
 .slider-hero__nav {
   position: absolute;
@@ -307,12 +311,14 @@ img {
 }
 .slider-hero__pagination {
   position: absolute;
-  bottom: -20px !important;
   width: 100%;
   padding: 0 11px;
   display: flex;
   gap: 34px;
   justify-content: center;
+}
+.slider-hero__pagination.swiper-pagination-hero.swiper-pagination-bullets {
+  bottom: -20px;
 }
 .slider-hero__pagination-bullet {
   display: inline-block;
@@ -372,14 +378,16 @@ img {
 }
 .slider-reviews__pagination {
   position: absolute;
-  bottom: 0 !important;
-  right: -30px !important;
   padding: 0 0px;
   height: 50%;
   display: flex;
   flex-direction: column;
   gap: 34px;
   justify-content: center;
+}
+.slider-reviews__pagination.swiper-pagination-reviews.swiper-pagination-bullets {
+  right: -30px;
+  bottom: 0;
 }
 .slider-reviews__pagination-bullet {
   display: inline-block;
@@ -498,6 +506,7 @@ img {
   font-size: 27.6px;
   font-weight: 600;
   margin-bottom: 20px;
+  color: #0b090a;
 }
 .figure-member__text {
   font-size: 16px;
@@ -655,6 +664,7 @@ img {
 }
 .hero__title {
   margin-bottom: 30px;
+  color: #0b090a;
 }
 .hero__slider-hero {
   margin-top: 40px;
@@ -674,14 +684,16 @@ img {
   background-color: #ffffff;
   border-radius: 30px;
 }
-.form-section__nav {
-  display: flex;
-  gap: 125px;
-  justify-content: center;
+.form-section__title-div {
+  text-align: center;
   padding-top: 40px;
   padding-bottom: 30px;
   border-bottom: 1px solid #aaaaaa;
   color: #808080;
+}
+.form-section__title {
+  font-size: 16px;
+  font-weight: 500;
 }
 .form-section__form {
   padding: 50px 40px 60px;
@@ -923,6 +935,7 @@ img {
 .services-section__section-title {
   text-align: center;
   margin-bottom: 60px;
+  color: #0b090a;
 }
 .services-section__services-list {
   display: flex;
