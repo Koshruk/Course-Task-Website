@@ -17,6 +17,11 @@
         max-height: 20px;
     }
 
+    &__arrow-svg{
+        max-width: 16px;
+        max-height: 16px;
+    }
+
     &--blue{
         padding: 15px 26px;
         background-color: $main-color;
