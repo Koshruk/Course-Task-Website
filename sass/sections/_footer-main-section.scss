@@ -8,7 +8,7 @@
     }
 
     &__logo{
-        margin-bottom: 30px;
+        margin-bottom: 40px;
     }
 
     &__address{
@@ -31,6 +31,10 @@
         gap: 10px;
     }
 
+    &__phone{
+        margin-bottom: 20px;
+    }
+
 
     &__title-div{
         font-size: 19.4px;
@@ -41,5 +45,41 @@
     &__link{
         font-size: 16px;
         line-height: 1.63;
+    }
+
+    &__form{
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    &__label{
+        display: none;
+    }
+
+    &__input{
+        font-size: 16px;
+        font-weight: 400;
+        padding: 20px 0 20px 20px;
+        border-style: none;
+        border-radius: 30px;
+
+        background-color: $white-color;
+    }
+
+    &__arrow-button{
+        position: absolute;
+        top: 4px;
+        right: 4px;
+    }
+
+    &__media-list{
+        display: flex;
+        gap: 20px;
+    }
+
+    &__media-svg{
+        max-width: 22px;
+        max-height: 22px;
+        color: $main-color;
     }
 }

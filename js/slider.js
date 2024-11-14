@@ -20,8 +20,16 @@ const swiperOffers = new Swiper('.swiperOffers',{
 });
 
 const swiperBlogs = new Swiper('.swiperBlogs',{
-    slidesPerView: 3,
+    direction: 'horizontal',
+    slidesPerView: 1,
     spaceBetween: 50,
+    allowTouchMove: true,
+    pagination:{
+        el: '.swiper-pagination-blogs',
+        bulletClass: 'slider-blogs__pagination-bullet',
+        bulletActiveClass: 'slider-blogs__pagination-bullet--active',
+        clickable: true,
+    },
 });
 
 const swiperReviews = new Swiper('.swiperReviews',{

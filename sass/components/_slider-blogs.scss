@@ -4,26 +4,38 @@
         overflow: hidden;
     }
 
+    &__slider{
+        &.swiper-slide{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
     &__pagination{
         position: absolute;
-        bottom: -20px !important;
         width: 100%;
-        padding: 0 11px;
+        padding: 0 400px;
 
         display: flex;
         gap: 34px;
         justify-content: center;
+
+        &.swiper-pagination-blogs{
+            &.swiper-pagination-bullets{
+                bottom: -70px;
+            }
+        }
     }
 
     &__pagination-bullet{
-        display: inline-block;
+        display: flex;
         height: 4px;
         width: 100%;
-        background-color: $white-color;
+        background-color: rgba($white-color, 0.3);
         border-radius: 2px;
 
         &--active{
-            background-color: $color1;
+            background-color: $white-color;
         }
     }
 }

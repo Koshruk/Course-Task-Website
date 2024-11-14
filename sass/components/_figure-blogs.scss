@@ -1,4 +1,9 @@
-.figure-blogs{
+.blogs-article{
+    user-select: none;
+    max-width: 340px;
+    height: 475px;
+    display: flex;
+    flex-direction: column;
     &__image-container{
         position: relative;
 
@@ -54,24 +59,8 @@
         text-transform: capitalize;
     }
 
-    &__link{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
-        background-color: $white-color;
-
+    &__arrow-button{
         margin-left: auto;
-        margin-top: 30px;
+        margin-top: auto;
     }
-
-    &__link-svg{
-        max-width: 30px;
-        max-height: 50px;
-        color: $main-color;
-    }
-
-    
 }
