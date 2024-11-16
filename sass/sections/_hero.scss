@@ -35,14 +35,12 @@
         transform: rotate(45deg);
     }
 
-    &__flex-div{
-    }
-
     &__title-section{
         max-width: 540px;
         position: relative;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 10vw;
     }
 
     &__form-section{
@@ -56,6 +54,23 @@
         margin-inline: auto;
     }
 
+    
+    &__title{
+        margin-bottom: 30px;
+        color: $text-color1;
+    }
+
+    &__slider-hero{
+        margin-top: 40px;
+        min-width: 200px;
+    }
+
+    &__announcement-section{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -50px;
+    }
     @media screen and (min-width: 320px){
         
     }
@@ -78,6 +93,7 @@
        &__title-section{
         margin-right: auto;
         margin-left: 0;
+        margin-bottom: 0;
        }
 
        &__form-section{
@@ -86,20 +102,4 @@
        }
     }
 
-    &__title{
-        margin-bottom: 30px;
-        color: $text-color1;
-    }
-
-    &__slider-hero{
-        margin-top: 40px;
-        min-width: 200px;
-    }
-
-    &__announcement-section{
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: -50px;
-    }
 }
