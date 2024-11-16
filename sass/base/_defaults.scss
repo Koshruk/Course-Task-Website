@@ -1,6 +1,10 @@
   html{
     scroll-behavior: smooth;
   }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+}
   
   p, h1, h2, h3, h4, a, ul, li, figure, body, img, button{
     margin: 0;
@@ -21,7 +25,7 @@
   body {
     font-family:'Poppins', sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 1rem;
     font-style:normal;
     line-height: 1.0;
     letter-spacing: 0.0em;

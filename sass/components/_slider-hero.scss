@@ -3,7 +3,8 @@
     user-select: none;
 
     &__swiper{
-        width: 540px;
+        width: 100%;
+        max-width: 540px;
         overflow: hidden;
         border-radius: 20px;
         box-shadow: 15px 20px 40px rgba(black, 0.2);
@@ -15,8 +16,8 @@
     }
 
     &__image{
-        width: 540px;
-        height: 340px;
+        width: 100%;
+        height: auto;
         object-fit: cover;
     }
 

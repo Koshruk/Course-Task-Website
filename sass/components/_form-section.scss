@@ -1,9 +1,9 @@
 .form-section{
-
     width: 420px;
     display: flex;
     flex-direction: column;
     box-shadow: 10px 10px 20px rgba(black, 0.2);
+    
 
     background-color: $white-color;
     border-radius: 30px;
@@ -57,5 +57,16 @@
             margin: auto auto 0;
             gap: 10px;
         }
+    }
+
+    @media screen and (min-width: 320px){
+        
+    }
+
+    @media screen and (min-width: 680px){
+        
+    }
+
+    @media screen and (min-width: 1024px){
     }
 }

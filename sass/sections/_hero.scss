@@ -10,6 +10,8 @@
     padding-top: 89px;
     padding-bottom: 112px;
 
+
+
     &__background{
         opacity: 0.3;
         position: absolute;
@@ -34,13 +36,54 @@
     }
 
     &__flex-div{
-        display: flex;
-        gap: 160px;
     }
 
     &__title-section{
         max-width: 540px;
         position: relative;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__form-section{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__secondary-title{
+        max-width: 540px;
+        text-align: left;
+        margin-inline: auto;
+    }
+
+    @media screen and (min-width: 320px){
+        
+    }
+
+    @media screen and (min-width: 680px){
+        
+    }
+
+    @media screen and (min-width: 1024px){
+       &__flex-div{
+        display: flex;
+        flex-direction: row;
+       }
+
+       &__secondary-title{
+        margin-inline: 0;
+        margin-right: auto;
+       }
+
+       &__title-section{
+        margin-right: auto;
+        margin-left: 0;
+       }
+
+       &__form-section{
+        margin-left: auto;
+        margin-right: 0;
+       }
     }
 
     &__title{
@@ -50,6 +93,7 @@
 
     &__slider-hero{
         margin-top: 40px;
+        min-width: 200px;
     }
 
     &__announcement-section{

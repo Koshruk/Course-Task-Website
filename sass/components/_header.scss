@@ -59,17 +59,14 @@
         line-height: 1.0;
 
         padding: 13px 16px;
-        border-bottom-left-radius: 50% 100%;
-        border-bottom-right-radius: 50% 100%;
-        border-top-left-radius: 50% 100%;
-        border-top-right-radius: 50% 100%;
+        border-radius: 30px;
         &:hover{
             background-color: $transparent-color1;
         }
     }
 
     &__logo{
-        margin-left: 129px;
+        margin-left: auto;
     }
 
     &__button-div{

@@ -2,6 +2,7 @@
     font-size: 19.4px;
     font-weight: 500;
     padding: 0 60px;
+    line-height: 1.35;
 
     &__content-div{
         border-bottom: 1px solid $text-color5;
@@ -15,6 +16,7 @@
     &__content{
         margin-top: auto;
         margin-bottom: auto;
+        
     }
 
     &__quotes-svg{

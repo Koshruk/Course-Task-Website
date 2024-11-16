@@ -26,6 +26,10 @@ html {
   scroll-behavior: smooth;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 p, h1, h2, h3, h4, a, ul, li, figure, body, img, button {
   margin: 0;
   padding: 0px;
@@ -45,7 +49,7 @@ a {
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 1rem;
   font-style: normal;
   line-height: 1;
   letter-spacing: 0em;
@@ -67,6 +71,7 @@ img {
 }
 
 .container {
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -226,16 +231,13 @@ img {
   font-size: 16px;
   line-height: 1;
   padding: 13px 16px;
-  border-bottom-left-radius: 50% 100%;
-  border-bottom-right-radius: 50% 100%;
-  border-top-left-radius: 50% 100%;
-  border-top-right-radius: 50% 100%;
+  border-radius: 30px;
 }
 .header__nav-link:hover {
   background-color: rgba(67, 97, 238, 0.3);
 }
 .header__logo {
-  margin-left: 129px;
+  margin-left: auto;
 }
 .header__button-div {
   margin-left: auto;
@@ -293,7 +295,8 @@ img {
           */
 }
 .slider-hero__swiper {
-  width: 540px;
+  width: 100%;
+  max-width: 540px;
   overflow: hidden;
   border-radius: 20px;
   box-shadow: 15px 20px 40px rgba(0, 0, 0, 0.2);
@@ -303,8 +306,8 @@ img {
   transition: transform 0.5s ease;
 }
 .slider-hero__image {
-  width: 540px;
-  height: 340px;
+  width: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -605,6 +608,7 @@ img {
   font-size: 19.4px;
   font-weight: 500;
   padding: 0 60px;
+  line-height: 1.35;
 }
 .review__content-div {
   border-bottom: 1px solid #d4d4d4;
@@ -682,13 +686,38 @@ img {
   right: -25px;
   transform: rotate(45deg);
 }
-.hero__flex-div {
-  display: flex;
-  gap: 160px;
-}
 .hero__title-section {
   max-width: 540px;
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero__form-section {
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero__secondary-title {
+  max-width: 540px;
+  text-align: left;
+  margin-inline: auto;
+}
+@media screen and (min-width: 1024px) {
+  .hero__flex-div {
+    display: flex;
+    flex-direction: row;
+  }
+  .hero__secondary-title {
+    margin-inline: 0;
+    margin-right: auto;
+  }
+  .hero__title-section {
+    margin-right: auto;
+    margin-left: 0;
+  }
+  .hero__form-section {
+    margin-left: auto;
+    margin-right: 0;
+  }
 }
 .hero__title {
   margin-bottom: 30px;
@@ -696,6 +725,7 @@ img {
 }
 .hero__slider-hero {
   margin-top: 40px;
+  min-width: 200px;
 }
 .hero__announcement-section {
   position: absolute;
@@ -750,7 +780,6 @@ img {
   margin: auto auto 0;
   gap: 10px;
 }
-
 .announcement-section {
   /*padding: 50px 0;*/
 }
