@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "title": "Tranquil Haven i the Woods",
+        "title": "Tranquil Haven in the Woods",
         "address": "103 Wright CourtBurien, WA 98168",
         "image": "./images/jpg/offer1.jpg",
         "alt": "Two-stored panthouse with a pool infront of it",
@@ -52,6 +52,61 @@
         "beds": 1,
         "bath": 2,
         "cost": "2,125",
+        "type": "new"
+    },
+    {
+        "id": 6,
+        "title": "Modern Oasis in the Desert",
+        "address": "720 Sunset Boulevard, Las Vegas, NV 89109",
+        "image": "./images/jpg/offer6.jpg",
+        "alt": "Modern house with a glass facade and a pool",
+        "beds": 5,
+        "bath": 4,
+        "cost": "8,350",
+        "type": "popular"
+    },
+    {
+        "id": 7,
+        "title": "Cozy Chalet in the Alps",
+        "address": "121 Alpine Trail, Aspen, CO 81611",
+        "image": "./images/jpg/offer7.jpg",
+        "alt": "Wooden chalet surrounded by snow-capped mountains",
+        "beds": 3,
+        "bath": 3,
+        "cost": "7,890",
+        "type": "new"
+    },
+    {
+        "id": 8,
+        "title": "Beachfront Paradise",
+        "address": "300 Ocean Drive, Miami, FL 33139",
+        "image": "./images/jpg/offer8.jpg",
+        "alt": "Luxury villa overlooking the ocean",
+        "beds": 6,
+        "bath": 5,
+        "cost": "12,500",
+        "type": "popular"
+    },
+    {
+        "id": 9,
+        "title": "Rustic Cabin in the Woods",
+        "address": "45 Maple Lane, Jackson, WY 83001",
+        "image": "./images/jpg/offer9.jpg",
+        "alt": "Rustic wooden cabin surrounded by tall trees",
+        "beds": 2,
+        "bath": 1,
+        "cost": "1,800",
+        "type": "discount"
+    },
+    {
+        "id": 10,
+        "title": "Urban Loft in Downtown",
+        "address": "10 Market Street, San Francisco, CA 94103",
+        "image": "./images/jpg/offer10.jpg",
+        "alt": "Industrial-style loft with large windows and a city view",
+        "beds": 1,
+        "bath": 1,
+        "cost": "3,500",
         "type": "new"
     }
 ]

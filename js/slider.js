@@ -1,3 +1,4 @@
+
 const swiperHero = new Swiper('.swiperHero',{
     direction: 'horizontal',
     loop: true,
@@ -14,9 +15,9 @@ const swiperHero = new Swiper('.swiperHero',{
 });
 
 let swiperClients;
-function enableSwiper(){
+function enableClientsSwiper(){
     if (swiperClients) return;
-    console.log("created");
+    console.log("created_client");
     swiperClients = new Swiper('.swiperClients',{
         freeMode: true,
         spaceBetween: 0,
@@ -32,13 +33,23 @@ function enableSwiper(){
     });
 };
 
-
+let swiperOffers;
+function enableOffersSwiper(){
+    if (swiperOffers) return;
+    console.log("created_offer");
+    swiperOffers = new Swiper('.swiperOffers',{
+        freeMode: true,
+        slidesPerView: 3,
+        spaceBetween: 10,
+    });
+};
+/*
 const swiperOffers = new Swiper('.swiperOffers',{
     slidesPerView: 3,
     freeMode: true,
     spaceBetween: 30,
 });
-
+*/
 const swiperBlogs = new Swiper('.swiperBlogs',{
     direction: 'horizontal',
     slidesPerView: 1,
@@ -69,17 +80,30 @@ const swiperReviews = new Swiper('.swiperReviews',{
 });
 
 function breakpointChecker(){
-    if(window.innerWidth > 750){
+
+    if(window.innerWidth < 768){
+        if (swiperOffers !== undefined){
+            swiperOffers.destroy(true, true);
+            console.log("deleted-offer");
+       }
+       swiperOffers = undefined;
+    } 
+    else{
+        enableOffersSwiper();
+    }   
+
+    if(window.innerWidth >= 768){
         if (swiperClients !== undefined){
              swiperClients.destroy(true, true);
-             console.log("deleted");
+             console.log("deleted-client");
         }
         swiperClients = undefined;
-        return;
     }
     else{
-        enableSwiper();
+        enableClientsSwiper();
     }
+
+
 }
 
 window.addEventListener('load', breakpointChecker);
