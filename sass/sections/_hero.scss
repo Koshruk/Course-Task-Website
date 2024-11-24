@@ -6,9 +6,8 @@
     background-size: 1440px;
     */
     position: relative;
-    
-    padding-top: 89px;
-    padding-bottom: 112px;
+    padding-top: clamp(2.1rem, 7vw + 1rem, 5.6rem);
+    padding-bottom: clamp(2.1rem, 7vw + 1rem, 6.6rem);
 
 
 
@@ -35,15 +34,20 @@
         transform: rotate(45deg);
     }
 
+    &__flex-fiv{
+        position: relative;
+    }
+
     &__title-section{
         max-width: 540px;
         position: relative;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 10vw;
+        margin-bottom: clamp(20px, 8vw, 70px);
     }
 
     &__form-section{
+
         margin-left: auto;
         margin-right: auto;
     }
@@ -56,33 +60,42 @@
 
     
     &__title{
-        margin-bottom: 30px;
+        margin-bottom: clamp(1rem, 1.5625vw, 2rem);
         color: $text-color1;
     }
 
     &__slider-hero{
-        margin-top: 40px;
+        margin-top: clamp(1.3rem, 1.5625vw + 0.5rem, 2.5rem);
         min-width: 200px;
     }
 
-    &__announcement-section{
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: -50px;
-    }
     @media screen and (min-width: 320px){
         
     }
 
     @media screen and (min-width: 680px){
-        
+
+        &__announcement-section{
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -50px;
+        }
+
+        &__form-section{
+            position: relative;
+            bottom: 0;
+        }
     }
 
     @media screen and (min-width: 1024px){
+        padding-top: 90px;
+        padding-bottom: 110px;
+
        &__flex-div{
         display: flex;
         flex-direction: row;
+        gap: 40px
        }
 
        &__secondary-title{
@@ -101,5 +114,7 @@
         margin-right: 0;
        }
     }
+
+
 
 }

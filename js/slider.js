@@ -13,6 +13,26 @@ const swiperHero = new Swiper('.swiperHero',{
     },
 });
 
+let swiperClients;
+function enableSwiper(){
+    if (swiperClients) return;
+    console.log("created");
+    swiperClients = new Swiper('.swiperClients',{
+        freeMode: true,
+        spaceBetween: 0,
+        slidesPerView: 2,
+        allowTouchMove: true,
+        loop: true,
+        autoplay: {
+            delay: 0,
+        },
+        speed: 5000,
+        freeModeMomentum: false,
+        freeModeSticky: false,
+    });
+};
+
+
 const swiperOffers = new Swiper('.swiperOffers',{
     slidesPerView: 3,
     freeMode: true,
@@ -34,7 +54,7 @@ const swiperBlogs = new Swiper('.swiperBlogs',{
 
 const swiperReviews = new Swiper('.swiperReviews',{
     slidesPerView: 1,
-    paceBetween: 50,
+    spaceBetween: 50,
     direction: 'vertical',
     allowTouchMove: false,
     navigation:{
@@ -47,6 +67,24 @@ const swiperReviews = new Swiper('.swiperReviews',{
         bulletActiveClass: 'slider-reviews__pagination-bullet--active',
     },
 });
+
+function breakpointChecker(){
+    if(window.innerWidth > 750){
+        if (swiperClients !== undefined){
+             swiperClients.destroy(true, true);
+             console.log("deleted");
+        }
+        swiperClients = undefined;
+        return;
+    }
+    else{
+        enableSwiper();
+    }
+}
+
+window.addEventListener('load', breakpointChecker);
+window.addEventListener('resize', breakpointChecker);
+
 /*
 const slidesContainer = document.querySelector(".slider__images-container");
 const slides = document.querySelectorAll(".slider__image");

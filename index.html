@@ -16,11 +16,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="./css/modern-normalize.css" />
-    <link rel="stylesheet" type="text/css" href="./sass/main.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" type="text/css" href="./sass/main.css" />
   </head>
 
   <body class="main-page">
@@ -317,50 +317,52 @@
           <h2 class="clients-section__title">
             Trusted by 100+ Companies acroos the globe!
           </h2>
-          <ul class="clients-section__clients-logo-list">
-            <li class="clients-section__clients-logo-item">
-              <img
-                class="clients-section__image"
-                src="./images/png/google.png"
-                alt="logo of 'Google'"
-              />
-            </li>
-            <li class="clients-section__clients-logo-item">
-              <img
-                class="clients-section__image"
-                src="./images/png/amazon.png"
-                alt="logo of 'Amazon'"
-              />
-            </li>
-            <li class="clients-section__clients-logo-item">
-              <img
-                class="clients-section__image"
-                src="./images/png/logitech.png"
-                alt="logo of 'Logitech'"
-              />
-            </li>
-            <li class="clients-section__clients-logo-item">
-              <img
-                class="clients-section__image"
-                src="./images/png/spotify.png"
-                alt="logo of 'Spotify'"
-              />
-            </li>
-            <li class="clients-section__clients-logo-item">
-              <img
-                class="clients-section__image"
-                src="./images/png/samsung.png"
-                alt="logo of 'Samsung'"
-              />
-            </li>
-            <li class="clients-section__clients-logo-item">
-              <img
-                class="clients-section__image"
-                src="./images/png/netflix.png"
-                alt="logo of 'Netflix'"
-              />
-            </li>
-          </ul>
+          <div class="clients-section__slider-clients slider-clients swiperClients">
+            <div class="swiper-wrapper slider-clients__wrapper clients-section__wrapper" id="slider-clients">
+              <div class="swiper-slide slider-clients__slide">
+                <img
+                  class="slider-clients__image"
+                  src="./images/png/google.png"
+                  alt="logo of 'Google'"
+                />
+              </div>
+              <div class="swiper-slide slider-clients__slide">
+                <img
+                  class="slider-clients__image"
+                  src="./images/png/amazon.png"
+                  alt="logo of 'Amazon'"
+                />
+              </div>
+              <div class="swiper-slide slider-clients__slide">
+                <img
+                  class="slider-clients__image"
+                  src="./images/png/logitech.png"
+                  alt="logo of 'Logitech'"
+                />
+              </div>
+              <div class="swiper-slide slider-clients__slide">
+                <img
+                  class="slider-clients__image"
+                  src="./images/png/spotify.png"
+                  alt="logo of 'Spotify'"
+                />
+              </div>
+              <div class="swiper-slide slider-clients__slide">
+                <img
+                  class="slider-clients__image"
+                  src="./images/png/samsung.png"
+                  alt="logo of 'Samsung'"
+                />
+              </div>
+              <div class="swiper-slide slider-clients__slide">
+                <img
+                  class="slider-clients__image"
+                  src="./images/png/netflix.png"
+                  alt="logo of 'Netflix'"
+                />
+              </div>
+            </div>
+          </div>
           <div class="decor-circle clients-section__decor-circle"></div>
         </div>
       </section>
@@ -382,30 +384,32 @@
                 dignissim purus. Nulla convallis ipsum molestie nibh malesuada,
                 ac malesuada leo volutpat.
               </p>
-              <div class="info-section__container">
-                <svg class="info-section__container-svg">
-                  <use href="./images/svg/icons.svg#smart-home-icon"></use>
-                </svg>
-                <div class="info-section__text-group">
-                  <h4 class="info-section__container-title">
-                    Donec porttitor euismod
-                  </h4>
-                  <p class="regular-text info-section__regular-text">
-                    Nullam a lacinia ipsum, nec dignissim purus. Nulla
-                  </p>
+              <div class="info-section__container-div">
+                <div class="info-section__container">
+                  <svg class="info-section__container-svg">
+                    <use href="./images/svg/icons.svg#smart-home-icon"></use>
+                  </svg>
+                  <div class="info-section__text-group">
+                    <h4 class="info-section__container-title">
+                      Donec porttitor euismod
+                    </h4>
+                    <p class="regular-text info-section__regular-text">
+                      Nullam a lacinia ipsum, nec dignissim purus. Nulla
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="info-section__container">
-                <svg class="info-section__container-svg">
-                  <use href="./images/svg/icons.svg#user-octagon-icon"></use>
-                </svg>
-                <div class="info-section__text-group">
-                  <h4 class="info-section__container-title">
-                    Donec porttitor euismod
-                  </h4>
-                  <p class="regular-text info-section__regular-text">
-                    Nullam a lacinia ipsum, nec dignissim purus. Nulla
-                  </p>
+                <div class="info-section__container">
+                  <svg class="info-section__container-svg">
+                    <use href="./images/svg/icons.svg#user-octagon-icon"></use>
+                  </svg>
+                  <div class="info-section__text-group">
+                    <h4 class="info-section__container-title">
+                      Donec porttitor euismod
+                    </h4>
+                    <p class="regular-text info-section__regular-text">
+                      Nullam a lacinia ipsum, nec dignissim purus. Nulla
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1382,5 +1386,6 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/slider.js"></script>
+    <script src="./js/change-layout.js"></script>
   </body>
 </html>
