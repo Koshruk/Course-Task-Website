@@ -44,6 +44,14 @@ h2 {
 a {
   color: inherit;
   text-decoration: none;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
+button {
+  cursor: pointer;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 
 body {
@@ -491,12 +499,22 @@ svg {
   bottom: 30px;
   left: 30px;
   padding: 10px 24px;
-  background-color: #ffffff;
-  color: #ff1111;
   border-radius: 20px;
   display: flex;
   gap: 10px;
   align-items: center;
+}
+.figure-offer__badge--popular {
+  color: #ff1111;
+  background-color: #ffe1e1;
+}
+.figure-offer__badge--new {
+  color: #119bff;
+  background-color: #d7eeff;
+}
+.figure-offer__badge--discount {
+  color: #00ce3a;
+  background-color: #f1fff1;
 }
 .figure-offer__badge-svg {
   max-height: 20px;

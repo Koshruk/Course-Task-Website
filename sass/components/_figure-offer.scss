@@ -26,8 +26,21 @@
 
         padding: 10px 24px;
 
-        background-color: $white-color;
-        color: $popular-color;
+        &--popular{
+            color: $popular-color;
+            background-color: $popular-background-color;
+        }
+
+        &--new{
+            color: $newlisting-color;
+            background-color: $newlisting-background-color;
+        }
+
+        &--discount{
+            color: $discount-color;
+            background-color: $discount-background-color;
+        }
+
         border-radius: 20px;
 
         display: flex;
