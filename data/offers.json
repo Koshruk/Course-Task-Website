@@ -3,36 +3,55 @@
         "id": 1,
         "title": "Tranquil Haven i the Woods",
         "address": "103 Wright CourtBurien, WA 98168",
+        "image": "./images/jpg/offer1.jpg",
+        "alt": "Two-stored panthouse with a pool infront of it",
         "beds": 4,
         "bath": 3,
         "cost": "5,970",
-        "type": "Popular"
+        "type": "popular"
     },
     {
-        "id": 1,
-        "title": "Tranquil Haven i the Woods",
-        "address": "103 Wright CourtBurien, WA 98168",
-        "beds": 4,
-        "bath": 3,
-        "cost": "5,970",
-        "type": "Popular"
+        "id": 2,
+        "title": "Serene Retreat by the Lake",
+        "address": "1964 Jehovah Drive, VA 22408",
+        "image": "./images/jpg/offer2.jpg",
+        "alt": "Residential building",
+        "beds": 3,
+        "bath": 2,
+        "cost": "1,970",
+        "type": "new"
     },
     {
-        "id": 1,
-        "title": "Tranquil Haven i the Woods",
-        "address": "103 Wright CourtBurien, WA 98168",
+        "id": 3,
+        "title": "Charming Cottage in the Meadow",
+        "address": "1508 Centennial Farm RoadHarlan, 51537",
+        "image": "./images/jpg/offer3.jpg",
+        "alt": "Two-stored panthouse with a pool infront of it and garage",
         "beds": 4,
-        "bath": 3,
-        "cost": "5,970",
-        "type": "Popular"
+        "bath": 4,
+        "cost": "3,450",
+        "type": "discount"
     },
     {
-        "id": 1,
-        "title": "Tranquil Haven i the Woods",
+        "id": 4,
+        "title": "Grand Estate Near City",
         "address": "103 Wright CourtBurien, WA 98168",
+        "image": "./images/jpg/offer4.jpg",
+        "alt": "Suburban house with a big lawn",
         "beds": 4,
-        "bath": 3,
-        "cost": "5,970",
-        "type": "Popular"
+        "bath": 2,
+        "cost": "2,389",
+        "type": "discount"
+    },
+    {
+        "id": 5,
+        "title": "Future in Your House",
+        "address": "103 Wright CourtBurien, WA 98168",
+        "alt": "High-tech residential building",
+        "image": "./images/jpg/offer5.jpg",
+        "beds": 1,
+        "bath": 2,
+        "cost": "2,125",
+        "type": "new"
     }
 ]
