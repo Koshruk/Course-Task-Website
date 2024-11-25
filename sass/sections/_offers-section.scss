@@ -10,7 +10,15 @@
     &__button-list{
         
         display: flex;
-        gap: 20px;
+        gap: 10px;
+        margin-bottom: clamp(20px, 7vw, 40px);
+    }
+
+    &__button{
+        font-size: 12px;
+        padding-inline: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
     &__section-title{
@@ -21,6 +29,18 @@
         margin-bottom: clamp(15px, 2.8vw, 40px);
     }
 
+    @media screen and (min-width:480px) {
+        &__button-list{
+            gap:20px;
+        }
+
+        &__button{
+            font-size: 16px;
+            padding-inline: 30px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
 
     @media screen and (min-width: 768px) {
         &__flex-div{
@@ -29,6 +49,7 @@
         
         &__button-list{
             margin-left: auto;
+            margin-bottom: 0;
         }
     }
 }
