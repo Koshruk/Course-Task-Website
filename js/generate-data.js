@@ -11,7 +11,7 @@ const badgeTexts = {
     discount: 'Discounted Price',
 };
 
-fetch('/data/offers.json')
+fetch('../data/offers.json')
     .then(res => res.json())
     .then(data => {
         data.forEach(offer => {
