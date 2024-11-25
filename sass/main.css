@@ -478,11 +478,11 @@ svg {
 }
 
 .figure-offer__image-container {
-  max-width: 340px;
-  height: 340px;
+  width: clamp(10px, 30vw, 340px);
+  height: clamp(10px, 30vw, 340px);
   overflow: hidden;
   border-radius: 30px;
-  margin-bottom: 30px;
+  margin-bottom: clamp(10px, 2vw, 30px);
   position: relative;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -496,8 +496,8 @@ svg {
 }
 .figure-offer__badge {
   position: absolute;
-  bottom: 30px;
-  left: 30px;
+  bottom: 8.8%;
+  left: 8.8%;
   padding: 10px 24px;
   border-radius: 20px;
   display: flex;
@@ -517,44 +517,55 @@ svg {
   background-color: #f1fff1;
 }
 .figure-offer__badge-svg {
-  max-height: 20px;
-  max-width: 20px;
+  max-height: clamp(17px, 1.4vw, 20px);
+  max-width: clamp(17px, 1.4vw, 20px);
 }
 .figure-offer__badge-text {
   font-weight: 500;
-  font-size: 16px;
+  font-size: clamp(0.8rem, 1.1vw + 0.3rem, 1rem);
 }
 .figure-offer__cost {
   font-weight: 600;
-  font-size: 26.7px;
-  margin-bottom: 15px;
+  font-size: clamp(19.4px, 1.91vw + 0.5rem, 27.6px);
+  margin-bottom: clamp(7px, 1vw, 15px);
 }
 .figure-offer__title {
   font-weight: 500;
-  font-size: 19.5px;
-  margin-bottom: 10px;
+  font-size: clamp(16px, 1.35vw + 0.5rem, 19.4px);
+  margin-bottom: clamp(5px, 0.7vw, 10px);
 }
 .figure-offer__regular-text {
-  margin-bottom: 10px;
+  margin-bottom: clamp(5px, 0.7vw, 10px);
 }
 .figure-offer__rooms {
   display: flex;
   gap: 20px;
 }
 .figure-offer__rooms-text {
-  font-size: 16px;
+  font-size: clamp(0.8rem, 1.1vw + 0.3rem, 1rem);
   line-height: 1.63;
   display: flex;
   gap: 10px;
 }
 .figure-offer__svg {
-  max-height: 24px;
+  max-height: clamp(18px, 1.7vw, 24px);
 }
 .figure-offer__svg--wide {
-  max-width: 30px;
+  max-width: clamp(22px, 2.1vw, 30px);
 }
 .figure-offer__svg--thin {
-  max-width: 24px;
+  max-width: clamp(18px, 1.7vw, 24px);
+}
+@media screen and (min-width: 1024px) {
+  .figure-offer__svg {
+    max-height: 24px;
+  }
+  .figure-offer__svg--wide {
+    max-width: 30px;
+  }
+  .figure-offer__svg--thin {
+    max-width: 24px;
+  }
 }
 
 .figure-member {
@@ -1125,22 +1136,30 @@ svg {
 }
 
 .offers-section {
-  padding-top: 100px;
-  padding-bottom: 188px;
+  padding-top: clamp(20px, 7vw, 100px);
+  padding-bottom: clamp(20px, 13vw, 188px);
 }
 .offers-section__flex-div {
   display: flex;
+  flex-direction: column;
 }
 .offers-section__button-list {
-  margin-left: auto;
   display: flex;
   gap: 20px;
 }
 .offers-section__section-title {
-  margin-bottom: 30px;
+  margin-bottom: clamp(10px, 2vw, 30px);
 }
 .offers-section__regular-text {
-  margin-bottom: 40px;
+  margin-bottom: clamp(15px, 2.8vw, 40px);
+}
+@media screen and (min-width: 768px) {
+  .offers-section__flex-div {
+    flex-direction: row;
+  }
+  .offers-section__button-list {
+    margin-left: auto;
+  }
 }
 
 .services-section {

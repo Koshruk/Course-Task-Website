@@ -1,12 +1,12 @@
 .figure-offer{
 
     &__image-container{
-        max-width: 340px;
-        height: 340px;
+        width: clamp(10px, 30vw, 340px);
+        height: clamp(10px, 30vw, 340px);
         overflow: hidden;
         border-radius: 30px;
 
-        margin-bottom: 30px;
+        margin-bottom: clamp(10px, 2vw, 30px);
 
         position: relative;
 
@@ -21,8 +21,8 @@
 
     &__badge{
         position: absolute;
-        bottom: 30px;
-        left: 30px;
+        bottom: 8.8%;
+        left: 8.8%;
 
         padding: 10px 24px;
 
@@ -50,31 +50,31 @@
     }
 
     &__badge-svg{
-        max-height: 20px;
-        max-width: 20px;
+        max-height: clamp(17px, 1.4vw, 20px);
+        max-width: clamp(17px, 1.4vw, 20px);
     }
 
     &__badge-text{
         font-weight: 500;
-        font-size: 16px;
+        font-size: clamp(0.8rem, 1.1vw + 0.3rem, 1rem);
     }
 
     &__cost{
         font-weight: 600;
-        font-size: 26.7px;
+        font-size: clamp(19.4px, 1.91vw + 0.5rem, 27.6px);
 
-        margin-bottom: 15px;
+        margin-bottom: clamp(7px, 1vw, 15px);
     }
 
     &__title{
         font-weight: 500;
-        font-size: 19.5px;
+        font-size: clamp(16px, 1.35vw + 0.5rem, 19.4px);
 
-        margin-bottom: 10px;
+        margin-bottom: clamp(5px, 0.7vw, 10px);
     }
 
     &__regular-text{
-        margin-bottom: 10px;
+        margin-bottom: clamp(5px, 0.7vw, 10px);
     }
 
     &__rooms{
@@ -84,7 +84,7 @@
 
 
     &__rooms-text{
-        font-size: 16px;
+        font-size: clamp(0.8rem, 1.1vw + 0.3rem, 1rem);
         line-height: 1.63;
 
         display: flex;
@@ -92,14 +92,28 @@
     }
 
     &__svg{
-        max-height: 24px;
+        max-height: clamp(18px, 1.7vw, 24px);
 
         &--wide{
-            max-width: 30px;
+            max-width: clamp(22px, 2.1vw, 30px);
         }
 
         &--thin{
-            max-width: 24px;
+            max-width: clamp(18px, 1.7vw, 24px);
+        }
+    }
+
+    @media screen and (min-width:1024px) {
+        &__svg{
+            max-height: 24px;
+    
+            &--wide{
+                max-width: 30px;
+            }
+    
+            &--thin{
+                max-width: 24px;
+            }
         }
     }
 
