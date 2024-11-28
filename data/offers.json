@@ -8,7 +8,8 @@
         "beds": 4,
         "bath": 3,
         "cost": "5,970",
-        "type": "popular"
+        "type": "popular",
+        "deal": "sell"
     },
     {
         "id": 2,
@@ -19,7 +20,8 @@
         "beds": 3,
         "bath": 2,
         "cost": "1,970",
-        "type": "new"
+        "type": "new",
+        "deal": "sell"
     },
     {
         "id": 3,
@@ -30,7 +32,8 @@
         "beds": 4,
         "bath": 4,
         "cost": "3,450",
-        "type": "discount"
+        "type": "discount",
+        "deal": "rent"
     },
     {
         "id": 4,
@@ -41,7 +44,8 @@
         "beds": 4,
         "bath": 2,
         "cost": "2,389",
-        "type": "discount"
+        "type": "discount",
+        "deal": "sell"
     },
     {
         "id": 5,
@@ -52,7 +56,8 @@
         "beds": 1,
         "bath": 2,
         "cost": "2,125",
-        "type": "new"
+        "type": "new",
+        "deal": "sell"
     },
     {
         "id": 6,
@@ -63,7 +68,8 @@
         "beds": 5,
         "bath": 4,
         "cost": "8,350",
-        "type": "popular"
+        "type": "popular",
+        "deal": "sell"
     },
     {
         "id": 7,
@@ -74,7 +80,8 @@
         "beds": 3,
         "bath": 3,
         "cost": "7,890",
-        "type": "new"
+        "type": "new",
+        "deal": "rent"
     },
     {
         "id": 8,
@@ -85,7 +92,8 @@
         "beds": 6,
         "bath": 5,
         "cost": "12,500",
-        "type": "popular"
+        "type": "popular",
+        "deal": "rent"
     },
     {
         "id": 9,
@@ -96,7 +104,8 @@
         "beds": 2,
         "bath": 1,
         "cost": "1,800",
-        "type": "discount"
+        "type": "discount",
+        "deal": "sell"
     },
     {
         "id": 10,
@@ -107,6 +116,7 @@
         "beds": 1,
         "bath": 1,
         "cost": "3,500",
-        "type": "new"
+        "type": "new",
+        "deal": "sell"
     }
 ]

@@ -88,7 +88,6 @@ svg {
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  overflow: hidden;
 }
 .container--flex {
   display: flex;
@@ -1217,6 +1216,10 @@ svg {
 .offers-section__regular-text {
   margin-bottom: clamp(15px, 2.8vw, 40px);
 }
+.offers-section__viewall-button {
+  font-size: clamp(13px, 4vw, 17px);
+  margin-inline: auto;
+}
 @media screen and (min-width: 480px) {
   .offers-section__button-list {
     gap: 20px;
@@ -1235,6 +1238,9 @@ svg {
   .offers-section__button-list {
     margin-left: auto;
     margin-bottom: 0;
+  }
+  .offers-section__viewall-button {
+    display: none;
   }
 }
 

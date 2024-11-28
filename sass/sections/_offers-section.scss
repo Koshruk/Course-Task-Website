@@ -29,6 +29,12 @@
         margin-bottom: clamp(15px, 2.8vw, 40px);
     }
 
+    &__viewall-button{
+        font-size: clamp(13px, 4vw, 17px);
+
+        margin-inline: auto;
+    }
+
     @media screen and (min-width:480px) {
         &__button-list{
             gap:20px;
@@ -50,6 +56,10 @@
         &__button-list{
             margin-left: auto;
             margin-bottom: 0;
+        }
+
+        &__viewall-button{
+            display: none;
         }
     }
 }

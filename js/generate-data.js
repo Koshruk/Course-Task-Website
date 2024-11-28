@@ -1,4 +1,10 @@
+
+
 const offerList = document.querySelector('.slider-offers__wrapper');
+const allButton = document.querySelector('#all-button');
+const sellButton = document.querySelector('#sell-button');
+const rentButton = document.querySelector('#rent-button');
+
 const badgeIcons = {
   popular: 'fire-icon',
   new: 'fill-home-icon',
@@ -57,29 +63,54 @@ fetch('./data/offers.json')
   })
   .then((data) => {
     if (Array.isArray(data) && data.length > 0) {
-      const offersToDisplay = data.slice(0, 4); 
+      const offersHTML = data.map(createOfferHTML).join('');
+      offerList.innerHTML = offersHTML;
+
+      const displayOffers = (filter) => {
+        const filteredOffers = filter === 'all' ? data : data.filter((offer) => offer.deal === filter);
+
+        if (swiperOffers) {
+          swiperOffers.destroy(true, true);
+          swiperOffers = undefined;
+          console.log('Deleted Swiper instance');
+        }
+
+        offerList.innerHTML = filteredOffers.map(createOfferHTML).join('');
+        console.log('html in the offer swiper was generated');
+
+        if(window.innerWidth >= 768){
+          enableOffersSwiper();
+        }
+      };
+
+      displayOffers('all');
+
+      allButton.addEventListener('click', () => displayOffers('all'));
+      sellButton.addEventListener('click', () => displayOffers('sell'));
+      rentButton.addEventListener('click', () => displayOffers('rent'));
+
+      /*const offersToDisplay = data.slice(0, 4); 
       const offersHTML = offersToDisplay.map(createOfferHTML).join('');
       offerList.innerHTML = offersHTML;
 
       const mediaQuery = window.matchMedia('(min-width: 768px)');
-      mediaQuery.addListener((e) => {
-        if (e.matches) {
-          const allOffersHTML = data.map(createOfferHTML).join('');
-          offerList.innerHTML = allOffersHTML;
-        } else {
-          offerList.innerHTML = offersHTML;
-        }
-      });
-
-      if (mediaQuery.matches) {
-        const allOffersHTML = data.map(createOfferHTML).join('');
-        offerList.innerHTML = allOffersHTML;
-      }
+      const updateOfferList = (e) => {
+        offerList.innerHTML = e.matches
+          ? data.map(createOfferHTML).join('')
+          : offersHTML;
+      };
+      
+      updateOfferList(mediaQuery);
+      mediaQuery.addEventListener('change', updateOfferList);
+*/
+      
     } else {
       console.warn('No offers found in the JSON data.');
+      offerList.innerHTML = `<p class="error-message">No offers available at the moment.</p>`;
     }
   })
   .catch((error) => {
     console.error('Error fetching offers:', error);
     offerList.innerHTML = `<p class="error-message">Failed to load offers. Please try again later.</p>`;
   });
+

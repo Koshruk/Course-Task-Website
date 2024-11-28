@@ -80,7 +80,6 @@ const swiperReviews = new Swiper('.swiperReviews',{
 });
 
 function breakpointChecker(){
-
     if(window.innerWidth < 768){
         if (swiperOffers !== undefined){
             swiperOffers.destroy(true, true);
