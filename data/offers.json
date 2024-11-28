@@ -21,7 +21,7 @@
         "bath": 2,
         "cost": "1,970",
         "type": "new",
-        "deal": "sell"
+        "deal": "rent"
     },
     {
         "id": 3,
@@ -93,7 +93,7 @@
         "bath": 5,
         "cost": "12,500",
         "type": "popular",
-        "deal": "rent"
+        "deal": "sell"
     },
     {
         "id": 9,

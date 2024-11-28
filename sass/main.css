@@ -1,13 +1,13 @@
 .title {
   font-weight: 600;
-  font-size: clamp(1.5rem, 4vw + 1rem, 3.6rem);
+  font-size: clamp(39.8px, 10vw, 57.3px);
   line-height: 1.3;
   letter-spacing: 0em;
 }
 
 .regular-text {
   font-weight: 400;
-  font-size: clamp(0.8rem, 1.1vw + 0.3rem, 1rem);
+  font-size: clamp(13.3px, 1.1vw + 0.3rem, 16px);
   line-height: 1.63;
   letter-spacing: 0em;
   color: #808080;
@@ -17,7 +17,7 @@
 }
 
 .section-title {
-  font-size: clamp(1.2rem, 2.76vw, 2.5rem);
+  font-size: clamp(27.6px, 6.9vw, 39.8px);
   font-weight: 600;
   line-height: 1.18;
 }
@@ -201,7 +201,7 @@ svg {
 
 .secondary-title {
   font-weight: 400;
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(16px, 4vw, 19.4px);
   line-height: 1;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -1210,6 +1210,15 @@ svg {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+.offers-section__button:hover {
+  background-color: #3a0ca3;
+  color: #ffffff;
+}
+.offers-section__button:focus {
+  background-color: #3a0ca3;
+  color: #ffffff;
+  box-shadow: inset 0px 0px 0px 2px #000000;
+}
 .offers-section__section-title {
   margin-bottom: clamp(10px, 2vw, 30px);
 }
@@ -1230,6 +1239,9 @@ svg {
     padding-top: 15px;
     padding-bottom: 15px;
   }
+  .offers-section__button:focus {
+    box-shadow: inset 0px 0px 0px 5px #000000;
+  }
 }
 @media screen and (min-width: 768px) {
   .offers-section__flex-div {
@@ -1246,37 +1258,40 @@ svg {
 
 .services-section {
   background-color: rgba(212, 212, 212, 0.3);
-  padding-top: 100px;
-  padding-bottom: 137px;
+  padding-top: clamp(50px, 7vw, 100px);
+  padding-bottom: clamp(55px, 10vw, 137px);
 }
 .services-section__secondary-title {
-  font-size: 19.4px;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+  margin-inline: auto;
 }
 .services-section__section-title {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   color: #0b090a;
 }
 .services-section__services-list {
   display: flex;
-  gap: 50px;
+  flex-direction: column;
+  gap: clamp(20px, 5.5vw, 50px);
   justify-content: space-between;
   text-align: center;
 }
 .services-section__services-item {
   background-color: #ffffff;
-  padding: 60px;
+  padding: clamp(30px, 10vw, 40px);
   border-radius: 30px;
   box-shadow: 5px 5px 30px rgba(212, 212, 212, 0.1);
 }
+.services-section__service-title {
+  font-size: clamp(16px, 4vw, 19.4px);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
 .services-section__svg-container {
-  width: 90px;
-  height: 90px;
+  width: 60px;
+  height: 60px;
   background-color: #4361ee;
   margin-left: auto;
   margin-right: auto;
@@ -1289,12 +1304,31 @@ svg {
   box-shadow: 3px 5px 20px rgba(67, 97, 238, 0.8);
 }
 .services-section__svg {
-  max-width: 40px;
+  max-width: 30px;
 }
-.services-section__service-title {
-  font-size: 19.4px;
-  font-weight: 500;
-  margin-bottom: 20px;
+@media screen and (min-width: 480px) {
+  .services-section__svg-container {
+    width: 70px;
+    height: 70px;
+  }
+  .services-section__svg {
+    max-width: 35px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .services-section__services-list {
+    flex-direction: row;
+  }
+  .services-section__services-item {
+    padding: clamp(30px, 5vw, 60px);
+  }
+  .services-section__svg-container {
+    width: 90px;
+    height: 90px;
+  }
+  .services-section__svg {
+    max-width: 40px;
+  }
 }
 
 .areas-section {

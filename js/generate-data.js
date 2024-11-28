@@ -54,56 +54,47 @@ const createOfferHTML = (offer) => {
     </figure>`;
 };
 
+const displayOffers = (data, filter) => {
+  const filteredOffers = filter === 'all' ? data : data.filter((offer) => offer.deal === filter);
+
+  const sliceLimit = window.innerWidth >= 768 ? 10 : 4;
+  console.log(sliceLimit);
+  const offersToDisplay = filteredOffers.slice(0, sliceLimit);
+
+  offerList.innerHTML = offersToDisplay.map(createOfferHTML).join('');
+
+  if (window.innerWidth >= 768) {
+      enableOffersSwiper();
+  }
+};
+
 fetch('./data/offers.json')
   .then((response) => {
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
+    if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
     return response.json();
   })
   .then((data) => {
     if (Array.isArray(data) && data.length > 0) {
-      const offersHTML = data.map(createOfferHTML).join('');
-      offerList.innerHTML = offersHTML;
+      let currentFilter = 'all';
 
-      const displayOffers = (filter) => {
-        const filteredOffers = filter === 'all' ? data : data.filter((offer) => offer.deal === filter);
+      const updateOffersOnResize = () => displayOffers(data, currentFilter);
 
-        if (swiperOffers) {
-          swiperOffers.destroy(true, true);
-          swiperOffers = undefined;
-          console.log('Deleted Swiper instance');
-        }
+      displayOffers(data, currentFilter);
 
-        offerList.innerHTML = filteredOffers.map(createOfferHTML).join('');
-        console.log('html in the offer swiper was generated');
+      allButton.addEventListener('click', () => {
+        currentFilter = 'all';
+        displayOffers(data, currentFilter);
+      });
+      sellButton.addEventListener('click', () => {
+        currentFilter = 'sell';
+        displayOffers(data, currentFilter);
+      });
+      rentButton.addEventListener('click', () => {
+        currentFilter = 'rent';
+        displayOffers(data, currentFilter);
+      });
 
-        if(window.innerWidth >= 768){
-          enableOffersSwiper();
-        }
-      };
-
-      displayOffers('all');
-
-      allButton.addEventListener('click', () => displayOffers('all'));
-      sellButton.addEventListener('click', () => displayOffers('sell'));
-      rentButton.addEventListener('click', () => displayOffers('rent'));
-
-      /*const offersToDisplay = data.slice(0, 4); 
-      const offersHTML = offersToDisplay.map(createOfferHTML).join('');
-      offerList.innerHTML = offersHTML;
-
-      const mediaQuery = window.matchMedia('(min-width: 768px)');
-      const updateOfferList = (e) => {
-        offerList.innerHTML = e.matches
-          ? data.map(createOfferHTML).join('')
-          : offersHTML;
-      };
-      
-      updateOfferList(mediaQuery);
-      mediaQuery.addEventListener('change', updateOfferList);
-*/
-      
+      window.addEventListener('resize', updateOffersOnResize);
     } else {
       console.warn('No offers found in the JSON data.');
       offerList.innerHTML = `<p class="error-message">No offers available at the moment.</p>`;
