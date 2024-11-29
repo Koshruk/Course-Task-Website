@@ -209,6 +209,9 @@ svg {
   margin-bottom: clamp(0.5rem, 1.5625vw + 0.5rem, 2rem);
 }
 
+.header {
+  display: none;
+}
 .header__address-section {
   font-weight: 400;
   font-size: 13.3px;
@@ -1332,30 +1335,21 @@ svg {
 }
 
 .areas-section {
-  padding: 210px 0;
+  padding: clamp(80px, 20vw, 210px) 0;
 }
 .areas-section__section-title {
-  margin-bottom: 80px;
+  margin-bottom: clamp(30px, 10vw, 80px);
 }
 .areas-section__pictures-list {
-  display: flex;
-  gap: 50px;
-  justify-content: space-between;
-}
-.areas-section__pictures-list:not(:last-of-type) {
-  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 columns for smaller screens */
+  gap: clamp(15px, 4%, 50px);
 }
 .areas-section__pictures-item {
   position: relative;
   overflow: hidden;
-  height: 320px;
-  border-radius: 30px;
-}
-.areas-section__pictures-item--thin {
-  width: 300px;
-}
-.areas-section__pictures-item--medium {
-  width: 420px;
+  height: clamp(155px, 30vw, 320px);
+  border-radius: 20px;
 }
 .areas-section__pictures-item::before {
   content: "";
@@ -1377,28 +1371,45 @@ svg {
 }
 .areas-section__overlay {
   position: absolute;
-  bottom: 30px;
-  left: 40px;
+  bottom: clamp(5px, 3vw, 30px);
+  left: clamp(5px, 3vw, 30px);
+  right: 3px;
   z-index: 2;
 }
 .areas-section__properties-number {
-  font-size: 57.3px;
+  font-size: clamp(27.6px, 7vw, 57.3px);
   font-weight: 600;
   line-height: 1.13;
   color: rgba(255, 255, 255, 0.6);
 }
 .areas-section__location {
-  font-size: 19.4;
+  font-size: clamp(13.3px, 1.1vw, 16px);
   font-weight: 500;
   color: #ffffff;
 }
-.areas-section__decor-circle {
-  width: 50px;
-  height: 50px;
-  transform: rotate(45deg);
-  opacity: 50%;
-  top: -125px;
-  left: 50%;
+@media screen and (min-width: 768px) {
+  .areas-section__pictures-list {
+    grid-template-columns: repeat(20, 1fr);
+    gap: clamp(15px, 4%, 50px);
+  }
+  .areas-section__pictures-item {
+    border-radius: 30px;
+  }
+  .areas-section__pictures-item:nth-child(1) {
+    grid-column: span 6;
+  }
+  .areas-section__pictures-item:nth-child(2) {
+    grid-column: span 6;
+  }
+  .areas-section__pictures-item:nth-child(3) {
+    grid-column: span 8;
+  }
+  .areas-section__pictures-item:nth-child(4) {
+    grid-column: span 8;
+  }
+  .areas-section__pictures-item:nth-child(5) {
+    grid-column: span 12;
+  }
 }
 
 .team-section {
