@@ -44,18 +44,24 @@ function enableOffersSwiper(){
     });
 };
 
-const swiperBlogs = new Swiper('.swiperBlogs',{
-    direction: 'horizontal',
-    slidesPerView: 1,
-    spaceBetween: 50,
-    allowTouchMove: true,
-    pagination:{
-        el: '.swiper-pagination-blogs',
-        bulletClass: 'slider-blogs__pagination-bullet',
-        bulletActiveClass: 'slider-blogs__pagination-bullet--active',
-        clickable: true,
-    },
-});
+
+let swiperBlogs;
+function enableBlogsSwiper(){
+    if (swiperBlogs) return;
+    swiperBlogs = new Swiper('.swiperBlogs',{
+        direction: 'horizontal',
+        slidesPerGroup: 3,
+        slidesPerView: 3,
+        spaceBetween: 50,
+        allowTouchMove: true,
+        pagination:{
+            el: '.swiper-pagination-blogs',
+            bulletClass: 'slider-blogs__pagination-bullet',
+            bulletActiveClass: 'slider-blogs__pagination-bullet--active',
+            clickable: true,
+        },
+    });
+}
 
 const swiperReviews = new Swiper('.swiperReviews',{
     slidesPerView: 1,
@@ -92,6 +98,16 @@ function breakpointChecker(){
     }
     else{
         enableClientsSwiper();
+    }
+
+    if(window.innerWidth < 768){
+        if (swiperBlogs !== undefined){
+             swiperBlogs.destroy(true, true);
+        }
+        swiperBlogs = undefined;
+    }
+    else{
+        enableBlogsSwiper();
     }
 }
 
