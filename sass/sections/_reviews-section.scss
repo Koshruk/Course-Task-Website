@@ -3,10 +3,13 @@
 
     &__container{
         position: relative;
+        
+        display: flex;
+        flex-direction: column;
     }
 
     &__title-div{
-        max-width: 415px;
+        width: 100%;
     }
 
     &__regular-text{
@@ -16,8 +19,6 @@
     }
 
     &__slider-reviews{
-        width: 500px;
-        margin-left: auto;
     }
 
     &__slider-nav{
@@ -59,5 +60,20 @@
         opacity: 50%;
         top: -20px;
         right: 460px;
+    }
+
+    @media screen and (min-width:768px) {
+        &__container{
+            flex-direction: row;
+        }
+
+        &__title-div{
+            width: 40%;
+        }
+
+        &__slider-reviews{
+            margin-left: auto;
+            width: 50%;
+        }
     }
 }
