@@ -386,7 +386,7 @@ svg {
 .slider-blogs__pagination {
   position: absolute;
   width: 100%;
-  padding: 0 400px;
+  padding: 0 40%;
   display: flex;
   gap: 34px;
   justify-content: center;
@@ -634,8 +634,8 @@ svg {
 }
 .figure-member__image-container {
   overflow: hidden;
-  width: 200px;
-  height: 280px;
+  width: clamp(100px, 30vw, 200px);
+  height: clamp(140px, 42vw, 280px);
   border-radius: 30px;
   border-top-left-radius: 50%;
   margin-bottom: 30px;
@@ -647,13 +647,14 @@ svg {
      object-fit: cover;
 }
 .figure-member__title {
-  font-size: 27.6px;
+  font-size: clamp(19.4px, 4.7vw, 27.6px);
   font-weight: 600;
   margin-bottom: 20px;
   color: #0b090a;
+  text-align: center;
 }
 .figure-member__text {
-  font-size: 16px;
+  font-size: clamp(13.3px, 1.1vw, 16px);
   font-weight: 500;
   color: #4361ee;
   text-align: center;
@@ -663,14 +664,13 @@ svg {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  max-width: 340px;
-  height: 475px;
+  max-width: 30%;
   display: flex;
   flex-direction: column;
 }
 .blogs-article__image-container {
   position: relative;
-  width: 340px;
+  width: 100%;
   height: 240px;
   border-radius: 30px;
   overflow: hidden;
@@ -1342,7 +1342,7 @@ svg {
 }
 .areas-section__pictures-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 3 columns for smaller screens */
+  grid-template-columns: repeat(2, 1fr);
   gap: clamp(15px, 4%, 50px);
 }
 .areas-section__pictures-item {
@@ -1413,7 +1413,7 @@ svg {
 }
 
 .team-section {
-  padding-bottom: 180px;
+  padding-bottom: clamp(80px, 13vw, 170px);
 }
 .team-section__container {
   position: relative;
@@ -1426,11 +1426,9 @@ svg {
   margin-bottom: 100px;
 }
 .team-section__members-list {
-  padding: 0 15px;
-}
-.team-section__member-item {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(15px, 4%, 50px);
 }
 .team-section__decor-circle {
   position: absolute;
@@ -1441,10 +1439,15 @@ svg {
   top: -100px;
   right: 20px;
 }
+@media screen and (min-width: 1024px) {
+  .team-section__members-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 
 .blogs-section {
-  padding-top: 110px;
-  padding-bottom: 170px;
+  padding-top: clamp(70px, 10vw, 150px);
+  padding-bottom: clamp(80px, 15vw, 170px);
   background-color: #3a0ca3;
 }
 .blogs-section__secondary-title {
@@ -1454,7 +1457,7 @@ svg {
 .blogs-section__section-title {
   color: #ffffff;
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: clamp(30px, 10vw, 80px);
 }
 
 .reviews-section {
@@ -1569,6 +1572,9 @@ svg {
 .footer-main-section__container {
   align-items: baseline;
   justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  place-items: center;
 }
 .footer-main-section__logo {
   margin-bottom: 40px;
@@ -1596,6 +1602,12 @@ svg {
   font-size: 19.4px;
   font-weight: 500;
   margin-bottom: 30px;
+}
+.footer-main-section__links-div {
+  display: none;
+}
+.footer-main-section__discovery-div {
+  display: none;
 }
 .footer-main-section__link {
   font-size: 16px;
@@ -1629,6 +1641,23 @@ svg {
   max-width: 22px;
   max-height: 22px;
   color: #3a0ca3;
+}
+@media screen and (min-width: 768px) {
+  .footer-main-section__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .footer-main-section__links-div {
+    display: block;
+  }
+  .footer-main-section__discovery-div {
+    display: block;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer-main-section__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .copyright-section {

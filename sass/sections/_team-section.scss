@@ -1,5 +1,5 @@
 .team-section{
-    padding-bottom: 180px;
+    padding-bottom: clamp(80px, 13vw, 170px);
 
     &__container{
         position: relative;
@@ -14,12 +14,9 @@
     }
 
     &__members-list{
-        padding: 0 15px;
-    }
-
-    &__member-item{
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: clamp(15px, 4%, 50px);
     }
 
     &__decor-circle{
@@ -30,5 +27,11 @@
         opacity: 50%;
         top: -100px;
         right: 20px;
+    }
+
+    @media screen and (min-width:1024px) {
+        &__members-list{
+            grid-template-columns: repeat(4, 1fr);
+        }
     }
 }

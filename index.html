@@ -21,6 +21,16 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" type="text/css" href="./sass/main.css" />
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init({
+            publicKey: "aFAZvuMZj3Apyanht",
+          });
+      })();
+    </script>
   </head>
 
   <body class="main-page">
@@ -645,6 +655,8 @@
                   <p class="figure-member__text">CEO & Founder</p>
                 </figcaption>
               </figure>
+            </li>
+            <li class="team-section__member-item">
               <figure class="figure-member team-section__figure-member">
                 <div class="figure-member__image-container">
                   <img
@@ -658,6 +670,8 @@
                   <p class="figure-member__text">Real Estate Developer</p>
                 </figcaption>
               </figure>
+            </li>
+            <li class="team-section__member-item">
               <figure class="figure-member team-section__figure-member">
                 <div class="figure-member__image-container">
                   <img
@@ -671,6 +685,8 @@
                   <p class="figure-member__text">Listing Agent</p>
                 </figcaption>
               </figure>
+            </li>
+            <li class="team-section__member-item">
               <figure class="figure-member team-section__figure-member">
                 <div class="figure-member__image-container">
                   <img
@@ -1131,7 +1147,7 @@
             <h3 class="footer-main-section__title-div">
               Subscribe to our Newsletter!
             </h3>
-            <form class="footer-main-section__form">
+            <form onsubmit="emailSend(); reset(); return false" class="footer-main-section__form">
               <label class="footer-main-section__label">E-mail</label>
               <input
                 class="footer-main-section__input"
@@ -1139,6 +1155,7 @@
                 name="email"
                 id="footer-email"
                 placeholder="Email Address"
+                required
               />
               <button
                 type="submit"
@@ -1196,5 +1213,6 @@
     <script src="./js/slider.js"></script>
     <script src="./js/change-layout.js"></script>
     <script async src="./js/generate-data.js"></script>
+    <script async src="./js/send-form.js"></script>
   </body>
 </html>

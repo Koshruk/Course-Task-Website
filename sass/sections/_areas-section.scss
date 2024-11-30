@@ -7,7 +7,7 @@
   
     &__pictures-list {
       display: grid;
-      grid-template-columns: repeat(2, 1fr); /* 3 columns for smaller screens */
+      grid-template-columns: repeat(2, 1fr);
       gap: clamp(15px, 4%, 50px);
       }
     

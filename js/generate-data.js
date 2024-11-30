@@ -94,7 +94,9 @@ fetch('./data/offers.json')
         displayOffers(data, currentFilter);
       });
 
-      window.addEventListener('resize', updateOffersOnResize);
+      const mediaQuery = window.matchMedia('(min-width: 768px)');
+
+      mediaQuery.addEventListener('change', updateOffersOnResize);
     } else {
       console.warn('No offers found in the JSON data.');
       offerList.innerHTML = `<p class="error-message">No offers available at the moment.</p>`;

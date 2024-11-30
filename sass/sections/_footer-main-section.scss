@@ -5,6 +5,9 @@
     &__container{
         align-items: baseline;
         justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        place-items: center;
     }
 
     &__logo{
@@ -40,6 +43,14 @@
         font-size: 19.4px;
         font-weight: 500;
         margin-bottom: 30px;
+    }
+
+    &__links-div{
+        display: none;
+    }
+
+    &__discovery-div{
+        display: none;
     }
 
     &__link{
@@ -81,5 +92,26 @@
         max-width: 22px;
         max-height: 22px;
         color: $main-color;
+    }
+
+    @media screen and (min-width:768px) {
+        &__container{
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        &__links-div{
+            display: block;
+        }
+    
+        &__discovery-div{
+            display: block;
+        }
+    }
+
+    @media screen and (min-width:1024px) {
+        &__container{
+            grid-template-columns: repeat(4, 1fr);
+        }
     }
 }
