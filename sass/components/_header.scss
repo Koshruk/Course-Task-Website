@@ -76,6 +76,11 @@
         gap:20px
     }
 
+    &__burger-menu{
+        display: block;
+        margin-left: auto;
+    }
+
     @media screen and (min-width:1024px) {
         &__logo{
             margin-left: auto;
@@ -90,6 +95,10 @@
 
         &__button-div{
             display: flex;
+        }
+
+        &__burger-menu{
+            display: none;
         }
     }
 }

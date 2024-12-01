@@ -107,19 +107,25 @@
               Add Listing
             </button>
           </div>
-          <div class="burger-button header__burger-button" onclick="burgerOnClick()">
-            <div id="bar1" class="bar burger-button__bar burger-button__bar-1"></div>
-            <div id="bar2" class="bar burger-button__bar burger-button__bar-2"></div>
-            <div id="bar3" class="bar burger-button__bar burger-button__bar-3"></div>
+          
+          <div id="menu" class="burger-menu header__burger-menu">
+            <div id="menu-bar" class="burger-menu__burger-button" onclick="menuOnClick()">
+              <div id="bar1" class="bar burger-menu__bar"></div>
+              <div id="bar2" class="bar burger-menu__bar"></div>
+              <div id="bar3" class="bar burger-menu__bar"></div>
+            </div>
+            <nav class="nav burger-menu__nav" id="nav">
+              <ul class="burger-menu__list">
+                <li class="burger-menu__item"><a class="burger-menu__link" href="#home">Home</a></li>
+                <li class="burger-menu__item"><a class="burger-menu__link" href="#info">About</a></li>
+                <li class="burger-menu__item"><a class="burger-menu__link" href="#offers">Listings</a></li>
+                <li class="burger-menu__item"><a class="burger-menu__link" href="#services">Services</a></li>
+                <li class="burger-menu__item"><a class="burger-menu__link" href="#blogs">BLogs</a></li>
+              </ul>
+            </nav> 
           </div>
-          <div class="burger-menu" id="nav">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Blog</a></li>
-            </ul>
-          </div> 
+          
+          <div class="burger-menu__background menu-bg" id="menu-bg"></div>      
         </div>
       </section>
     </header>
@@ -1232,7 +1238,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/slider.js"></script>
     <script src="./js/change-layout.js"></script>
-    <script scr="./js/burger-menu.js"></script>
+    <script src="./js/burger-menu.js"></script>
     <script async src="./js/generate-data.js"></script>
     <script async src="./js/send-form.js"></script>
   </body>

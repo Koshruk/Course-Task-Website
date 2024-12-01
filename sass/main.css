@@ -88,6 +88,8 @@ svg {
   margin-left: auto;
   margin-right: auto;
   position: relative;
+  overflow: clip;
+  overflow-y: visible;
 }
 .container--flex {
   display: flex;
@@ -268,6 +270,10 @@ svg {
   display: none;
   gap: 20px;
 }
+.header__burger-menu {
+  display: block;
+  margin-left: auto;
+}
 @media screen and (min-width: 1024px) {
   .header__logo {
     margin-left: auto;
@@ -280,6 +286,9 @@ svg {
   }
   .header__button-div {
     display: flex;
+  }
+  .header__burger-menu {
+    display: none;
   }
 }
 
@@ -814,7 +823,6 @@ svg {
   min-width: 40px;
   border-radius: 50%;
   overflow: hidden;
-  margin-right: 15px;
 }
 .review__author-image {
   width: 100%;
@@ -852,31 +860,90 @@ svg {
   }
 }
 
-.burger-button {
+.burger-menu {
+  z-index: 3;
+  top: 0;
+  right: 20px;
+  position: absolute;
+}
+.burger-menu__burger-button {
   width: 45px;
   height: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  margin: 20px 20px 20px 0;
+  margin-left: auto;
   cursor: pointer;
+  position: relative;
 }
-.burger-button__bar {
+.burger-menu__bar {
   height: 5px;
   width: 100%;
-  background-color: #DC052D;
+  background-color: #3a0ca3;
   display: block;
   border-radius: 5px;
   transition: 0.3s ease;
 }
-.burger-button__bar-2 {
+.burger-menu__bar#bar1 {
+  transform: translateY(-4px);
+}
+.burger-menu__bar#bar3 {
   transform: translateY(4px);
 }
-.burger-button__bar-3 {
-  transform: translateY(8px);
+.burger-menu__nav {
+  transition: 0.3s ease;
+  display: none;
+}
+.burger-menu__list {
+  padding: 0 22px;
+}
+.burger-menu__item {
+  padding: 12px 0;
+  text-align: right;
+}
+.burger-menu__link {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+.burger-menu__link:hover {
+  font-weight: 600;
+}
+.burger-menu__background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 0;
+  height: 0;
+  margin: 30px 20px 20px 0;
+  background: radial-gradient(circle, #3a0ca3, #3a0ca3);
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+.burger-menu.change .burger-menu__nav {
+  display: block;
+}
+.burger-menu.change .burger-menu__bar {
+  background-color: #ffffff;
+}
+.burger-menu.change .burger-menu__bar#bar1 {
+  transform: translateY(4px) rotateZ(-45deg);
+}
+.burger-menu.change .burger-menu__bar#bar2 {
+  opacity: 0;
+}
+.burger-menu.change .burger-menu__bar#bar3 {
+  transform: translateY(-6px) rotateZ(45deg);
+}
+.burger-menu.change .burger-menu__background {
+  width: 520px;
+  height: 460px;
+  transform: translate(60%, -30%);
 }
 
-.burger-menu {
-  display: none;
+.change-bg {
+  width: 520px;
+  height: 460px;
+  transform: translate(60%, -30%);
 }
 
 .hero {
