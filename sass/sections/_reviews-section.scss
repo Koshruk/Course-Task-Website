@@ -1,5 +1,6 @@
 .reviews-section{
-    padding: 217px 0;
+    padding: clamp(70px, 20vw, 218px) 0;
+    height: max-content;
 
     &__container{
         position: relative;
@@ -22,7 +23,7 @@
     }
 
     &__slider-nav{
-        display: flex;
+        display: none;
         user-select: none;
     }
 
@@ -68,13 +69,16 @@
         }
 
         &__title-div{
-            width: 40%;
+            width: 45%;
         }
 
         &__slider-reviews{
             margin-left: auto;
             width: 50%;
             margin-right: 30px;
+        }
+        &__slider-nav{
+            display: flex;
         }
     }
 }
