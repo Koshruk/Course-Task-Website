@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="description" content="rieltor website" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rezilla</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,11 +16,21 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="./css/modern-normalize.css" />
-    <link rel="stylesheet" type="text/css" href="./sass/main.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" type="text/css" href="./sass/main.css" />
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init({
+            publicKey: "aFAZvuMZj3Apyanht",
+          });
+      })();
+    </script>
   </head>
 
   <body class="main-page">
@@ -96,6 +107,25 @@
               Add Listing
             </button>
           </div>
+          
+          <div id="menu" class="burger-menu header__burger-menu">
+            <div id="menu-bar" class="burger-menu__burger-button" onclick="menuOnClick()">
+              <div id="bar1" class="bar burger-menu__bar"></div>
+              <div id="bar2" class="bar burger-menu__bar"></div>
+              <div id="bar3" class="bar burger-menu__bar"></div>
+            </div>
+            <nav class="nav burger-menu__nav" id="nav">
+              <ul class="burger-menu__list">
+                <li class="burger-menu__item"><a class="burger-menu__link" href="#home">Home</a></li>
+                <li class="burger-menu__item"><a class="burger-menu__link" href="#info">About</a></li>
+                <li class="burger-menu__item"><a class="burger-menu__link" href="#offers">Listings</a></li>
+                <li class="burger-menu__item"><a class="burger-menu__link" href="#services">Services</a></li>
+                <li class="burger-menu__item"><a class="burger-menu__link" href="#blogs">BLogs</a></li>
+              </ul>
+            </nav> 
+          </div>
+          
+          <div class="burger-menu__background menu-bg" id="menu-bg"></div>      
         </div>
       </section>
     </header>
@@ -107,13 +137,13 @@
           <h3 class="secondary-title hero__secondary-title">Real Estate</h3>
           <div class="flex-div hero__flex-div">
             <div class="hero__title-section">
-              <div class="decor-circle hero__decor-circle"></div>
               <h1 class="title hero__title">Find a perfect home you love..!</h1>
               <p class="regular-text hero__regular-text">
                 Etiam eget elementum elit. Aenean dignissim dapibus vestibulum.
                 Integer a dolor eu sapien sodales vulputate ac in purus.
               </p>
               <div class="slider-hero hero__slider-hero">
+                <div class="decor-circle hero__decor-circle"></div>
                 <div class="slider-hero__swiper swiperHero">
                   <div class="slider-hero__images-container swiper-wrapper">
                     <div class="swiper-slide">
@@ -174,45 +204,51 @@
 
             <div class="form-section hero__form-section">
               <div class="form-section__title-div">
-                <h3 class="form-section__title">Register for service</h3>
+                <h3 class="form-section__title">Register for consultation</h3>
               </div>
-              <form class="form-section__form">
+              <form onsubmit="formSend(); return false;" class="form-section__form">
                 <ul class="form-section__input-list">
                   <li class="form-section__input-item">
-                    <label class="form-section__label">Location</label>
-                    <input
+                    <label class="form-section__label">Name
+                      <input id="hero-form-name"
                       class="form-section__input"
-                      placeholder="New York, San Francisco, etc"
+                      placeholder="Brendon Perez"
                       type="text"
                       name="location"
                     />
+                    <div class="form-section__error error"></div>
+                    </label>
                   </li>
                   <li class="form-section__input-item">
-                    <label class="form-section__label">Type</label>
-                    <input
+                    <label class="form-section__label">Email
+                      <input id="hero-form-email"
                       class="form-section__input"
-                      placeholder="Select Property Type"
+                      placeholder="rezilla@gmail.com"
                       type="text"
                       name="location"
                     />
+                    <div class="form-section__error error"></div>
+                    </label>
                   </li>
                   <li class="form-section__input-item">
-                    <label class="form-section__label">Rooms</label>
-                    <input
+                    <label class="form-section__label">Phone number
+                      <input id="hero-form-phone"
                       class="form-section__input"
-                      placeholder="Select Rooms"
+                      placeholder="+2025557324"
                       type="text"
                       name="location"
                     />
+                    <div class="form-section__error error"></div>
+                    </label>
                   </li>
                 </ul>
-                <button
+                <button type="submit" 
                   class="button button--blue form-section__button--search form-section__button"
                 >
                   <svg class="button__svg">
-                    <use href="./images/svg/icons.svg#search-normal-icon"></use>
+                    <use href="./images/svg/icons.svg#register-icon"></use>
                   </svg>
-                  Search
+                  Register
                 </button>
               </form>
             </div>
@@ -253,7 +289,7 @@
                       >
                         <img
                           class="announcement-section__image"
-                          src="../images/jpg/account3.jpg"
+                          src="./images/jpg/account3.jpg"
                           alt="profile picture"
                         />
                       </div>
@@ -264,7 +300,7 @@
                       >
                         <img
                           class="announcement-section__image"
-                          src="/images/jpg/account4.jpg"
+                          src="./images/jpg/account4.jpg"
                           alt="profile picture"
                         />
                       </div>
@@ -316,50 +352,52 @@
           <h2 class="clients-section__title">
             Trusted by 100+ Companies acroos the globe!
           </h2>
-          <ul class="clients-section__clients-logo-list">
-            <li class="clients-section__clients-logo-item">
-              <img
-                class="clients-section__image"
-                src="./images/png/google.png"
-                alt="logo of 'Google'"
-              />
-            </li>
-            <li class="clients-section__clients-logo-item">
-              <img
-                class="clients-section__image"
-                src="./images/png/amazon.png"
-                alt="logo of 'Amazon'"
-              />
-            </li>
-            <li class="clients-section__clients-logo-item">
-              <img
-                class="clients-section__image"
-                src="./images/png/logitech.png"
-                alt="logo of 'Logitech'"
-              />
-            </li>
-            <li class="clients-section__clients-logo-item">
-              <img
-                class="clients-section__image"
-                src="./images/png/spotify.png"
-                alt="logo of 'Spotify'"
-              />
-            </li>
-            <li class="clients-section__clients-logo-item">
-              <img
-                class="clients-section__image"
-                src="./images/png/samsung.png"
-                alt="logo of 'Samsung'"
-              />
-            </li>
-            <li class="clients-section__clients-logo-item">
-              <img
-                class="clients-section__image"
-                src="./images/png/netflix.png"
-                alt="logo of 'Netflix'"
-              />
-            </li>
-          </ul>
+          <div class="clients-section__slider-clients slider-clients swiperClients">
+            <div class="swiper-wrapper slider-clients__wrapper clients-section__wrapper" id="slider-clients">
+              <div class="swiper-slide slider-clients__slide">
+                <img
+                  class="slider-clients__image"
+                  src="./images/png/google.png"
+                  alt="logo of 'Google'"
+                />
+              </div>
+              <div class="swiper-slide slider-clients__slide">
+                <img
+                  class="slider-clients__image"
+                  src="./images/png/amazon.png"
+                  alt="logo of 'Amazon'"
+                />
+              </div>
+              <div class="swiper-slide slider-clients__slide">
+                <img
+                  class="slider-clients__image"
+                  src="./images/png/logitech.png"
+                  alt="logo of 'Logitech'"
+                />
+              </div>
+              <div class="swiper-slide slider-clients__slide">
+                <img
+                  class="slider-clients__image"
+                  src="./images/png/spotify.png"
+                  alt="logo of 'Spotify'"
+                />
+              </div>
+              <div class="swiper-slide slider-clients__slide">
+                <img
+                  class="slider-clients__image"
+                  src="./images/png/samsung.png"
+                  alt="logo of 'Samsung'"
+                />
+              </div>
+              <div class="swiper-slide slider-clients__slide">
+                <img
+                  class="slider-clients__image"
+                  src="./images/png/netflix.png"
+                  alt="logo of 'Netflix'"
+                />
+              </div>
+            </div>
+          </div>
           <div class="decor-circle clients-section__decor-circle"></div>
         </div>
       </section>
@@ -381,30 +419,32 @@
                 dignissim purus. Nulla convallis ipsum molestie nibh malesuada,
                 ac malesuada leo volutpat.
               </p>
-              <div class="info-section__container">
-                <svg class="info-section__container-svg">
-                  <use href="./images/svg/icons.svg#smart-home-icon"></use>
-                </svg>
-                <div class="info-section__text-group">
-                  <h4 class="info-section__container-title">
-                    Donec porttitor euismod
-                  </h4>
-                  <p class="regular-text info-section__regular-text">
-                    Nullam a lacinia ipsum, nec dignissim purus. Nulla
-                  </p>
+              <div class="info-section__container-div">
+                <div class="info-section__container">
+                  <svg class="info-section__container-svg">
+                    <use href="./images/svg/icons.svg#smart-home-icon"></use>
+                  </svg>
+                  <div class="info-section__text-group">
+                    <h4 class="info-section__container-title">
+                      Donec porttitor euismod
+                    </h4>
+                    <p class="regular-text info-section__regular-text">
+                      Nullam a lacinia ipsum, nec dignissim purus. Nulla
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="info-section__container">
-                <svg class="info-section__container-svg">
-                  <use href="./images/svg/icons.svg#user-octagon-icon"></use>
-                </svg>
-                <div class="info-section__text-group">
-                  <h4 class="info-section__container-title">
-                    Donec porttitor euismod
-                  </h4>
-                  <p class="regular-text info-section__regular-text">
-                    Nullam a lacinia ipsum, nec dignissim purus. Nulla
-                  </p>
+                <div class="info-section__container">
+                  <svg class="info-section__container-svg">
+                    <use href="./images/svg/icons.svg#user-octagon-icon"></use>
+                  </svg>
+                  <div class="info-section__text-group">
+                    <h4 class="info-section__container-title">
+                      Donec porttitor euismod
+                    </h4>
+                    <p class="regular-text info-section__regular-text">
+                      Nullam a lacinia ipsum, nec dignissim purus. Nulla
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -438,12 +478,12 @@
                   />
                 </div>
                 <div class="decor-circle info-section__decor-circle"></div>
-              </div>
-              <img
+                <img
                 class="info-section__circular-text"
                 src="./images/png/circular-text.png"
                 alt="circulat text that says 'real estate since 2022'"
               />
+              </div>
             </div>
           </div>
         </div>
@@ -466,224 +506,34 @@
             </div>
             <ul class="offers-section__button-list">
               <li class="offers-section__button-item">
-                <button class="button button--bordered offers-section__button">
+                <button class="button button--bordered offers-section__button" id="all-button">
                   All
                 </button>
               </li>
               <li class="offers-section__button-item">
-                <button class="button button--bordered offers-section__button">
+                <button class="button button--bordered offers-section__button" id="sell-button">
                   Sell
                 </button>
               </li>
               <li class="offers-section__button-item">
-                <button class="button button--bordered offers-section__button">
+                <button class="button button--bordered offers-section__button" id="rent-button">
                   Rent
                 </button>
               </li>
             </ul>
           </div>
-          <div class="swiperOffers slider-offers hero__slider-offers">
+          <div class="swiperOffers slider-offers hero__slider-offers swiperOffers">
             <div class="swiper-wrapper slider-offers__wrapper">
-              <figure
-                class="swiper-slide figure-offer slider-offers__figure-offer"
-              >
-                <div class="figure-offer__image-container">
-                  <img
-                    class="figure-offer__image"
-                    src="./images/jpg/offer1.jpg"
-                    alt="Two-stored panthouse with pool"
-                  />
-                  <div class="figure-offer__badge figure-offer__badge--popular">
-                    <svg class="figure-offer__badge-svg">
-                      <use href="./images/svg/icons.svg#fire-icon"></use>
-                    </svg>
-                    <p class="figure-offer__badge-text">Popular</p>
-                  </div>
-                </div>
-                <figcaption class="figure-offer__figcaption">
-                  <p class="figure-offer__cost">$5,970</p>
-                  <h4 class="figure-offer__title">
-                    Tranquil Haven in the Woods
-                  </h4>
-                  <p class="regular-text figure-offer__regular-text">
-                    103 Wright CourtBurien, WA 98168
-                  </p>
-                  <div class="figure-offer__rooms">
-                    <p class="figure-offer__rooms-text">
-                      <svg class="figure-offer__svg figure-offer__svg--wide">
-                        <use href="./images/svg/icons.svg#bed-icon"></use>
-                      </svg>
-                      4 Bedrooms
-                    </p>
-                    <p class="figure-offer__rooms-text">
-                      <svg class="figure-offer__svg figure-offer__svg--thin">
-                        <use href="./images/svg/icons.svg#bathroom-icon"></use>
-                      </svg>
-                      3 Baths
-                    </p>
-                  </div>
-                </figcaption>
-              </figure>
-              <figure class="swiper-slide figure-offer slider__figure-offer">
-                <div class="figure-offer__image-container">
-                  <img
-                    class="figure-offer__image"
-                    src="./images/jpg/offer2.jpg"
-                    alt="Two-stored panthouse with pool"
-                  />
-                  <div class="figure-offer__badge figure-offer__badge--popular">
-                    <svg class="figure-offer__badge-svg">
-                      <use href="./images/svg/icons.svg#fire-icon"></use>
-                    </svg>
-                    <p class="figure-offer__badge-text">Popular</p>
-                  </div>
-                </div>
-                <figcaption class="figure-offer__figcaption">
-                  <p class="figure-offer__cost">$5,970</p>
-                  <h4 class="figure-offer__title">
-                    Tranquil Haven in the Woods
-                  </h4>
-                  <p class="regular-text figure-offer__regular-text">
-                    103 Wright CourtBurien, WA 98168
-                  </p>
-                  <div class="figure-offer__rooms">
-                    <p class="figure-offer__rooms-text">
-                      <svg class="figure-offer__svg figure-offer__svg--wide">
-                        <use href="./images/svg/icons.svg#bed-icon"></use>
-                      </svg>
-                      4 Bedrooms
-                    </p>
-                    <p class="figure-offer__rooms-text">
-                      <svg class="figure-offer__svg figure-offer__svg--thin">
-                        <use href="./images/svg/icons.svg#bathroom-icon"></use>
-                      </svg>
-                      3 Baths
-                    </p>
-                  </div>
-                </figcaption>
-              </figure>
-              <figure class="swiper-slide figure-offer slider__figure-offer">
-                <div class="figure-offer__image-container">
-                  <img
-                    class="figure-offer__image"
-                    src="./images/jpg/offer3.jpg"
-                    alt="Two-stored panthouse with pool"
-                  />
-                  <div class="figure-offer__badge figure-offer__badge--popular">
-                    <svg class="figure-offer__badge-svg">
-                      <use href="./images/svg/icons.svg#fire-icon"></use>
-                    </svg>
-                    <p class="figure-offer__badge-text">Popular</p>
-                  </div>
-                </div>
-                <figcaption class="figure-offer__figcaption">
-                  <p class="figure-offer__cost">$5,970</p>
-                  <h4 class="figure-offer__title">
-                    Tranquil Haven in the Woods
-                  </h4>
-                  <p class="regular-text figure-offer__regular-text">
-                    103 Wright CourtBurien, WA 98168
-                  </p>
-                  <div class="figure-offer__rooms">
-                    <p class="figure-offer__rooms-text">
-                      <svg class="figure-offer__svg figure-offer__svg--wide">
-                        <use href="./images/svg/icons.svg#bed-icon"></use>
-                      </svg>
-                      4 Bedrooms
-                    </p>
-                    <p class="figure-offer__rooms-text">
-                      <svg class="figure-offer__svg figure-offer__svg--thin">
-                        <use href="./images/svg/icons.svg#bathroom-icon"></use>
-                      </svg>
-                      3 Baths
-                    </p>
-                  </div>
-                </figcaption>
-              </figure>
-              <figure class="swiper-slide figure-offer slider__figure-offer">
-                <div class="figure-offer__image-container">
-                  <img
-                    class="figure-offer__image"
-                    src="./images/jpg/offer4.jpg"
-                    alt="Two-stored panthouse with pool"
-                  />
-                  <div class="figure-offer__badge figure-offer__badge--popular">
-                    <svg class="figure-offer__badge-svg">
-                      <use href="./images/svg/icons.svg#fire-icon"></use>
-                    </svg>
-                    <p class="figure-offer__badge-text">Popular</p>
-                  </div>
-                </div>
-                <figcaption class="figure-offer__figcaption">
-                  <p class="figure-offer__cost">$5,970</p>
-                  <h4 class="figure-offer__title">
-                    Tranquil Haven in the Woods
-                  </h4>
-                  <p class="regular-text figure-offer__regular-text">
-                    103 Wright CourtBurien, WA 98168
-                  </p>
-                  <div class="figure-offer__rooms">
-                    <p class="figure-offer__rooms-text">
-                      <svg class="figure-offer__svg figure-offer__svg--wide">
-                        <use href="./images/svg/icons.svg#bed-icon"></use>
-                      </svg>
-                      4 Bedrooms
-                    </p>
-                    <p class="figure-offer__rooms-text">
-                      <svg class="figure-offer__svg figure-offer__svg--thin">
-                        <use href="./images/svg/icons.svg#bathroom-icon"></use>
-                      </svg>
-                      3 Baths
-                    </p>
-                  </div>
-                </figcaption>
-              </figure>
-              <figure class="swiper-slide figure-offer slider__figure-offer">
-                <div class="figure-offer__image-container">
-                  <img
-                    class="figure-offer__image"
-                    src="./images/jpg/offer5.jpg"
-                    alt="Two-stored panthouse with pool"
-                  />
-                  <div class="figure-offer__badge figure-offer__badge--popular">
-                    <svg class="figure-offer__badge-svg">
-                      <use href="./images/svg/icons.svg#fire-icon"></use>
-                    </svg>
-                    <p class="figure-offer__badge-text">Popular</p>
-                  </div>
-                </div>
-                <figcaption class="figure-offer__figcaption">
-                  <p class="figure-offer__cost">$5,970</p>
-                  <h4 class="figure-offer__title">
-                    Tranquil Haven in the Woods
-                  </h4>
-                  <p class="regular-text figure-offer__regular-text">
-                    103 Wright CourtBurien, WA 98168
-                  </p>
-                  <div class="figure-offer__rooms">
-                    <p class="figure-offer__rooms-text">
-                      <svg class="figure-offer__svg figure-offer__svg--wide">
-                        <use href="./images/svg/icons.svg#bed-icon"></use>
-                      </svg>
-                      4 Bedrooms
-                    </p>
-                    <p class="figure-offer__rooms-text">
-                      <svg class="figure-offer__svg figure-offer__svg--thin">
-                        <use href="./images/svg/icons.svg#bathroom-icon"></use>
-                      </svg>
-                      3 Baths
-                    </p>
-                  </div>
-                </figcaption>
-              </figure>
+              <!--json-->
             </div>
           </div>
+          <button type="button" class="button button--bordered offers-section__viewall-button">View more properties</button>
         </div>
       </section>
 
       <section class="services-section" id="services">
         <div class="container services-section__container container--main">
-          <h3 class="services-section__secondary-title">Our services</h3>
+          <h3 class="secondary-title services-section__secondary-title">Our services</h3>
           <h2 class="services-section__section-title section-title">
             Donec porttitor euismod dignissim
           </h2>
@@ -776,8 +626,6 @@
                 <p class="areas-section__location">Philadelphia, PA</p>
               </div>
             </li>
-          </ul>
-          <ul class="areas-section__pictures-list">
             <li
               class="areas-section__pictures-item areas-section__pictures-item--medium"
             >
@@ -832,6 +680,8 @@
                   <p class="figure-member__text">CEO & Founder</p>
                 </figcaption>
               </figure>
+            </li>
+            <li class="team-section__member-item">
               <figure class="figure-member team-section__figure-member">
                 <div class="figure-member__image-container">
                   <img
@@ -845,6 +695,8 @@
                   <p class="figure-member__text">Real Estate Developer</p>
                 </figcaption>
               </figure>
+            </li>
+            <li class="team-section__member-item">
               <figure class="figure-member team-section__figure-member">
                 <div class="figure-member__image-container">
                   <img
@@ -858,6 +710,8 @@
                   <p class="figure-member__text">Listing Agent</p>
                 </figcaption>
               </figure>
+            </li>
+            <li class="team-section__member-item">
               <figure class="figure-member team-section__figure-member">
                 <div class="figure-member__image-container">
                   <img
@@ -888,8 +742,7 @@
           <div class="slider-blogs blogs-section__slider-blogs">
             <div class="swiperBlogs slider-blogs__swiper">
               <div class="swiper-wrapper slider-blogs__wrapper">
-                <div class="swiper-slide slider-blogs__slider">
-                  <article class="blogs-article slider-blogs__blogs-article">
+                  <article class="swiper-slide blogs-article slider-blogs__blogs-article">
                     <div class="blogs-article__image-container">
                       <img
                         class="blogs-article__image"
@@ -917,7 +770,7 @@
                       </svg>
                     </a>
                   </article>
-                  <article class="blogs-article slider-blogs__blogs-article">
+                  <article class=" swiper-slide blogs-article slider-blogs__blogs-article">
                     <div class="blogs-article__image-container">
                       <img
                         class="blogs-article__image"
@@ -944,7 +797,7 @@
                       </svg>
                     </a>
                   </article>
-                  <article class="blogs-article slider-blogs__blogs-article">
+                  <article class=" swiper-slide blogs-article slider-blogs__blogs-article">
                     <div class="blogs-article__image-container">
                       <img
                         class="blogs-article__image"
@@ -971,10 +824,7 @@
                       </svg>
                     </a>
                   </article>
-                </div>
-                <!--second slide-->
-                <div class="swiper-slide slider-blogs__slider">
-                  <article class="blogs-article slider-blogs__blogs-article">
+                  <article class="swiper-slide blogs-article slider-blogs__blogs-article">
                     <div class="blogs-article__image-container">
                       <img
                         class="blogs-article__image"
@@ -1001,7 +851,7 @@
                       </svg>
                     </a>
                   </article>
-                  <article class="blogs-article slider-blogs__blogs-article">
+                  <article class="swiper-slide blogs-article slider-blogs__blogs-article">
                     <div class="blogs-article__image-container">
                       <img
                         class="blogs-article__image"
@@ -1028,7 +878,7 @@
                       </svg>
                     </a>
                   </article>
-                  <article class="blogs-article slider-blogs__blogs-article">
+                  <article class="swiper-slide blogs-article slider-blogs__blogs-article">
                     <div class="blogs-article__image-container">
                       <img
                         class="blogs-article__image"
@@ -1056,16 +906,16 @@
                       </svg>
                     </a>
                   </article>
-                </div>
               </div>
             </div>
             <div class="swiper-pagination-blogs slider-blogs__pagination"></div>
           </div>
+          <button type="button" class="button button--white blogs-section__viewall-button">View more blogs</button>
         </div>
       </section>
 
       <section class="reviews-section">
-        <div class="container container--flex container--main">
+        <div class="container container--flex container--main reviews-section__container">
           <div class="reviews-section__title-div">
             <h3 class="secondary-title reviews-section__secondary-title">
               Testimonials
@@ -1187,10 +1037,9 @@
                   </div>
                 </div>
               </div>
-              <div class="decor-circle reviews-section__decor-circle"></div>
             </div>
             <div
-              class="swiper-pagination-reviews slider-reviews__pagination"
+              class="swiper-pagination-reviews slider-reviews__pagination slider-reviews__pagination--vertical"
             ></div>
           </div>
           
@@ -1198,33 +1047,38 @@
       </section>
 
       <section class="register-section" id="register">
-        <div class="container container--flex register-section__container">
-          <img
-            class="register-section__image"
-            src="./images/png/register-guy.png"
-            alt="Smiling presentable-looking man in suit"
-          />
-          <div class="register-section__text-div">
-            <h2 class="section-title register-section__title">
-              Become an Agent
-            </h2>
-            <p class="regular-text register-section__regular-text">
-              Fusce venenatis tellus a felis scelerisque. venenatis tellus a
-              felis scelerisque.
-            </p>
+        <div class="container container--flex container--main register-section__container">
+          <div class="register-section__div">
+            <img
+              class="register-section__image"
+              src="./images/png/register-guy.png"
+              alt="Smiling presentable-looking man in suit"
+            />
+            <div class="register-section__main-content">
+              <div class="register-section__text-div">
+                <h2 class="section-title register-section__title">
+                  Become an Agent
+                </h2>
+                <p class="regular-text register-section__regular-text">
+                  Fusce venenatis tellus a felis scelerisque. venenatis tellus a
+                  felis scelerisque.
+                </p>
+              </div>
+              <a
+                class="button register-section__button button--white"
+                href="#home"
+              >
+                
+                Register now
+            </a>
+            </div>
+            <div
+              class="decor-circle decor-circle--white register-section__decor-circle register-section__decor-circle--first"
+            ></div>
+            <div
+              class="decor-circle decor-circle--white register-section__decor-circle register-section__decor-circle--second"
+            ></div>
           </div>
-          <button
-            type="button"
-            class="button register-section__button button--white"
-          >
-            Register now
-          </button>
-          <div
-            class="decor-circle decor-circle--white register-section__decor-circle register-section__decor-circle--first"
-          ></div>
-          <div
-            class="decor-circle decor-circle--white register-section__decor-circle register-section__decor-circle--second"
-          ></div>
         </div>
       </section>
     </main>
@@ -1287,7 +1141,7 @@
                   <a class="footer-main-section__link" href="#blogs">Blogs</a>
                 </li>
                 <li class="footer-main-section__links-item">
-                  <a class="footer-main-section__link" href="#register"
+                  <a class="footer-main-section__link" href="#home"
                     >Become an Agent</a
                   >
                 </li>
@@ -1318,15 +1172,17 @@
             <h3 class="footer-main-section__title-div">
               Subscribe to our Newsletter!
             </h3>
-            <form class="footer-main-section__form">
+            <form onsubmit="emailSend(); return false" class="footer-main-section__form">
               <label class="footer-main-section__label">E-mail</label>
               <input
                 class="footer-main-section__input"
-                type="email"
+                type="text"
                 name="email"
                 id="footer-email"
                 placeholder="Email Address"
+                required
               />
+              <div class="footer-main-section__error error"></div>
               <button
                 type="submit"
                 class="arrow-button arrow-button--blue footer-main-section__arrow-button"
@@ -1381,5 +1237,9 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/slider.js"></script>
+    <script src="./js/change-layout.js"></script>
+    <script src="./js/burger-menu.js"></script>
+    <script async src="./js/generate-data.js"></script>
+    <script async src="./js/send-form.js"></script>
   </body>
 </html>

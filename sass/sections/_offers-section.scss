@@ -1,23 +1,78 @@
 .offers-section{
-    padding-top: 100px;
-    padding-bottom: 188px;
+    padding-top: clamp(20px, 7vw, 100px);
+    padding-bottom: clamp(20px, 13vw, 188px);
 
     &__flex-div{
         display: flex;
+        flex-direction: column;
     }
 
     &__button-list{
-        margin-left: auto;
-
+        
         display: flex;
-        gap: 20px;
+        gap: 10px;
+        margin-bottom: clamp(20px, 7vw, 40px);
+    }
+
+    &__button{
+        font-size: 12px;
+        padding-inline: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        &:hover{
+            background-color: $main-color;
+            color: $white-color;
+        }
+        &:focus{
+            background-color: $main-color;
+            color: $white-color;
+            box-shadow:inset 0px 0px 0px 2px #000000;
+        }
     }
 
     &__section-title{
-        margin-bottom: 30px;
+        margin-bottom: clamp(10px, 2vw, 30px);
     }
 
     &__regular-text{
-        margin-bottom: 40px;
+        margin-bottom: clamp(15px, 2.8vw, 40px);
+    }
+
+    &__viewall-button{
+        font-size: clamp(13px, 4vw, 17px);
+
+        margin-inline: auto;
+    }
+
+    @media screen and (min-width:480px) {
+        &__button-list{
+            gap:20px;
+        }
+
+        &__button{
+            font-size: 16px;
+            padding-inline: 30px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            &:focus{
+                box-shadow:inset 0px 0px 0px 5px #000000;
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        &__flex-div{
+            flex-direction: row;
+        }
+        
+        &__button-list{
+            margin-left: auto;
+            margin-bottom: 0;
+        }
+
+        &__viewall-button{
+            display: none;
+        }
     }
 }

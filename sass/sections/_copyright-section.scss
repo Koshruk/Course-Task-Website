@@ -4,10 +4,30 @@
     color: $text-color4;
     font-size: 16px;
     line-height: 1.65;
+
+    &__copyright{
+        text-align: center;
+        width: 100%;
+    }
     
     &__links-list{
         margin-left: auto;
         display: flex;
         gap: 40px;
+    }
+
+    &__links-item:nth-child(n+1){
+        display: none;
+    }
+
+    @media screen and (min-width:768px) {
+        &__copyright{
+            width: max-content;
+        }
+
+        &__links-item:nth-child(n+1){
+            display: inline;
+        }
+    
     }
 }

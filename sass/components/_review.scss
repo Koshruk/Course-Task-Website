@@ -1,7 +1,8 @@
 .review{
-    font-size: 19.4px;
+    font-size: clamp(13px, 4vw, 19.6px);
     font-weight: 500;
-    padding: 0 60px;
+    padding: 0 clamp(10px, 5vw, 60px);
+    line-height: 1.35;
 
     &__content-div{
         border-bottom: 1px solid $text-color5;
@@ -9,35 +10,36 @@
         display: flex;
         flex-direction: column;
         justify-content: center; 
-        height: 250px; 
+        height: clamp(100px, 46vw, 250px); 
     }
 
     &__content{
         margin-top: auto;
         margin-bottom: auto;
+        
     }
 
     &__quotes-svg{
+        display: none;
         max-width: 60px;
         max-height: 40px;
         color: rgba(#ffc700, 0.4);
     }
 
     &__author-div{
-        padding: 20px 0;
+        padding: clamp(10px, 4vw, 20px) 0;
 
         display: flex;
         align-items: center;
     }
 
     &__author-image-container{
-        width: 50px;
-        height: 50px;
-        min-width: 50px;
+        width: clamp(40px, 12vw, 50px);
+        height: clamp(40px, 12vw, 50px);
+        min-width: 40px;
         border-radius: 50%;
         overflow: hidden;
 
-        margin-right: 15px;
     }
 
     &__author-image{
@@ -51,7 +53,29 @@
     }
 
     &__stars-image{
-        max-width: 86px;
+        max-width: clamp(50px, 20vw, 80px);
         margin-left: auto;
+    }
+
+    @media screen and (min-width: 600px) {
+        &__quotes-svg{
+            display: block;
+        }
+    }
+
+    @media screen and (min-width:768px) {
+        font-size: clamp(10px, 2vw, 19.6px);
+        padding: 0 60px;
+        &__author-div{
+            padding: 20px 0;
+        }
+        &__author-image-container{
+            width: 50px;
+            height: 50px;
+            min-width: 50px;
+        }
+        &__stars-image{
+            max-width: 86px;
+        }
     }
 }

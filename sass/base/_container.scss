@@ -1,7 +1,11 @@
 .container{
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     position: relative;
+    overflow: clip;
+    overflow-y:visible;
+
 
     &--flex{
         display: flex;
@@ -15,6 +19,23 @@
 
     &--main{
         max-width: 1200px;
-        padding: 0 40px;
+        padding: 0 15px;
+    }
+
+    @media screen and (min-width: 1024px){
+        &--main{
+            padding: 0 30px;
+        }
+        &--header{
+
+        }
+    }
+    @media screen and (min-width: 480px){
+        &--main{
+           padding: 0 24px;
+        }
+        &--header{
+            
+        }
     }
 }

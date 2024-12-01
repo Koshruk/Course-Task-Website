@@ -1,42 +1,47 @@
 .services-section{
     background-color: rgba($text-color5, 0.3);
-    padding-top: 100px;
-    padding-bottom: 137px;
+    padding-top: clamp(50px, 7vw, 100px);
+    padding-bottom: clamp(55px, 10vw, 137px);
 
     &__secondary-title{
-        font-size: 19.4px;
-        font-weight: 500;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
         text-align: center;
+        margin-bottom: 15px;
 
-        margin-bottom: 30px;
+        margin-inline: auto;
     }
 
     &__section-title{
         text-align: center;
-        margin-bottom: 60px;
+        margin-bottom: 40px;
         color: $text-color1;
     }
 
     &__services-list{
         display: flex;
-        gap: 50px;
+        flex-direction: column;
+        gap: clamp(20px, 5.5vw, 50px);
         justify-content: space-between;
         text-align: center;
     }
 
     &__services-item{
         background-color: $white-color;
-        padding: 60px;
+        padding: clamp(30px, 10vw, 40px);
         border-radius: 30px;
 
         box-shadow: 5px 5px 30px rgba($text-color5, 0.1);
     }
 
+    &__service-title{
+        font-size: clamp(16px, 4vw, 19.4px);
+        font-weight: 500;
+
+        margin-bottom: 20px;
+    }
+
     &__svg-container{
-        width: 90px;
-        height: 90px;
+        width: 60px;
+        height: 60px;
         background-color: $color1;
         margin-left: auto;
         margin-right: auto;
@@ -53,13 +58,36 @@
     }
 
     &__svg{
-        max-width: 40px;
+        max-width: 30px;
     }
 
-    &__service-title{
-        font-size: 19.4px;
-        font-weight: 500;
+    @media screen and (min-width:480px) {
+        &__svg-container{
+            width: 70px;
+            height: 70px;
+        }
 
-        margin-bottom: 20px;
+        &__svg{
+            max-width: 35px;
+        }
+    }
+
+    @media screen and (min-width:768px) {
+        &__services-list{
+            flex-direction: row;
+        }
+
+        &__services-item{
+            padding: clamp(30px, 5vw, 60px);
+        }
+
+        &__svg-container{
+            width: 90px;
+            height: 90px;
+        }
+
+        &__svg{
+            max-width: 40px;
+        }
     }
 }

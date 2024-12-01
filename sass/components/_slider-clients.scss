@@ -1,0 +1,41 @@
+.slider-clients{
+    overflow: hidden;
+    user-select: none;
+    &__wrapper{
+        &.swiper-wrapper{
+            &#slider-clients{
+                transition-timing-function: linear;
+            }
+        }
+    }
+
+    &__image{
+        width: 90px;
+        filter: grayscale(100%);
+    }
+
+    @media screen and (min-width: 480px) {
+    }
+
+    @media screen and (min-width: 600px) {
+
+        
+    }
+
+    @media screen and (min-width: 750px) {
+        &__wrapper{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__slide{
+            max-width: fit-content;
+        }
+    }
+
+    @media screen and (min-width: 1024px){
+        &__image{
+            width: 120px;
+        }
+    }
+}

@@ -1,6 +1,6 @@
 .blogs-section{
-    padding-top: 110px;
-    padding-bottom: 170px;
+    padding-top: clamp(70px, 10vw, 150px);
+    padding-bottom: clamp(80px, 15vw, 170px);
     background-color: $main-color;
 
     &__secondary-title{
@@ -12,6 +12,12 @@
         color: $white-color;
         text-align: center;
 
-        margin-bottom: 80px;
+        margin-bottom: clamp(30px, 10vw, 80px);
+    }
+
+    @media screen and (min-width:768px) {
+        &__viewall-button{
+            display: none;
+        }
     }
 }

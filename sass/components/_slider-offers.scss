@@ -1,3 +1,23 @@
 .slider-offers{
     overflow: hidden;
+
+    &__wrapper{
+        flex-direction: column;
+    }
+
+    &__figure-offer{
+        max-width: 400px;
+        margin-inline: auto;
+        margin-bottom: clamp(20px, 7vw, 30px);
+    }
+
+    @media screen and (min-width:768px) {
+        &__wrapper{
+            flex-direction: row;
+        }
+
+        &__figure-offer{
+            margin-bottom: 0;
+        }
+    }
 }
