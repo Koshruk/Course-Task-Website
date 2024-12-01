@@ -1,5 +1,5 @@
-function burgerOnClick(){
-    document.getElementById("menu-bar").classList.toggle("change");
+function menuOnClick() {
+    document.getElementById("menu").classList.toggle("change");
     document.getElementById("nav").classList.toggle("change");
     document.getElementById("menu-bg").classList.toggle("change-bg");
-}
+  }
