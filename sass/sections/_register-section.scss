@@ -1,30 +1,42 @@
 .register-section{
 
-    padding: 0 0 180px;
+    padding: 0 0 clamp(80px, 25vw, 180px);
 
     &__container{
-        background-color: $main-color;
         max-width: 1200px;
-        padding: 70px 25px;
-        border-radius: 40px;
-        margin-left: auto;
-        margin-right: auto;
         position: relative;
     }
 
-    &__image{
-        width: 358px;
+    &__div{
+        background-color: $main-color;
+        width: 100%;
+        height: 100%;
+        padding: 70px 25px clamp(10px, 70vw, 300px);
+        border-radius: 40px;
+    }
 
+    &__main-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: max-content;
+        margin-inline: auto;
+        gap: 20px;
+    }
+
+    &__image{
+        width: clamp(20px, 75vw, 350px);
+        margin-right: auto;
+        left: 50%;
+        transform: translateX(-50%);
         position: absolute;
         bottom: 0;
         z-index: 1;
     }
 
     &__text-div{
-        margin-left: 50px;
-        margin-right: 85px;
-        width: 360px;
-        margin-left: auto;
+        width: 68vw;
+        margin-left: 0;
     }
 
     &__title{
@@ -33,11 +45,14 @@
     }
 
     &__regular-text{
+        font-size: clamp(10px, 3.3vw, 13.3px);
         color: $white-color;
     }
 
     &__button{
-        margin-right: 180px;
+        text-wrap: nowrap;
+        margin-left: 0;
+        margin-right: auto;
     }
 
     &__decor-circle{
@@ -57,6 +72,67 @@
 
             right: 50px;
             top: -40px;
+        }
+    }
+
+    @media screen and (min-width:480px) {
+        &__div{
+            padding: 70px 25px 300px;
+        }
+        
+        &__image{
+            width: 350px;
+        }
+    }
+
+    @media screen and (min-width:768px) {
+        &__div{
+            padding: 70px 25px;
+        }
+
+        &__main-content{
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        &__text-div{
+            width: clamp(100px, 25vw, 300px);
+        }
+
+        &__button{
+        }
+
+        &__image{
+            width: 400px;
+            left: 30px;
+            transform: none;
+        }
+    }
+
+    @media screen and (min-width:1024px) {
+        &__main-content{
+            flex-direction: row;
+        }
+        &__text-div{
+            margin-right: clamp(20px, 5.9vw, 85px);
+            width: 360px;
+            margin-right: auto;
+        }
+
+        &__title{
+            font-size: clamp(15px, 3vw, 39.8px);
+        }
+
+        &__regular-text{
+            font-size: clamp(10px, 1.5vw, 16px);
+        }
+
+        &__button{
+            margin-right: clamp(20px, 7vw, 100px);
+        }
+
+        &__image{
+            width: 350px;
         }
     }
 }

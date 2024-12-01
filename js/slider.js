@@ -63,22 +63,31 @@ function enableBlogsSwiper(){
     });
 }
 
-const swiperReviews = new Swiper('.swiperReviews',{
-    slidesPerView: 1,
-    spaceBetween: 50,
-    direction: 'vertical',
-    allowTouchMove: false,
-    navigation:{
-        nextEl: '.swiper-button-next-reviews',
-        prevEl: '.swiper-button-prev-reviews'  
-      },
-    pagination:{
-        el: '.swiper-pagination-reviews',
-        bulletClass: 'slider-reviews__pagination-bullet',
-        bulletActiveClass: 'slider-reviews__pagination-bullet--active',
-    },
-});
+let swiperReviews;
+function enableReviewsSwiper(direction){
 
+    swiperReviews = new Swiper('.swiperReviews',{
+        slidesPerView: 1,
+        spaceBetween: 50,
+        direction: direction,
+        allowTouchMove: true,
+        navigation:{
+            nextEl: '.swiper-button-next-reviews',
+            prevEl: '.swiper-button-prev-reviews'  
+        },
+        pagination:{
+            el: '.swiper-pagination-reviews',
+            bulletClass: 'slider-reviews__pagination-bullet',
+            bulletActiveClass: 'slider-reviews__pagination-bullet--active',
+        },
+
+        breakpoints:{
+            768:{
+                allowTouchMove: false,
+            }
+        }
+});
+}
 function breakpointChecker(){
     if(window.innerWidth < 768){
         if (swiperOffers !== undefined){
@@ -108,6 +117,19 @@ function breakpointChecker(){
     }
     else{
         enableBlogsSwiper();
+    }
+
+    if(window.innerWidth < 768){
+        if (swiperReviews !== undefined){
+             swiperReviews.destroy(true, true);
+        }
+        enableReviewsSwiper('horizontal');
+    }
+    else{
+        if (swiperReviews !== undefined){
+            swiperReviews.destroy(true, true);
+       }
+        enableReviewsSwiper('vertical');
     }
 }
 

@@ -118,13 +118,13 @@
           <h3 class="secondary-title hero__secondary-title">Real Estate</h3>
           <div class="flex-div hero__flex-div">
             <div class="hero__title-section">
-              <div class="decor-circle hero__decor-circle"></div>
               <h1 class="title hero__title">Find a perfect home you love..!</h1>
               <p class="regular-text hero__regular-text">
                 Etiam eget elementum elit. Aenean dignissim dapibus vestibulum.
                 Integer a dolor eu sapien sodales vulputate ac in purus.
               </p>
               <div class="slider-hero hero__slider-hero">
+                <div class="decor-circle hero__decor-circle"></div>
                 <div class="slider-hero__swiper swiperHero">
                   <div class="slider-hero__images-container swiper-wrapper">
                     <div class="swiper-slide">
@@ -185,45 +185,51 @@
 
             <div class="form-section hero__form-section">
               <div class="form-section__title-div">
-                <h3 class="form-section__title">Register for service</h3>
+                <h3 class="form-section__title">Register for consultation</h3>
               </div>
-              <form class="form-section__form">
+              <form onsubmit="formSend(); return false;" class="form-section__form">
                 <ul class="form-section__input-list">
                   <li class="form-section__input-item">
-                    <label class="form-section__label">Location</label>
-                    <input
+                    <label class="form-section__label">Name
+                      <input id="hero-form-name"
                       class="form-section__input"
-                      placeholder="New York, San Francisco, etc"
+                      placeholder="Brendon Perez"
                       type="text"
                       name="location"
                     />
+                    <div class="form-section__error error"></div>
+                    </label>
                   </li>
                   <li class="form-section__input-item">
-                    <label class="form-section__label">Type</label>
-                    <input
+                    <label class="form-section__label">Email
+                      <input id="hero-form-email"
                       class="form-section__input"
-                      placeholder="Select Property Type"
+                      placeholder="rezilla@gmail.com"
                       type="text"
                       name="location"
                     />
+                    <div class="form-section__error error"></div>
+                    </label>
                   </li>
                   <li class="form-section__input-item">
-                    <label class="form-section__label">Rooms</label>
-                    <input
+                    <label class="form-section__label">Phone number
+                      <input id="hero-form-phone"
                       class="form-section__input"
-                      placeholder="Select Rooms"
+                      placeholder="+2025557324"
                       type="text"
                       name="location"
                     />
+                    <div class="form-section__error error"></div>
+                    </label>
                   </li>
                 </ul>
-                <button
+                <button type="submit" 
                   class="button button--blue form-section__button--search form-section__button"
                 >
                   <svg class="button__svg">
-                    <use href="./images/svg/icons.svg#search-normal-icon"></use>
+                    <use href="./images/svg/icons.svg#register-icon"></use>
                   </svg>
-                  Search
+                  Register
                 </button>
               </form>
             </div>
@@ -453,12 +459,12 @@
                   />
                 </div>
                 <div class="decor-circle info-section__decor-circle"></div>
-              </div>
-              <img
+                <img
                 class="info-section__circular-text"
                 src="./images/png/circular-text.png"
                 alt="circulat text that says 'real estate since 2022'"
               />
+              </div>
             </div>
           </div>
         </div>
@@ -1015,7 +1021,7 @@
               </div>
             </div>
             <div
-              class="swiper-pagination-reviews slider-reviews__pagination"
+              class="swiper-pagination-reviews slider-reviews__pagination slider-reviews__pagination--vertical"
             ></div>
           </div>
           
@@ -1023,33 +1029,37 @@
       </section>
 
       <section class="register-section" id="register">
-        <div class="container container--flex register-section__container">
-          <img
-            class="register-section__image"
-            src="./images/png/register-guy.png"
-            alt="Smiling presentable-looking man in suit"
-          />
-          <div class="register-section__text-div">
-            <h2 class="section-title register-section__title">
-              Become an Agent
-            </h2>
-            <p class="regular-text register-section__regular-text">
-              Fusce venenatis tellus a felis scelerisque. venenatis tellus a
-              felis scelerisque.
-            </p>
+        <div class="container container--flex container--main register-section__container">
+          <div class="register-section__div">
+            <img
+              class="register-section__image"
+              src="./images/png/register-guy.png"
+              alt="Smiling presentable-looking man in suit"
+            />
+            <div class="register-section__main-content">
+              <div class="register-section__text-div">
+                <h2 class="section-title register-section__title">
+                  Become an Agent
+                </h2>
+                <p class="regular-text register-section__regular-text">
+                  Fusce venenatis tellus a felis scelerisque. venenatis tellus a
+                  felis scelerisque.
+                </p>
+              </div>
+              <button
+                type="button"
+                class="button register-section__button button--white"
+              >
+                Register now
+              </button>
+            </div>
+            <div
+              class="decor-circle decor-circle--white register-section__decor-circle register-section__decor-circle--first"
+            ></div>
+            <div
+              class="decor-circle decor-circle--white register-section__decor-circle register-section__decor-circle--second"
+            ></div>
           </div>
-          <button
-            type="button"
-            class="button register-section__button button--white"
-          >
-            Register now
-          </button>
-          <div
-            class="decor-circle decor-circle--white register-section__decor-circle register-section__decor-circle--first"
-          ></div>
-          <div
-            class="decor-circle decor-circle--white register-section__decor-circle register-section__decor-circle--second"
-          ></div>
         </div>
       </section>
     </main>
@@ -1143,16 +1153,17 @@
             <h3 class="footer-main-section__title-div">
               Subscribe to our Newsletter!
             </h3>
-            <form onsubmit="emailSend(); reset(); return false" class="footer-main-section__form">
+            <form onsubmit="emailSend(); return false" class="footer-main-section__form">
               <label class="footer-main-section__label">E-mail</label>
               <input
                 class="footer-main-section__input"
-                type="email"
+                type="text"
                 name="email"
                 id="footer-email"
                 placeholder="Email Address"
                 required
               />
+              <div class="footer-main-section__error error"></div>
               <button
                 type="submit"
                 class="arrow-button arrow-button--blue footer-main-section__arrow-button"

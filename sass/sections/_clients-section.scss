@@ -27,6 +27,8 @@
 
 
     &__decor-circle{
+        display: none;
+
         width: 100px;
         height: 100px;
         top: -70px;
@@ -38,5 +40,11 @@
 
     @media screen and (min-width: 680px) {
         padding-bottom: 2.6rem;
+    }
+
+    @media screen and (min-width: 768px) {
+        &__decor-circle{
+            display: block;
+        }
     }
 }

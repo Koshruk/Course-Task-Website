@@ -10,17 +10,25 @@
         place-items: center;
     }
 
-    &__logo{
+    &__main-div{
         margin-bottom: 40px;
+    }
+
+    &__logo{
+        margin-bottom: 20px;
+        width: max-content;
+        margin-inline: auto;
     }
 
     &__address{
         font-size: 16px;
         font-weight: 500;
+
+        color: $text-color3;
     }
 
     &__location{
-        margin-bottom: 45px;
+        margin-bottom: 20px;
     }
 
     &__address-svg{
@@ -31,11 +39,15 @@
     &__phone , &__email{
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 10px;
+
+        color: $text-color3;
     }
 
     &__phone{
         margin-bottom: 20px;
+
     }
 
 
@@ -43,6 +55,7 @@
         font-size: 19.4px;
         font-weight: 500;
         margin-bottom: 30px;
+        text-align: center;
     }
 
     &__links-div{
@@ -60,7 +73,7 @@
 
     &__form{
         position: relative;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 
     &__label{
@@ -68,6 +81,8 @@
     }
 
     &__input{
+        width: 100%;
+
         font-size: 16px;
         font-weight: 400;
         padding: 20px 0 20px 20px;
@@ -75,6 +90,12 @@
         border-radius: 30px;
 
         background-color: $white-color;
+    }
+
+    &__error{
+        margin-top: 5px;
+        color: rgb(200, 0 , 0);
+        height: 1px;
     }
 
     &__arrow-button{
@@ -86,6 +107,7 @@
     &__media-list{
         display: flex;
         gap: 20px;
+        justify-content: center;
     }
 
     &__media-svg{
@@ -93,6 +115,8 @@
         max-height: 22px;
         color: $main-color;
     }
+    
+
 
     @media screen and (min-width:768px) {
         &__container{
@@ -100,18 +124,60 @@
             gap: 30px;
         }
 
-        &__links-div{
-            display: block;
+        &__main-div{
         }
+
+        &__logo{
+            margin-left: 0;
+        }
+
+        &__title-div{
+            text-align: left;
+        }
+
+        &__email-div{
+            grid-column: 2;
+        }
+
+        &__address{
+            color: $text-color1;
+        }
+
+        &__phone , &__email{
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            gap: 10px;
     
-        &__discovery-div{
-            display: block;
+            color: $text-color1;
+        }
+
+        &__media-list{
+            justify-content: left;
         }
     }
 
     @media screen and (min-width:1024px) {
         &__container{
             grid-template-columns: repeat(4, 1fr);
+        }
+
+        &__links-div{
+            display: block;
+            grid-column: 3;
+            grid-row: 1;
+        }
+    
+        &__discovery-div{
+            display: block;
+        }
+        &__email-div{
+            grid-column: 4;
+            grid-row: 1;
+        }
+
+        &__input{
+            min-width: 350px;
         }
     }
 }

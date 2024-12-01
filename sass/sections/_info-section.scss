@@ -113,7 +113,7 @@
     &__decor-circle{
         width: 60px;
         height: 60px;
-        bottom: 75px;
+        bottom: 50px;
         left: 50px;
         transform: rotate(45deg);
 
@@ -122,8 +122,10 @@
     
     &__circular-text{
         position: absolute;
-        top: -50px;
-        right: 200px;
+        top: -100px;
+        left: -100px;
+
+        display: none;
     }
 
     @media screen and (min-width:400px) {
@@ -175,6 +177,10 @@
                 width: 38vw;
                 height: 40%;
             }
+        }
+
+        &__circular-text{
+            display: block;
         }
     }
 
