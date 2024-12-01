@@ -1,0 +1,27 @@
+.burger-button{
+    width: 45px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    &__bar{
+        height: 5px;
+        width: 100%;
+        background-color: #DC052D;
+        display: block;
+        border-radius: 5px;
+        transition: 0.3s ease;
+
+        &-2{
+            transform: translateY(4px);
+        }
+        &-3{
+            transform: translateY(8px);
+        }
+    }
+}
+
+.burger-menu{
+    display: none;
+}

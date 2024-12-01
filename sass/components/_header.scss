@@ -1,6 +1,6 @@
 .header{
-    display: none;
     &__address-section{
+        display: none;
         font-weight: 400;
         font-size: 13.3px;
         line-height: 1.65;
@@ -45,8 +45,7 @@
     }
 
     &__nav-list{
-        display: flex;
-        
+        display: none;        
     }
 
     &__nav-item{
@@ -67,13 +66,30 @@
     }
 
     &__logo{
-        margin-left: auto;
+        margin-right: auto;
     }
 
     &__button-div{
         margin-left: auto;
 
-        display: flex;
+        display: none;
         gap:20px
+    }
+
+    @media screen and (min-width:1024px) {
+        &__logo{
+            margin-left: auto;
+        }
+        &__address-section{
+            display: block;
+        }
+
+        &__nav-list{
+            display: flex;
+        }
+
+        &__button-div{
+            display: flex;
+        }
     }
 }

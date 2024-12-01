@@ -107,6 +107,19 @@
               Add Listing
             </button>
           </div>
+          <div class="burger-button header__burger-button" onclick="burgerOnClick()">
+            <div id="bar1" class="bar burger-button__bar burger-button__bar-1"></div>
+            <div id="bar2" class="bar burger-button__bar burger-button__bar-2"></div>
+            <div id="bar3" class="bar burger-button__bar burger-button__bar-3"></div>
+          </div>
+          <div class="burger-menu" id="nav">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div> 
         </div>
       </section>
     </header>
@@ -1045,12 +1058,13 @@
                   felis scelerisque.
                 </p>
               </div>
-              <button
-                type="button"
+              <a
                 class="button register-section__button button--white"
+                href="#home"
               >
+                
                 Register now
-              </button>
+            </a>
             </div>
             <div
               class="decor-circle decor-circle--white register-section__decor-circle register-section__decor-circle--first"
@@ -1121,7 +1135,7 @@
                   <a class="footer-main-section__link" href="#blogs">Blogs</a>
                 </li>
                 <li class="footer-main-section__links-item">
-                  <a class="footer-main-section__link" href="#register"
+                  <a class="footer-main-section__link" href="#home"
                     >Become an Agent</a
                   >
                 </li>
@@ -1218,6 +1232,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/slider.js"></script>
     <script src="./js/change-layout.js"></script>
+    <script scr="./js/burger-menu.js"></script>
     <script async src="./js/generate-data.js"></script>
     <script async src="./js/send-form.js"></script>
   </body>
