@@ -34,7 +34,7 @@ function enableClientsSwiper(){
 };
 
 let swiperOffers;
-function enableOffersSwiper(){
+export function enableOffersSwiper(){
     if (swiperOffers) return;
     console.log("created_offer");
     swiperOffers = new Swiper('.swiperOffers',{
@@ -43,6 +43,8 @@ function enableOffersSwiper(){
         spaceBetween: 10,
     });
 };
+
+window.enableOffersSwiper = enableOffersSwiper;
 
 
 let swiperBlogs;

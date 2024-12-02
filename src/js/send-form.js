@@ -130,4 +130,7 @@ function clearFormState(form) {
     });
 }
 
+window.formSend = formSend;
+window.emailSend = emailSend;
+
 
