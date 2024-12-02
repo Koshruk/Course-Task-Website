@@ -3,6 +3,7 @@
     "swiper": "^11.1.14"
   },
   "devDependencies": {
+    "browser-sync": "^3.0.3",
     "gulp": "^5.0.0",
     "gulp-clean": "^0.4.0",
     "gulp-file-include": "^2.3.0",
