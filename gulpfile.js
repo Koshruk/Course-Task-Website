@@ -16,7 +16,6 @@ gulp.task('default',
 gulp.task('docs', 
     gulp.series(
     'clean:docs',
-    gulp.parallel('html:docs', 'sass:docs', 'css:docs', 'images:docs', 'json:docs','js:docs'),
-    gulp.parallel('server:docs')))
+    gulp.parallel('html:docs', 'sass:docs', 'css:docs', 'images:docs', 'json:docs','js:docs')))
 
 

@@ -6,7 +6,6 @@ const postcss = require('gulp-postcss');
 const gulpautoprefixer = require('gulp-autoprefixer');
 const autoprefixer = require('autoprefixer');
 const csso = require('gulp-csso');
-const server = require('gulp-server-livereload');
 const clean = require('gulp-clean');
 const fs = require('fs');
 const sourceMaps = require('gulp-sourcemaps');
@@ -26,10 +25,6 @@ const fileIncludeSettings = {
     basepath: '@file',
 }
 
-const serverSettings = {
-    livereload: true,
-    open: true,
-}
 
 
 const plumberNotify = (title) => {
@@ -103,8 +98,3 @@ gulp.task('js:docs', function(){
     .pipe(gulp.dest('./docs/js'))
 })
 
-gulp.task('server:docs', function(){
-    return gulp
-    .src('./docs/')
-    .pipe(server(serverSettings))
-});
